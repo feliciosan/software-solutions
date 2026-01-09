@@ -4,25 +4,40 @@ import { Section } from "./Section";
 import Image from "next/image";
 
 const brands = [
-  { name: "Hugo Boss", logo: "/hugoboss-logo.png", width: 140, height: 40 },
+  {
+    name: "Hugo Boss",
+    logo: "/hugoboss-logo.png",
+    width: 140,
+    height: 40,
+    alt: "Hugo Boss - Experience developing e-commerce and fashion retail solutions",
+  },
   {
     name: "Calvin Klein",
     logo: "/calvin-klein-logo.webp",
     width: 280,
     height: 80,
+    alt: "Calvin Klein - Fashion industry web and mobile application development",
   },
   {
     name: "Tommy Hilfiger",
     logo: "/tommy-hilfiger-logo.webp",
     width: 280,
     height: 80,
+    alt: "Tommy Hilfiger - E-commerce platform and retail technology solutions",
   },
-  { name: "Globo", logo: "/globo-com-seeklogo.png", width: 100, height: 30 },
+  {
+    name: "Globo",
+    logo: "/globo-com-seeklogo.png",
+    width: 100,
+    height: 30,
+    alt: "Globo - Media and broadcasting platform development experience",
+  },
   {
     name: "Carlsberg",
     logo: "/carlsberg-seeklogo.png",
     width: 100,
     height: 30,
+    alt: "Carlsberg - Consumer goods and beverage industry digital solutions",
   },
 ];
 
@@ -45,7 +60,7 @@ export function SocialProofSection() {
               >
                 <Image
                   src={brand.logo}
-                  alt={brand.name}
+                  alt={brand.alt}
                   width={brand.width}
                   height={brand.height}
                   className="max-h-20 sm:max-h-32 w-auto"

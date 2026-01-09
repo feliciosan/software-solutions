@@ -87,7 +87,7 @@ export function HeroSection() {
                     <div className="bg-slate-100 rounded-[22px] w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 flex items-center justify-center overflow-hidden">
                       <Image
                         src="/profile-photo.png"
-                        alt="Team member"
+                        alt="Felicio Santos - Senior Software Developer specializing in React, Next.js and TypeScript"
                         width={300}
                         height={300}
                         className="object-cover w-full h-full"
@@ -107,7 +107,7 @@ export function HeroSection() {
                     <div className="bg-slate-100 rounded-[22px] w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 flex items-center justify-center overflow-hidden">
                       <Image
                         src="/profile-photo-2.png"
-                        alt="Team member"
+                        alt="Senior Full Stack Developer specializing in React, Node.js and mobile development"
                         width={300}
                         height={300}
                         className="object-cover w-full h-full"
