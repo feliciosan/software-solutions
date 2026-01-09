@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "title": "Software Development | Building digital solutions",
+    "description": "Specialized team building high-quality web and mobile applications. From zero to deployment, with solid architecture and clean code."
+  },
+  "hero": {
+    "headline": "Building digital solutions with quality and scale",
+    "subheadline": "We're a specialized team developing complete web and mobile applications, from zero to deployment, with solid architecture and quality code.",
+    "cta": "Talk about your project",
+    "availableBadge": "Available for new projects",
+    "teamBadge": "Specialized Team",
+    "learnMore": "Learn more",
+    "experienceBadge": {
+      "years": "12+ years",
+      "label": "Experience"
+    },
+    "photoPlaceholder": {
+      "text": "Add your photo at",
+      "path": "public/profile.jpg"
+    }
+  },
+  "social": {
+    "title": "Experience with real projects",
+    "description": "Our team has experience with products from companies like Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo and Carlsberg."
+  },
+  "problems": {
+    "badge": "Common Challenges",
+    "title": "Maybe you're facing this",
+    "list": [
+      {
+        "title": "Need a reliable technical team",
+        "description": "Want to start a project but don't have a specialized team"
+      },
+      {
+        "title": "Don't know how to start technically",
+        "description": "Many questions about architecture, stack and best practices"
+      },
+      {
+        "title": "Concerned about scalability",
+        "description": "Want a solid foundation that handles future growth"
+      },
+      {
+        "title": "Looking for quality from the start",
+        "description": "Don't want to deal with rewrites and technical debt later"
+      }
+    ]
+  },
+  "solution": {
+    "title": "How we can help",
+    "offerName": "Software Development",
+    "offerDuration": "Complete projects",
+    "description": "We develop your application from scratch, with solid architecture, quality code and clear documentation. We also offer technical consultancy for ongoing projects.",
+    "stats": {
+      "experience": "Years of Experience",
+      "projects": "Projects Delivered",
+      "satisfaction": "Satisfaction"
+    }
+  },
+  "included": {
+    "badge": "What's Included",
+    "title": "How we work",
+    "steps": [
+      {
+        "title": "Planning and architecture",
+        "description": "We define stack, architecture and project structure with clarity"
+      },
+      {
+        "title": "Complete development",
+        "description": "Frontend, backend, APIs and database - complete solution"
+      },
+      {
+        "title": "Native apps (when needed)",
+        "description": "iOS and Android app development with React Native"
+      },
+      {
+        "title": "Deploy and infrastructure",
+        "description": "We setup production environment, CI/CD and monitoring"
+      },
+      {
+        "title": "Technical documentation",
+        "description": "Documented code and guides to facilitate future maintenance"
+      },
+      {
+        "title": "Consultancy (optional)",
+        "description": "Technical guidance for teams with ongoing projects"
+      }
+    ]
+  },
+  "audience": {
+    "badge": "Who It's For",
+    "title": "Who it's for (and who it's not for)",
+    "isFor": {
+      "title": "Makes sense if:",
+      "list": [
+        "You have a digital product idea",
+        "Need a team to start or evolve",
+        "Looking for technical partners, not just execution",
+        "Want development with technical clarity",
+        "Value quality and good decisions"
+      ]
+    },
+    "isNotFor": {
+      "title": "Doesn't make sense if:",
+      "list": [
+        "Looking for development hours only",
+        "Want a miraculous quick solution",
+        "Don't accept involvement in technical decisions",
+        "Looking for code without follow-up",
+        "Want the cheapest option possible"
+      ]
+    }
+  },
+  "about": {
+    "badge": "About",
+    "title": "Who we are",
+    "description": "We're a team of software engineers with experience in real products. We've worked on projects for Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo and Carlsberg. We work collaboratively with clients, developing complete solutions: web applications, native apps and backend.",
+    "skills": {
+      "react": "React & React Native",
+      "nextjs": "Next.js",
+      "nodejs": "Node.js",
+      "typescript": "TypeScript",
+      "databases": "SQL & NoSQL"
+    }
+  },
+  "finalCta": {
+    "badge": "Available for new projects",
+    "title": "Let's talk about your case",
+    "description": "If you want to understand if we can help with your project, just schedule a conversation. No pressure.",
+    "cta": "Talk about the project",
+    "disclaimer": "No commitment • Free",
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Projects delivered",
+      "satisfaction": "Satisfaction"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}
