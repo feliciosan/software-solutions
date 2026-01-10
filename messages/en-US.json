@@ -3,6 +3,9 @@
     "title": "Software Development | Building digital solutions",
     "description": "Specialized team building high-quality web and mobile applications. From zero to deployment, with solid architecture and clean code."
   },
+  "header": {
+    "tagline": "Strategic Development Partner"
+  },
   "hero": {
     "headline": "From MVP to scale: We build digital products that grow with your business",
     "subheadline": "We transform your idea into a digital product running in production. Scalable architecture, documented code, and transparent technical decisions from day one.",

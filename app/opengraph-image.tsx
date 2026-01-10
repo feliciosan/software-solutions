@@ -47,7 +47,7 @@ export default async function Image() {
             marginBottom: 20,
           }}
         >
-          Software Development Services
+          CodaCrew
         </div>
 
         {/* Subtitle */}

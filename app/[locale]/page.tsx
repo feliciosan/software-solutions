@@ -42,9 +42,9 @@ export async function generateMetadata({
       "consultoria técnica",
       "technical consulting",
     ],
-    authors: [{ name: "Felicio Santos" }],
-    creator: "Felicio Santos",
-    publisher: "Software Development Services",
+    authors: [{ name: "CodaCrew" }],
+    creator: "CodaCrew",
+    publisher: "CodaCrew",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: currentUrl,
@@ -57,7 +57,7 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       url: currentUrl,
-      siteName: "Software Development Services",
+      siteName: "CodaCrew",
       locale: locale,
       type: "website",
       images: [
@@ -73,7 +73,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      creator: "@feliciosan",
+      creator: "@codacrew",
       images: [`${baseUrl}/og-image.jpg`],
     },
     robots: {
@@ -110,7 +110,7 @@ export default async function HomePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Software Development Services",
+    name: "CodaCrew",
     description:
       locale === "pt-BR"
         ? "Time especializado em construir aplicações web e mobile de alta qualidade"
@@ -122,12 +122,12 @@ export default async function HomePage({
       process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com"
     }/logo.png`,
     sameAs: [
-      "https://github.com/feliciosan",
-      "https://linkedin.com/in/feliciosan",
+      "https://github.com/codacrew",
+      "https://linkedin.com/company/codacrew",
     ],
     founder: {
       "@type": "Person",
-      name: "Felicio Santos",
+      name: "CodaCrew Team",
     },
     offers: {
       "@type": "Offer",

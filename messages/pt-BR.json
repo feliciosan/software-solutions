@@ -3,6 +3,9 @@
     "title": "Software Development | Construindo soluções digitais",
     "description": "Time especializado em construir aplicações web e mobile de alta qualidade. Do zero ao deploy, com arquitetura sólida e código limpo."
   },
+  "header": {
+    "tagline": "Parceiro Estratégico de Desenvolvimento"
+  },
   "hero": {
     "headline": "Do MVP à escala: Desenvolvemos produtos digitais que crescem com seu negócio",
     "subheadline": "Transformamos sua ideia em produto digital rodando em produção. Arquitetura escalável, código documentado e decisões técnicas transparentes desde o primeiro dia.",
