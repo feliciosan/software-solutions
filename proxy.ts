@@ -1,12 +1,18 @@
 import createMiddleware from "next-intl/middleware";
 import { locales } from "./i18n";
+import type { NextRequest } from "next/server";
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: "pt-BR",
-  localePrefix: "as-needed",
+  defaultLocale: "en-US",
+  localePrefix: "never",
+  localeDetection: true,
 });
 
+export function proxy(request: NextRequest) {
+  return intlMiddleware(request);
+}
+
 export const config = {
-  matcher: ["/", "/(pt-BR|en-US)/:path*", "/((?!_next|_vercel|.*\\..*).*)"],
+  matcher: ["/", "/((?!api|_next|_vercel|.*\\..*).*)"],
 };

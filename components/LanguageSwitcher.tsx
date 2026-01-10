@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      {locales.map((loc) => (
+      {locales.toSorted().map((loc) => (
         <button
           key={loc}
           onClick={() => switchLocale(loc)}

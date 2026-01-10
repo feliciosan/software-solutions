@@ -125,7 +125,7 @@
   "finalCta": {
     "badge": "Available for new projects",
     "title": "Let's talk about your case",
-    "description": "If you want to understand if we can help with your project, just schedule a conversation. No pressure.",
+    "description": "If you want to understand if we can help with your project, just fill out the form below. No pressure.",
     "cta": "Talk about the project",
     "disclaimer": "No commitment • Free",
     "stats": {
@@ -133,6 +133,27 @@
       "projects": "Projects delivered",
       "satisfaction": "Satisfaction"
     }
+  },
+  "contactForm": {
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com",
+      "error": "Please enter a valid email address"
+    },
+    "company": {
+      "label": "Company/Project",
+      "placeholder": "Your company or project name",
+      "error": "Please provide the company or project name"
+    },
+    "message": {
+      "label": "Tell us about your project",
+      "placeholder": "Briefly describe what you need, challenges you're facing, or how we can help...",
+      "error": "Please provide more details about your project (minimum 10 characters)"
+    },
+    "submit": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll get back to you soon.",
+    "error": "Error sending message. Please try again."
   },
   "languageSwitcher": {
     "label": "Language"

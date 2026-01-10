@@ -125,7 +125,7 @@
   "finalCta": {
     "badge": "Disponível para novos projetos",
     "title": "Vamos conversar sobre o seu caso",
-    "description": "Se quiser entender se podemos ajudar no seu projeto, é só agendar uma conversa. Sem pressão.",
+    "description": "Se quiser entender se podemos ajudar no seu projeto, é só preencher o formulário abaixo. Sem pressão.",
     "cta": "Conversar sobre o projeto",
     "disclaimer": "Sem compromisso • Gratuito",
     "stats": {
@@ -133,6 +133,27 @@
       "projects": "Projetos entregues",
       "satisfaction": "Satisfação"
     }
+  },
+  "contactForm": {
+    "email": {
+      "label": "Email",
+      "placeholder": "seu@email.com",
+      "error": "Por favor, insira um email válido"
+    },
+    "company": {
+      "label": "Empresa/Projeto",
+      "placeholder": "Nome da sua empresa ou projeto",
+      "error": "Por favor, informe o nome da empresa ou projeto"
+    },
+    "message": {
+      "label": "Conte-nos sobre seu projeto",
+      "placeholder": "Descreva brevemente o que você precisa, desafios que está enfrentando ou como podemos ajudar...",
+      "error": "Por favor, forneça mais detalhes sobre seu projeto (mínimo 10 caracteres)"
+    },
+    "submit": "Enviar mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso! Responderemos em breve.",
+    "error": "Erro ao enviar mensagem. Por favor, tente novamente."
   },
   "languageSwitcher": {
     "label": "Idioma"

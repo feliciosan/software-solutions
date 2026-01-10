@@ -6,8 +6,9 @@ export type Locale = (typeof locales)[number];
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
 
+  // Se não houver locale ou não for pt-BR/en-US, usa en-US como fallback
   if (!locale || !locales.includes(locale as Locale)) {
-    locale = "pt-BR";
+    locale = "en-US";
   }
 
   return {
