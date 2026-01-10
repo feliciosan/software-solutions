@@ -4,8 +4,8 @@
     "description": "Specialized team building high-quality web and mobile applications. From zero to deployment, with solid architecture and clean code."
   },
   "hero": {
-    "headline": "Building digital solutions with quality and scale",
-    "subheadline": "We're a specialized team developing complete web and mobile applications, from zero to deployment, with solid architecture and quality code.",
+    "headline": "From MVP to scale: We build digital products that grow with your business",
+    "subheadline": "We transform your idea into a digital product running in production. Scalable architecture, documented code, and transparent technical decisions from day one.",
     "cta": "Talk about your project",
     "availableBadge": "Available for new projects",
     "teamBadge": "Specialized Team",
@@ -20,8 +20,8 @@
     }
   },
   "social": {
-    "title": "Experience with real projects",
-    "description": "Our team has experience with products from companies like Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo and Carlsberg."
+    "title": "Proven experience in real products",
+    "description": "We participated in developing products for Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo, and Carlsberg, processing millions of transactions and serving users worldwide."
   },
   "problems": {
     "badge": "Common Challenges",
@@ -49,11 +49,11 @@
     "title": "How we can help",
     "offerName": "Software Development",
     "offerDuration": "Complete projects",
-    "description": "We develop your application from scratch, with solid architecture, quality code and clear documentation. We also offer technical consultancy for ongoing projects.",
+    "description": "We develop your application from scratch with code review from the first commit, automated tests, documented technical decisions, and complete CI/CD setup. You follow the entire process and understand every decision.",
     "stats": {
-      "experience": "Years of Experience",
-      "projects": "Projects Delivered",
-      "satisfaction": "Satisfaction"
+      "experience": "Years building products",
+      "projects": "Products in production",
+      "satisfaction": "Success rate"
     }
   },
   "included": {
@@ -123,7 +123,7 @@
     }
   },
   "finalCta": {
-    "badge": "Available for new projects",
+    "badge": "Only 2 spots available for Q1 2026",
     "title": "Let's talk about your case",
     "description": "If you want to understand if we can help with your project, just fill out the form below. No pressure.",
     "cta": "Talk about the project",
@@ -144,6 +144,18 @@
       "label": "Company/Project",
       "placeholder": "Your company or project name",
       "error": "Please provide the company or project name"
+    },
+    "budget": {
+      "label": "Estimated budget (optional)",
+      "placeholder": "Select a range",
+      "options": {
+        "none": "Prefer not to say",
+        "small": "Up to $50,000",
+        "medium": "$50,000 - $150,000",
+        "large": "$150,000 - $300,000",
+        "xlarge": "Above $300,000",
+        "undefined": "Not defined yet"
+      }
     },
     "message": {
       "label": "Tell us about your project",

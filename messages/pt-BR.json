@@ -4,8 +4,8 @@
     "description": "Time especializado em construir aplicações web e mobile de alta qualidade. Do zero ao deploy, com arquitetura sólida e código limpo."
   },
   "hero": {
-    "headline": "Construindo soluções digitais com qualidade e escala",
-    "subheadline": "Somos uma equipe especializada em desenvolver aplicações web e mobile completas, do zero ao deploy, com arquitetura sólida e código de qualidade.",
+    "headline": "Do MVP à escala: Desenvolvemos produtos digitais que crescem com seu negócio",
+    "subheadline": "Transformamos sua ideia em produto digital rodando em produção. Arquitetura escalável, código documentado e decisões técnicas transparentes desde o primeiro dia.",
     "cta": "Conversar sobre o projeto",
     "availableBadge": "Disponível para novos projetos",
     "teamBadge": "Time Especializado",
@@ -20,8 +20,8 @@
     }
   },
   "social": {
-    "title": "Experiência em projetos reais",
-    "description": "Nossa equipe tem experiência em produtos de empresas como Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg."
+    "title": "Experiência comprovada em produtos reais",
+    "description": "Participamos do desenvolvimento de produtos para Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg, processando milhões de transações e atendendo usuários ao redor do mundo."
   },
   "problems": {
     "badge": "Desafios Comuns",
@@ -49,11 +49,11 @@
     "title": "Como podemos ajudar",
     "offerName": "Desenvolvimento de Software",
     "offerDuration": "Projetos completos",
-    "description": "Desenvolvemos sua aplicação do zero, com arquitetura sólida, código de qualidade e documentação clara. Também oferecemos consultoria técnica para projetos em andamento.",
+    "description": "Desenvolvemos sua aplicação do zero com code review desde o primeiro commit, testes automatizados, decisões técnicas documentadas e setup completo de CI/CD. Você acompanha todo o processo e entende cada decisão.",
     "stats": {
-      "experience": "Anos de Experiência",
-      "projects": "Projetos Entregues",
-      "satisfaction": "Satisfação"
+      "experience": "Anos desenvolvendo produtos",
+      "projects": "Produtos em produção",
+      "satisfaction": "Taxa de sucesso"
     }
   },
   "included": {
@@ -123,7 +123,7 @@
     }
   },
   "finalCta": {
-    "badge": "Disponível para novos projetos",
+    "badge": "Apenas 2 vagas disponíveis para Q1 2026",
     "title": "Vamos conversar sobre o seu caso",
     "description": "Se quiser entender se podemos ajudar no seu projeto, é só preencher o formulário abaixo. Sem pressão.",
     "cta": "Conversar sobre o projeto",
@@ -144,6 +144,18 @@
       "label": "Empresa/Projeto",
       "placeholder": "Nome da sua empresa ou projeto",
       "error": "Por favor, informe o nome da empresa ou projeto"
+    },
+    "budget": {
+      "label": "Orçamento estimado (opcional)",
+      "placeholder": "Selecione uma faixa",
+      "options": {
+        "none": "Prefiro não informar",
+        "small": "Até R$ 50.000",
+        "medium": "R$ 50.000 - R$ 150.000",
+        "large": "R$ 150.000 - R$ 300.000",
+        "xlarge": "Acima de R$ 300.000",
+        "undefined": "Ainda não definido"
+      }
     },
     "message": {
       "label": "Conte-nos sobre seu projeto",

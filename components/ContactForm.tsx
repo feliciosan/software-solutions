@@ -8,8 +8,9 @@ import { useState } from "react";
 
 // Schema de validação
 const contactSchema = z.object({
-  email: z.email("Invalid email address"),
+  email: z.string().email("Invalid email address"),
   company: z.string().min(2, "Company name is required"),
+  budget: z.string().optional(),
   message: z.string().min(10, "Please provide more details about your project"),
 });
 
@@ -112,6 +113,43 @@ export function ContactForm() {
           {errors.company && (
             <p className="mt-1 text-sm text-red-400">{t("company.error")}</p>
           )}
+        </div>
+
+        {/* Budget Field */}
+        <div>
+          <label
+            htmlFor="budget"
+            className="block text-sm font-medium text-slate-300 mb-2"
+          >
+            {t("budget.label")}
+          </label>
+          <select
+            id="budget"
+            {...register("budget")}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm"
+          >
+            <option value="" className="bg-slate-800">
+              {t("budget.placeholder")}
+            </option>
+            <option value="none" className="bg-slate-800">
+              {t("budget.options.none")}
+            </option>
+            <option value="small" className="bg-slate-800">
+              {t("budget.options.small")}
+            </option>
+            <option value="medium" className="bg-slate-800">
+              {t("budget.options.medium")}
+            </option>
+            <option value="large" className="bg-slate-800">
+              {t("budget.options.large")}
+            </option>
+            <option value="xlarge" className="bg-slate-800">
+              {t("budget.options.xlarge")}
+            </option>
+            <option value="undefined" className="bg-slate-800">
+              {t("budget.options.undefined")}
+            </option>
+          </select>
         </div>
 
         {/* Message Field */}
