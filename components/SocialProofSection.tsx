@@ -45,7 +45,7 @@ export function SocialProofSection() {
   const t = useTranslations("social");
 
   return (
-    <Section background="subtle" className="py-12 sm:py-16">
+    <Section id="about" background="subtle" className="py-12 sm:py-16">
       <Container>
         <div className="text-center">
           <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">
