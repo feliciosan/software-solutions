@@ -83,7 +83,7 @@ export function MVPFinalCTASection() {
 
             {/* Formulário */}
             <div className="p-8 md:p-12 bg-white">
-              <ContactForm variant="mvp" />
+              <ContactForm />
             </div>
           </div>
 
