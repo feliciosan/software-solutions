@@ -36,6 +36,10 @@ export function HeroSection() {
               {t("subheadline")}
             </p>
 
+            <p className="mt-6 text-base text-slate-700 max-w-2xl mx-auto lg:mx-0 border-l-4 border-blue-500 pl-4 italic">
+              {t("foundersIntro")}
+            </p>
+
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
