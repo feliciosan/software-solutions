@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     const validatedData = contactSchema.parse(body);
 
     const { data, error } = await resend.emails.send({
-      from: "Website Contact <onboarding@resend.dev>", // Substitua pelo seu domínio verificado no Resend
+      from: "CodaCrew <contato@codacrew.com>",
       to: ["feliciosantoslive@gmail.com"],
       subject: `Novo contato de ${validatedData.company}`,
       html: `
