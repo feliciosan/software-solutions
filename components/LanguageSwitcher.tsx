@@ -3,6 +3,7 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { locales, Locale } from "@/i18n";
+import posthog from "posthog-js";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -18,6 +19,13 @@ export function LanguageSwitcher() {
     } else {
       segments.unshift(newLocale);
     }
+
+    // Track language switch event
+    posthog.capture("language_switched", {
+      previous_locale: locale,
+      new_locale: newLocale,
+      current_path: pathname,
+    });
 
     router.push("/" + segments.join("/"));
   };

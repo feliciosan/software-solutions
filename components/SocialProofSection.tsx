@@ -1,7 +1,10 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Container } from "./Container";
 import { Section } from "./Section";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 const brands = [
   {
@@ -44,6 +47,12 @@ const brands = [
 export function SocialProofSection() {
   const t = useTranslations("social");
 
+  const handleBrandHover = (brandName: string) => {
+    posthog.capture("brand_logo_hovered", {
+      brand_name: brandName,
+    });
+  };
+
   return (
     <Section id="about" background="subtle" className="py-12 sm:py-16">
       <Container>
@@ -56,6 +65,7 @@ export function SocialProofSection() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
+                onMouseEnter={() => handleBrandHover(brand.name)}
                 className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               >
                 <Image

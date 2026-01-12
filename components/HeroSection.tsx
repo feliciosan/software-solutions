@@ -1,10 +1,27 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Container } from "./Container";
 import { Button } from "./Button";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 export function HeroSection() {
   const t = useTranslations("hero");
+
+  const handleCtaClick = () => {
+    posthog.capture("cta_hero_clicked", {
+      button_text: t("cta"),
+      destination: "#contact",
+    });
+  };
+
+  const handleLearnMoreClick = () => {
+    posthog.capture("cta_learn_more_clicked", {
+      button_text: t("learnMore"),
+      destination: "#about",
+    });
+  };
 
   return (
     <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
@@ -44,6 +61,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 href="#contact"
+                onClick={handleCtaClick}
                 className="shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 transition-all"
               >
                 {t("cta")}
@@ -52,6 +70,7 @@ export function HeroSection() {
                 size="lg"
                 variant="secondary"
                 href="#about"
+                onClick={handleLearnMoreClick}
                 className="border-2 border-slate-200 hover:border-slate-300"
               >
                 {t("learnMore")}
@@ -82,7 +101,7 @@ export function HeroSection() {
 
               <div className="relative flex gap-4 sm:gap-6">
                 {/* Avatar 1 - Top Left - Multiple users */}
-                <div className="absolute -top-4 -left-6 sm:-left-8 z-10 animate-float">
+                <div className="absolute -top-4 left-0 sm:-left-8 z-10 animate-float">
                   <div className="relative">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full shadow-lg flex items-center justify-center border-2 border-white">
                       <svg
@@ -114,7 +133,7 @@ export function HeroSection() {
 
                 {/* Avatar 2 - Top Right - Single user */}
                 <div
-                  className="absolute -top-6 -right-6 sm:-right-8 z-10 animate-float"
+                  className="absolute -top-6 right-0 sm:-right-8 z-10 animate-float"
                   style={{ animationDelay: "0.5s" }}
                 >
                   <div className="relative">
@@ -154,7 +173,7 @@ export function HeroSection() {
 
                 {/* Avatar 3 - Bottom Right - Multiple users */}
                 <div
-                  className="absolute bottom-8 -right-4 sm:-right-6 z-10 animate-float"
+                  className="absolute bottom-8 right-0 sm:-right-6 z-10 animate-float"
                   style={{ animationDelay: "1s" }}
                 >
                   <div className="relative">

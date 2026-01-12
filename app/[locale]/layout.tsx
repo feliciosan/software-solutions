@@ -1,5 +1,5 @@
 import { locales } from "@/i18n";
-import { Metadata, Viewport } from "next";
+import { Viewport } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -30,6 +30,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={inter.className}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body>{children}</body>
     </html>
   );

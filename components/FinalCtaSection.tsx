@@ -1,12 +1,38 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Container } from "./Container";
 import { ContactForm } from "./ContactForm";
+import { useRef, useCallback } from "react";
+import posthog from "posthog-js";
 
 export function FinalCtaSection() {
   const t = useTranslations("finalCta");
+  const hasTrackedViewRef = useRef(false);
+
+  const sectionRef = useCallback((node: HTMLElement | null) => {
+    if (node && !hasTrackedViewRef.current) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasTrackedViewRef.current) {
+              hasTrackedViewRef.current = true;
+              posthog.capture("contact_section_viewed", {
+                timestamp: new Date().toISOString(),
+              });
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(node);
+    }
+  }, []);
 
   return (
     <section
+      ref={sectionRef}
       id="contact"
       className="relative py-16 sm:py-20 lg:py-32 overflow-hidden"
     >

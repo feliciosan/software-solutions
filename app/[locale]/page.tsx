@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { locales } from "@/i18n";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
@@ -154,7 +155,8 @@ export default async function HomePage({
 
   return (
     <>
-      <script
+      <Script
+        id="json-ld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

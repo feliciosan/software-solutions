@@ -4,7 +4,8 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import posthog from "posthog-js";
 
 // Schema de validação
 const contactSchema = z.object({
@@ -23,6 +24,7 @@ export function ContactForm() {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const formStartedRef = useRef(false);
 
   const {
     register,
@@ -32,6 +34,24 @@ export function ContactForm() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  const handleFormStarted = () => {
+    if (!formStartedRef.current) {
+      formStartedRef.current = true;
+      posthog.capture("contact_form_started", {
+        timestamp: new Date().toISOString(),
+      });
+    }
+  };
+
+  const handleBudgetChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const budget = e.target.value;
+    if (budget) {
+      posthog.capture("budget_selected", {
+        budget_value: budget,
+      });
+    }
+  };
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -52,13 +72,37 @@ export function ContactForm() {
         throw new Error(result.error || "Failed to send message");
       }
 
+      // Track successful form submission (conversion event)
+      posthog.capture("contact_form_submitted", {
+        company: data.company,
+        budget: data.budget || "not_specified",
+        message_length: data.message.length,
+      });
+
+      // Identify user by email after successful submission
+      posthog.identify(data.email, {
+        email: data.email,
+        company: data.company,
+        budget: data.budget,
+      });
+
       setSubmitStatus({
         type: "success",
         message: t("success"),
       });
       reset();
+      formStartedRef.current = false;
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
+
+      // Track form submission error
+      posthog.capture("contact_form_error", {
+        error_message: error instanceof Error ? error.message : "Unknown error",
+      });
+
+      // Also capture exception for error tracking
+      posthog.captureException(error);
+
       setSubmitStatus({
         type: "error",
         message: t("error"),
@@ -68,9 +112,20 @@ export function ContactForm() {
     }
   };
 
+  const handleInvalidSubmit = () => {
+    // Track validation errors
+    const errorFields = Object.keys(errors);
+    if (errorFields.length > 0) {
+      posthog.capture("contact_form_validation_error", {
+        error_fields: errorFields,
+        error_count: errorFields.length,
+      });
+    }
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto mt-12">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit, handleInvalidSubmit)} className="space-y-6">
         {/* Email Field */}
         <div>
           <label
@@ -83,6 +138,7 @@ export function ContactForm() {
             id="email"
             type="email"
             {...register("email")}
+            onFocus={handleFormStarted}
             className={`w-full px-4 py-3 bg-white/10 border ${
               errors.email ? "border-red-500" : "border-white/20"
             } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm`}
@@ -125,7 +181,7 @@ export function ContactForm() {
           </label>
           <select
             id="budget"
-            {...register("budget")}
+            {...register("budget", { onChange: handleBudgetChange })}
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm"
           >
             <option value="" className="bg-slate-800">
