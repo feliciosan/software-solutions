@@ -154,10 +154,10 @@
       "placeholder": "Selecione uma faixa",
       "options": {
         "none": "Prefiro não informar",
-        "small": "Até R$ 50.000",
-        "medium": "R$ 50.000 - R$ 150.000",
-        "large": "R$ 150.000 - R$ 300.000",
-        "xlarge": "Acima de R$ 300.000",
+        "small": "Até € 8.000",
+        "medium": "€ 8.000 - € 25.000",
+        "large": "€ 25.000 - € 50.000",
+        "xlarge": "Acima de € 50.000",
         "undefined": "Ainda não definido"
       }
     },
@@ -173,5 +173,312 @@
   },
   "languageSwitcher": {
     "label": "Idioma"
+  },
+  "mvp": {
+    "meta": {
+      "title": "MVP para Startups em 8-12 Semanas | CodaCrew",
+      "description": "Desenvolvemos seu MVP validado com usuários reais. Da ideia ao deploy em 8-12 semanas. Stack moderna, código documentado, CI/CD incluso.",
+      "ogTitle": "MVP Completo para Startups | CodaCrew",
+      "ogDescription": "Do zero aos primeiros usuários em 8-12 semanas"
+    },
+    "hero": {
+      "badge": "Validado por 12+ Startups",
+      "headline": "Seu MVP Pronto para Validar em",
+      "headlineHighlight": "8 Semanas",
+      "subheadline": "Pare de gastar 6 meses e € 35k+ com agências tradicionais",
+      "description": "Entregamos MVPs completos, testados e deployados por € 8k-14k. Você foca no negócio, nós cuidamos da tecnologia.",
+      "ctaPrimary": "Ver Investimento Estimado",
+      "ctaSecondary": "Ver Cases de Sucesso",
+      "stats": {
+        "mvps": "MVPs Entregues",
+        "weeks": "Semanas Médias",
+        "onTime": "No Prazo"
+      }
+    },
+    "problems": {
+      "headline": "Por que 80% dos MVPs falham antes de validar?",
+      "subheadline": "Evite os erros mais comuns que afundam startups",
+      "items": {
+        "0": {
+          "problem": "Agências cobram € 25k+ e entregam em 6 meses",
+          "solution": "Entregamos em 8-12 semanas por € 8k-14k"
+        },
+        "1": {
+          "problem": "Freelancers somem no meio do projeto",
+          "solution": "Equipe dedicada com code review diário e Slack direto"
+        },
+        "2": {
+          "problem": "Código bagunçado impossível de escalar",
+          "solution": "TypeScript, testes, CI/CD e documentação inclusa"
+        },
+        "3": {
+          "problem": "Deploy é um pesadelo que trava tudo",
+          "solution": "Deploy automatizado na Vercel/AWS desde o dia 1"
+        }
+      }
+    },
+    "timeline": {
+      "headline": "Como Entregamos em 8-12 Semanas",
+      "subheadline": "Processo comprovado e transparente",
+      "weeksLabel": "Semanas",
+      "phases": {
+        "0": {
+          "title": "Planejamento & Design",
+          "items": {
+            "0": "Kickoff e alinhamento de expectativas",
+            "1": "Definição de funcionalidades do MVP",
+            "2": "Wireframes e protótipo navegável",
+            "3": "Setup do projeto e arquitetura"
+          }
+        },
+        "1": {
+          "title": "Desenvolvimento Sprint",
+          "items": {
+            "0": "Desenvolvimento de features em sprints semanais",
+            "1": "Code review diário e testes automatizados",
+            "2": "Demos semanais com feedback",
+            "3": "Integração contínua e deploy staging"
+          }
+        },
+        "2": {
+          "title": "Testes & Deploy",
+          "items": {
+            "0": "Testes end-to-end e correção de bugs",
+            "1": "Otimização de performance",
+            "2": "Deploy em produção e monitoramento",
+            "3": "Treinamento e documentação final"
+          }
+        }
+      }
+    },
+    "team": {
+      "badge": "Nosso Time",
+      "headline": "Time Experiente e Entrosado",
+      "subheadline": "Anos de trabalho conjunto resultam em desenvolvimento mais fluido, rápido e com menos erros",
+      "experience": {
+        "title": "Experiência Comprovada",
+        "description": "Nosso time trabalha junto há mais de 5 anos, enfrentando e resolvendo os mais diversos desafios técnicos em startups e empresas de tecnologia."
+      },
+      "synergy": {
+        "title": "Entrosamento que Acelera",
+        "description": "Sabemos como cada um trabalha, antecipamos necessidades e nos comunicamos de forma eficiente. Isso significa menos reuniões e mais código de qualidade."
+      },
+      "efficiency": {
+        "title": "Desenvolvimento Fluido",
+        "description": "Já passamos por todos os cenários possíveis: integrações complexas, arquiteturas escaláveis, refatorações críticas. Sabemos exatamente o que fazer."
+      },
+      "benefits": {
+        "title": "O Que Isso Significa Para Você",
+        "items": {
+          "0": {
+            "title": "Comunicação Eficiente",
+            "description": "Menos ruído, mais resultado"
+          },
+          "1": {
+            "title": "Decisões Rápidas",
+            "description": "Agilidade em cada etapa"
+          },
+          "2": {
+            "title": "Código de Qualidade",
+            "description": "Padrões já estabelecidos"
+          },
+          "3": {
+            "title": "Menos Bugs",
+            "description": "Experiência previne problemas"
+          }
+        }
+      },
+      "stats": {
+        "years": "Anos juntos",
+        "projects": "Projetos",
+        "success": "Taxa sucesso"
+      },
+      "guarantee": {
+        "title": "Você Trabalha Direto com o Time",
+        "description": "Sem intermediários, sem mal-entendidos. Acesso direto via Slack com respostas em até 2h.",
+        "tags": {
+          "0": "Slack Direto",
+          "1": "Updates Semanais",
+          "2": "Code Review Diário"
+        }
+      }
+    },
+    "discoveryCall": {
+      "headline": "Vamos Descobrir Juntos o Melhor Caminho para Seu MVP",
+      "subheadline": "Call de 30 minutos sem compromisso para entender sua visão e desenhar a estratégia ideal",
+      "whatWeDiscuss": {
+        "title": "O Que Vamos Discutir",
+        "items": {
+          "0": {
+            "title": "Sua Visão e Objetivos",
+            "description": "Entender o problema que você quer resolver e o impacto desejado"
+          },
+          "1": {
+            "title": "Escopo e Prioridades",
+            "description": "Definir features essenciais vs. nice-to-have para o MVP"
+          },
+          "2": {
+            "title": "Investimento Personalizado",
+            "description": "Proposta ajustada ao seu orçamento e cronograma"
+          },
+          "3": {
+            "title": "Próximos Passos",
+            "description": "Timeline realista e plano de ação claro"
+          }
+        }
+      },
+      "howItWorks": {
+        "title": "Como Funciona",
+        "steps": {
+          "0": "Você preenche o formulário abaixo com detalhes do projeto",
+          "1": "Respondemos em até 24h para agendar a call",
+          "2": "Conversamos 30min e você recebe uma proposta em 48h"
+        }
+      },
+      "cta": {
+        "primary": "Agendar Discovery Call Gratuita"
+      },
+      "stats": {
+        "duration": "Duração",
+        "price": "Sem custo",
+        "response": "Resposta"
+      },
+      "trust": {
+        "0": "Sem compromisso",
+        "1": "100% confidencial",
+        "2": "Proposta em 48h"
+      }
+    },
+    "calculator": {
+      "headline": "Quanto Custa Seu MVP?",
+      "subheadline": "Calcule em 2 minutos o investimento estimado",
+      "title": "Calculadora de Investimento",
+      "description": "Selecione as funcionalidades do seu projeto:",
+      "features": {
+        "landing": {
+          "label": "Landing Page / Site Institucional"
+        },
+        "webapp": {
+          "label": "Web App Completo (Frontend + Backend + DB)"
+        },
+        "auth": {
+          "label": "Sistema de Autenticação"
+        },
+        "payments": {
+          "label": "Integração de Pagamentos"
+        },
+        "admin": {
+          "label": "Painel Administrativo"
+        },
+        "mobile": {
+          "label": "App Mobile (iOS + Android)"
+        },
+        "ai": {
+          "label": "Integração com IA (GPT-4, etc)"
+        }
+      },
+      "estimatedCost": "Investimento Estimado",
+      "timeline": "Prazo",
+      "weeks": "semanas",
+      "days": "dias",
+      "selectFeatures": "Selecione features",
+      "priceRange": "Faixa de investimento aproximada",
+      "disclaimer": "Valores incluem: código, testes, deploy, documentação e 1 mês de suporte",
+      "priceVariation": "Os preços podem variar de acordo com a complexidade e requisitos específicos do projeto",
+      "cta": "Receber Proposta Detalhada"
+    },
+    "cases": {
+      "headline": "MVPs que Validaram e Cresceram",
+      "subheadline": "Histórias reais de sucesso",
+      "investmentLabel": "Investimento",
+      "resultLabel": "Resultado Alcançado",
+      "items": {
+        "0": {
+          "company": "FinTech SaaS",
+          "timeline": "10 semanas",
+          "budget": "€ 11.5k",
+          "result": "€ 8.5k MRR em 4 meses",
+          "quote": "A CodaCrew entregou nosso MVP 2x mais rápido que a agência anterior cobraria. O código é tão bom que escalamos para 10k usuários sem refatorar nada.",
+          "metrics": {
+            "0": "10k usuários",
+            "1": "€ 8.5k MRR",
+            "2": "0 bugs críticos"
+          }
+        },
+        "1": {
+          "company": "Marketplace B2B",
+          "timeline": "12 semanas",
+          "budget": "€ 12.5k",
+          "result": "Adquirida por € 350k",
+          "quote": "Validamos o produto com clientes reais em 3 meses. A qualidade do código permitiu escalar rapidamente quando os investidores apareceram.",
+          "metrics": {
+            "0": "500+ empresas",
+            "1": "Adquirida",
+            "2": "Stack moderna"
+          }
+        }
+      }
+    },
+    "included": {
+      "headline": "O Que Está Incluído",
+      "subheadline": "Tudo que você precisa para validar seu MVP",
+      "items": {
+        "0": {
+          "title": "Código Production-Ready",
+          "description": "TypeScript, Next.js, testes automatizados e padrões enterprise"
+        },
+        "1": {
+          "title": "Testes Automatizados",
+          "description": "Unit tests, integration tests e E2E com Playwright"
+        },
+        "2": {
+          "title": "Design Responsivo",
+          "description": "Interface moderna e responsiva para desktop, tablet e mobile"
+        },
+        "3": {
+          "title": "Deploy Automatizado",
+          "description": "CI/CD configurado com Vercel ou AWS, deploy em minutos"
+        },
+        "4": {
+          "title": "Documentação Completa",
+          "description": "README técnico, guia de setup e documentação de APIs"
+        },
+        "5": {
+          "title": "1 Mês de Suporte",
+          "description": "Correção de bugs e ajustes pós-launch inclusos"
+        }
+      }
+    },
+    "guarantees": {
+      "headline": "Nossas Garantias",
+      "items": {
+        "0": {
+          "title": "Entrega no Prazo",
+          "description": "100% dos nossos projetos foram entregues dentro do prazo acordado"
+        },
+        "1": {
+          "title": "Code Review Diário",
+          "description": "Todo código passa por revisão antes de ir para produção"
+        },
+        "2": {
+          "title": "Comunicação Transparente",
+          "description": "Updates semanais, Slack direto e demos regulares"
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Comece Agora",
+      "headline": "Pronto para Tirar Sua Ideia do Papel?",
+      "subheadline": "Agende uma call de 30 min para discutir seu MVP (sem compromisso)",
+      "formTitle": "Vamos Conversar Sobre Seu Projeto",
+      "formSubtitle": "Preencha o formulário e retornaremos em até 24h",
+      "responseTime": "Respondemos em até 24h úteis",
+      "scheduleCall": "Agendar call gratuita",
+      "stats": {
+        "satisfaction": "Satisfação",
+        "response": "Resposta",
+        "projects": "Projetos"
+      }
+    }
   }
 }

@@ -125,12 +125,15 @@ export function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-12">
-      <form onSubmit={handleSubmit(onSubmit, handleInvalidSubmit)} className="space-y-6">
+      <form
+        onSubmit={handleSubmit(onSubmit, handleInvalidSubmit)}
+        className="space-y-6"
+      >
         {/* Email Field */}
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-semibold text-slate-800 mb-2"
           >
             {t("email.label")}
           </label>
@@ -139,13 +142,13 @@ export function ContactForm() {
             type="email"
             {...register("email")}
             onFocus={handleFormStarted}
-            className={`w-full px-4 py-3 bg-white/10 border ${
-              errors.email ? "border-red-500" : "border-white/20"
-            } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.email ? "border-red-500" : "border-slate-300"
+            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm`}
             placeholder={t("email.placeholder")}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-400">{t("email.error")}</p>
+            <p className="mt-1 text-sm text-red-600">{t("email.error")}</p>
           )}
         </div>
 
@@ -153,7 +156,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="company"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-semibold text-slate-800 mb-2"
           >
             {t("company.label")}
           </label>
@@ -161,13 +164,13 @@ export function ContactForm() {
             id="company"
             type="text"
             {...register("company")}
-            className={`w-full px-4 py-3 bg-white/10 border ${
-              errors.company ? "border-red-500" : "border-white/20"
-            } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.company ? "border-red-500" : "border-slate-300"
+            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm`}
             placeholder={t("company.placeholder")}
           />
           {errors.company && (
-            <p className="mt-1 text-sm text-red-400">{t("company.error")}</p>
+            <p className="mt-1 text-sm text-red-600">{t("company.error")}</p>
           )}
         </div>
 
@@ -175,34 +178,34 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="budget"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-semibold text-slate-800 mb-2"
           >
             {t("budget.label")}
           </label>
           <select
             id="budget"
             {...register("budget", { onChange: handleBudgetChange })}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm"
+            className="w-full px-4 py-3 bg-white border-2 border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
           >
-            <option value="" className="bg-slate-800">
+            <option value="" className="bg-white text-slate-900">
               {t("budget.placeholder")}
             </option>
-            <option value="none" className="bg-slate-800">
+            <option value="none" className="bg-white text-slate-900">
               {t("budget.options.none")}
             </option>
-            <option value="small" className="bg-slate-800">
+            <option value="small" className="bg-white text-slate-900">
               {t("budget.options.small")}
             </option>
-            <option value="medium" className="bg-slate-800">
+            <option value="medium" className="bg-white text-slate-900">
               {t("budget.options.medium")}
             </option>
-            <option value="large" className="bg-slate-800">
+            <option value="large" className="bg-white text-slate-900">
               {t("budget.options.large")}
             </option>
-            <option value="xlarge" className="bg-slate-800">
+            <option value="xlarge" className="bg-white text-slate-900">
               {t("budget.options.xlarge")}
             </option>
-            <option value="undefined" className="bg-slate-800">
+            <option value="undefined" className="bg-white text-slate-900">
               {t("budget.options.undefined")}
             </option>
           </select>
@@ -212,7 +215,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-semibold text-slate-800 mb-2"
           >
             {t("message.label")}
           </label>
@@ -220,13 +223,13 @@ export function ContactForm() {
             id="message"
             rows={5}
             {...register("message")}
-            className={`w-full px-4 py-3 bg-white/10 border ${
-              errors.message ? "border-red-500" : "border-white/20"
-            } rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm resize-none`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.message ? "border-red-500" : "border-slate-300"
+            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm resize-none`}
             placeholder={t("message.placeholder")}
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-400">{t("message.error")}</p>
+            <p className="mt-1 text-sm text-red-600">{t("message.error")}</p>
           )}
         </div>
 
@@ -234,7 +237,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-6 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-blue-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl hover:scale-[1.02] transform"
+          className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl hover:scale-[1.02] transform"
         >
           {isSubmitting ? t("sending") : t("submit")}
         </button>
