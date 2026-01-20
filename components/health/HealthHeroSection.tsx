@@ -9,7 +9,7 @@ export function HealthHeroSection() {
   const t = useTranslations("health.hero");
 
   const openWhatsApp = () => {
-    const phone = "5511999999999"; // Substituir pelo número real
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
     const message = encodeURIComponent(t("whatsappMessage"));
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
