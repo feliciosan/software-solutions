@@ -594,7 +594,8 @@
       },
       "ctaTitle": "Everything ready for you to start",
       "ctaSubtitle": "No need to worry about anything technical. We take care of everything.",
-      "ctaBadge": "No hassle"
+      "ctaBadge": "No hassle",
+      "demoButton": "See Example Site"
     },
     "audience": {
       "badge": "Who It's For",
@@ -649,6 +650,252 @@
       "cta": "Chat on WhatsApp",
       "whatsappMessage": "Hi! I'm a healthcare professional and want to know more about having my professional page.",
       "guarantee": "Quick response with no commitment"
+    }
+  },
+  "psychologist": {
+    "metadata": {
+      "title": "Dr. Ana Paula Silva - Psychologist CRP 06/12345",
+      "description": "Clinical psychology specialized in Cognitive-Behavioral Therapy. Humanized care, in-person and online."
+    },
+    "hero": {
+      "availableBadge": "Available for appointments",
+      "headline1": "Take care of your",
+      "headline2": "mental health",
+      "description": "Clinical psychology specialized in Cognitive-Behavioral Therapy with over 12 years of experience. Humanized care, in-person and online.",
+      "name": "Dr. Ana Paula Silva",
+      "credentials": "CRP 06/12345 • Clinical Psychologist",
+      "stats": {
+        "experience": "12+",
+        "experienceLabel": "Years of\nExperience",
+        "patients": "500+",
+        "patientsLabel": "Patients\nSeen",
+        "satisfaction": "98%",
+        "satisfactionLabel": "Client\nSatisfaction"
+      },
+      "cta": "Book Appointment",
+      "learnMore": "Learn more",
+      "certification": {
+        "title": "Certified CRP",
+        "titleShort": "CRP",
+        "subtitle": "Active and regularized registration",
+        "subtitleShort": "Certified"
+      },
+      "scrollHint": "Scroll down"
+    },
+    "areas": {
+      "badge": "Areas of Expertise",
+      "title": "How I Can Help You",
+      "subtitle": "Specialized care in various areas of clinical psychology",
+      "list": [
+        {
+          "title": "Anxiety",
+          "description": "Effective techniques to control crises and develop emotional resilience"
+        },
+        {
+          "title": "Depression",
+          "description": "Therapeutic approach to recover well-being and motivation"
+        },
+        {
+          "title": "Relationships",
+          "description": "Improve communication and strengthen personal and family bonds"
+        },
+        {
+          "title": "Self-Esteem",
+          "description": "Build a healthier relationship with yourself"
+        },
+        {
+          "title": "Stress",
+          "description": "Learn to manage daily pressures in a balanced way"
+        },
+        {
+          "title": "Personal Development",
+          "description": "Achieve your goals and realize your maximum potential"
+        }
+      ]
+    },
+    "process": {
+      "badge": "Process",
+      "title": "How It Works",
+      "subtitle": "A clear and welcoming path for your therapeutic journey",
+      "steps": [
+        {
+          "number": "01",
+          "title": "First Contact",
+          "description": "Get in touch and schedule your first evaluation appointment"
+        },
+        {
+          "number": "02",
+          "title": "Initial Assessment",
+          "description": "We discuss your needs and set therapeutic goals"
+        },
+        {
+          "number": "03",
+          "title": "Regular Sessions",
+          "description": "Weekly or biweekly meetings, in-person or online"
+        },
+        {
+          "number": "04",
+          "title": "Follow-up",
+          "description": "We monitor your progress and adjust strategies as needed"
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Testimonials",
+      "title": "What My Patients Say",
+      "subtitle": "Real stories of transformation and personal growth",
+      "list": [
+        {
+          "text": "Therapy with Dr. Ana Paula changed my life. I learned to deal with my anxiety in a practical and effective way. Highly recommend!",
+          "author": "Maria Silva",
+          "role": "Patient for 2 years",
+          "rating": 5
+        },
+        {
+          "text": "Extremely competent and welcoming professional. Online sessions are as effective as in-person ones. Very satisfied with my progress.",
+          "author": "João Santos",
+          "role": "Patient for 1 year",
+          "rating": 5
+        },
+        {
+          "text": "After years struggling with depression, I finally found a psychologist who truly understands me. Eternal gratitude!",
+          "author": "Ana Costa",
+          "role": "Patient for 3 years",
+          "rating": 5
+        }
+      ],
+      "stats": {
+        "title": "Proven Results",
+        "experience": "12+ Years",
+        "experienceLabel": "Of clinical experience",
+        "patients": "500+",
+        "patientsLabel": "Patients seen",
+        "satisfaction": "98%",
+        "satisfactionLabel": "Satisfaction rate"
+      },
+      "about": {
+        "badge": "About Me",
+        "title": "Meet Your Psychologist",
+        "description": "I am a clinical psychologist with over 12 years of experience in patient care. Specialized in Cognitive-Behavioral Therapy, my mission is to help people overcome their emotional challenges and achieve a more balanced and fulfilling life.",
+        "credentials": "CRP 06/12345",
+        "benefits": [
+          "100% confidential and ethical service",
+          "Flexible hours, including Saturdays",
+          "Online or in-person sessions",
+          "First consultation with special discount"
+        ]
+      }
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "Clear Your Doubts",
+      "subtitle": "Answers to the most common questions about the therapeutic process",
+      "stillHaveQuestions": "Still have questions?",
+      "contactCTA": "Get in touch",
+      "list": [
+        {
+          "question": "How does the first appointment work?",
+          "answer": "The first appointment is an initial assessment where we'll discuss your goals, history, and expectations. It's a moment for us to get to know each other and for you to decide if you want to start the therapeutic process."
+        },
+        {
+          "question": "How long are the sessions?",
+          "answer": "Each session lasts 50 minutes. I recommend weekly or biweekly sessions, depending on each case."
+        },
+        {
+          "question": "Do you offer online sessions?",
+          "answer": "Yes! I offer both in-person and online sessions with the same quality and effectiveness. Online sessions are conducted via video call on a secure platform."
+        },
+        {
+          "question": "How much does an appointment cost?",
+          "answer": "Contact me for information about prices and payment methods. I work with affordable rates and offer installment options."
+        },
+        {
+          "question": "Do you accept insurance?",
+          "answer": "I work privately, but I provide receipts for reimbursement with your insurance, when applicable."
+        },
+        {
+          "question": "How do I schedule an appointment?",
+          "answer": "You can schedule via WhatsApp, phone, or through the contact form. I respond within 24 hours."
+        },
+        {
+          "question": "How long does treatment last?",
+          "answer": "Duration varies according to each case. Some people achieve their goals in a few months, others prefer to maintain longer-term support."
+        },
+        {
+          "question": "What is Cognitive-Behavioral Therapy?",
+          "answer": "It's a therapeutic approach focused on identifying and modifying thought and behavior patterns that cause suffering, promoting practical and lasting changes."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Take the first step",
+      "title": "Ready to start your",
+      "titleHighlight": "journey?",
+      "subtitle": "Schedule your first appointment with a special 20% discount. Limited spots for new patients this month.",
+      "benefits": [
+        "First appointment with 20% discount",
+        "Response within 24 hours",
+        "In-person or online service",
+        "Flexible hours, including Saturdays"
+      ],
+      "whatsappCTA": "WhatsApp",
+      "phoneCTA": "Call now",
+      "form": {
+        "title": "Schedule your appointment",
+        "subtitle": "Fill out the form and we'll contact you soon",
+        "nameLabel": "Full name *",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email *",
+        "emailPlaceholder": "your@email.com",
+        "phoneLabel": "WhatsApp *",
+        "phonePlaceholder": "(11) 99999-9999",
+        "messageLabel": "How can I help you?",
+        "messagePlaceholder": "Tell me a little about what you're looking for...",
+        "submitButton": "Request appointment",
+        "submittingButton": "Sending...",
+        "successButton": "Sent successfully!",
+        "privacyNote": "By submitting, you agree to our privacy policy"
+      }
+    },
+    "footer": {
+      "brand": {
+        "name": "Dr. Ana Paula Silva",
+        "credentials": "Psychologist CRP 06/12345",
+        "tagline": "Taking care of your mental health with warmth, professionalism and dedication."
+      },
+      "links": {
+        "title": "Quick Links",
+        "home": "Home",
+        "areas": "Areas of Expertise",
+        "process": "How It Works",
+        "testimonials": "Testimonials",
+        "faq": "Frequently Asked Questions"
+      },
+      "specialties": {
+        "title": "Specialties",
+        "list": [
+          "Anxiety",
+          "Depression",
+          "Couples Therapy",
+          "Self-Esteem",
+          "Professional Stress",
+          "Personal Development"
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "address": {
+          "line1": "Av. Paulista, 1000 - Suite 801",
+          "line2": "São Paulo, SP - ZIP 01310-100"
+        },
+        "email": "contact@draanapaula.com.br",
+        "phone": "(11) 99999-9999",
+        "hours": "Mon - Sat: 8am to 8pm"
+      },
+      "copyright": "© {year} Dr. Ana Paula Silva - Psychologist. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms of Use",
+      "developedBy": "Developed by"
     }
   }
 }

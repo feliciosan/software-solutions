@@ -594,7 +594,8 @@
       },
       "ctaTitle": "Tudo pronto para você começar",
       "ctaSubtitle": "Não precisa se preocupar com nada técnico. Nós cuidamos de tudo.",
-      "ctaBadge": "Sem complicação"
+      "ctaBadge": "Sem complicação",
+      "demoButton": "Ver Exemplo de Site"
     },
     "audience": {
       "badge": "Para Quem É",
@@ -649,6 +650,252 @@
       "cta": "Conversar no WhatsApp",
       "whatsappMessage": "Olá! Sou um profissional de saúde e quero saber mais sobre ter minha página profissional.",
       "guarantee": "Resposta rápida e sem compromisso"
+    }
+  },
+  "psychologist": {
+    "metadata": {
+      "title": "Dra. Ana Paula Silva - Psicóloga CRP 06/12345",
+      "description": "Psicologia clínica especializada em Terapia Cognitivo-Comportamental. Atendimento humanizado, presencial e online."
+    },
+    "hero": {
+      "availableBadge": "Disponível para consultas",
+      "headline1": "Cuide da sua",
+      "headline2": "saúde mental",
+      "description": "Psicologia clínica especializada em Terapia Cognitivo-Comportamental com mais de 12 anos de experiência. Atendimento humanizado, presencial e online.",
+      "name": "Dra. Ana Paula Silva",
+      "credentials": "CRP 06/12345 • Psicóloga Clínica",
+      "stats": {
+        "experience": "12+",
+        "experienceLabel": "Anos de\nExperiência",
+        "patients": "500+",
+        "patientsLabel": "Pacientes\nAtendidos",
+        "satisfaction": "98%",
+        "satisfactionLabel": "Satisfação\nDos Clientes"
+      },
+      "cta": "Agendar Consulta",
+      "learnMore": "Conhecer mais",
+      "certification": {
+        "title": "Certificada CRP",
+        "titleShort": "CRP",
+        "subtitle": "Registro ativo e regularizado",
+        "subtitleShort": "Certificada"
+      },
+      "scrollHint": "Role para baixo"
+    },
+    "areas": {
+      "badge": "Áreas de Atuação",
+      "title": "Como Posso Te Ajudar",
+      "subtitle": "Atendimento especializado em diversas áreas da psicologia clínica",
+      "list": [
+        {
+          "title": "Ansiedade",
+          "description": "Técnicas eficazes para controlar crises e desenvolver resiliência emocional"
+        },
+        {
+          "title": "Depressão",
+          "description": "Abordagem terapêutica para recuperar o bem-estar e a motivação"
+        },
+        {
+          "title": "Relacionamentos",
+          "description": "Melhore a comunicação e fortaleça vínculos pessoais e familiares"
+        },
+        {
+          "title": "Autoestima",
+          "description": "Construa uma relação mais saudável consigo mesmo"
+        },
+        {
+          "title": "Estresse",
+          "description": "Aprenda a gerenciar pressões do dia a dia de forma equilibrada"
+        },
+        {
+          "title": "Desenvolvimento Pessoal",
+          "description": "Alcance seus objetivos e realize seu potencial máximo"
+        }
+      ]
+    },
+    "process": {
+      "badge": "Processo",
+      "title": "Como Funciona",
+      "subtitle": "Um caminho claro e acolhedor para sua jornada terapêutica",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Primeiro Contato",
+          "description": "Entre em contato e agende sua primeira consulta de avaliação"
+        },
+        {
+          "number": "02",
+          "title": "Avaliação Inicial",
+          "description": "Conversamos sobre suas necessidades e traçamos objetivos terapêuticos"
+        },
+        {
+          "number": "03",
+          "title": "Sessões Regulares",
+          "description": "Encontros semanais ou quinzenais, presenciais ou online"
+        },
+        {
+          "number": "04",
+          "title": "Acompanhamento",
+          "description": "Monitoramos seu progresso e ajustamos as estratégias conforme necessário"
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Depoimentos",
+      "title": "O Que Meus Pacientes Dizem",
+      "subtitle": "Histórias reais de transformação e crescimento pessoal",
+      "list": [
+        {
+          "text": "A terapia com a Dra. Ana Paula mudou minha vida. Aprendi a lidar com minha ansiedade de forma prática e efetiva. Recomendo muito!",
+          "author": "Maria Silva",
+          "role": "Paciente há 2 anos",
+          "rating": 5
+        },
+        {
+          "text": "Profissional extremamente competente e acolhedora. As sessões online são tão eficazes quanto as presenciais. Estou muito satisfeito com meu progresso.",
+          "author": "João Santos",
+          "role": "Paciente há 1 ano",
+          "rating": 5
+        },
+        {
+          "text": "Depois de anos lutando contra a depressão, finalmente encontrei uma psicóloga que realmente me entende. Gratidão eterna!",
+          "author": "Ana Costa",
+          "role": "Paciente há 3 anos",
+          "rating": 5
+        }
+      ],
+      "stats": {
+        "title": "Resultados Comprovados",
+        "experience": "12+ Anos",
+        "experienceLabel": "De experiência clínica",
+        "patients": "500+",
+        "patientsLabel": "Pacientes atendidos",
+        "satisfaction": "98%",
+        "satisfactionLabel": "Taxa de satisfação"
+      },
+      "about": {
+        "badge": "Sobre Mim",
+        "title": "Conheça Sua Psicóloga",
+        "description": "Sou psicóloga clínica com mais de 12 anos de experiência em atendimento. Especializada em Terapia Cognitivo-Comportamental, minha missão é ajudar pessoas a superarem seus desafios emocionais e alcançarem uma vida mais equilibrada e satisfatória.",
+        "credentials": "CRP 06/12345",
+        "benefits": [
+          "Atendimento 100% sigiloso e ético",
+          "Horários flexíveis, inclusive aos sábados",
+          "Sessões online ou presenciais",
+          "Primeira consulta com desconto especial"
+        ]
+      }
+    },
+    "faq": {
+      "badge": "Perguntas Frequentes",
+      "title": "Tire suas dúvidas",
+      "subtitle": "Respostas para as perguntas mais comuns sobre o processo terapêutico",
+      "stillHaveQuestions": "Ainda tem dúvidas?",
+      "contactCTA": "Entre em contato",
+      "list": [
+        {
+          "question": "Como funciona a primeira consulta?",
+          "answer": "A primeira consulta é uma avaliação inicial onde conversaremos sobre seus objetivos, histórico e expectativas. É um momento para nos conhecermos e você decidir se quer iniciar o processo terapêutico."
+        },
+        {
+          "question": "Qual a duração das sessões?",
+          "answer": "Cada sessão tem duração de 50 minutos. Recomendo sessões semanais ou quinzenais, dependendo de cada caso."
+        },
+        {
+          "question": "Atende online?",
+          "answer": "Sim! Atendo tanto presencial quanto online, com a mesma qualidade e eficácia. As sessões online são realizadas por videochamada em plataforma segura."
+        },
+        {
+          "question": "Quanto custa a consulta?",
+          "answer": "Entre em contato para informações sobre valores e formas de pagamento. Trabalho com valores acessíveis e ofereço opções de parcelamento."
+        },
+        {
+          "question": "Aceita convênio?",
+          "answer": "Trabalho como particular, mas forneço recibo para reembolso junto ao seu convênio, quando aplicável."
+        },
+        {
+          "question": "Como agendar uma consulta?",
+          "answer": "Você pode agendar pelo WhatsApp, telefone ou através do formulário de contato. Retorno em até 24 horas."
+        },
+        {
+          "question": "Quanto tempo dura o tratamento?",
+          "answer": "A duração varia de acordo com cada caso. Algumas pessoas alcançam seus objetivos em poucos meses, outras preferem manter um acompanhamento mais longo."
+        },
+        {
+          "question": "O que é Terapia Cognitivo-Comportamental?",
+          "answer": "É uma abordagem terapêutica focada em identificar e modificar padrões de pensamento e comportamento que causam sofrimento, promovendo mudanças práticas e duradouras."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Dê o primeiro passo",
+      "title": "Pronto para começar sua",
+      "titleHighlight": "jornada?",
+      "subtitle": "Agende sua primeira consulta com desconto especial de 20%. Vagas limitadas para novos pacientes este mês.",
+      "benefits": [
+        "Primeira consulta com 20% de desconto",
+        "Resposta em até 24 horas",
+        "Atendimento presencial ou online",
+        "Horários flexíveis, inclusive aos sábados"
+      ],
+      "whatsappCTA": "WhatsApp",
+      "phoneCTA": "Ligar agora",
+      "form": {
+        "title": "Agende sua consulta",
+        "subtitle": "Preencha o formulário e entraremos em contato em breve",
+        "nameLabel": "Nome completo *",
+        "namePlaceholder": "Seu nome",
+        "emailLabel": "E-mail *",
+        "emailPlaceholder": "seu@email.com",
+        "phoneLabel": "WhatsApp *",
+        "phonePlaceholder": "(11) 99999-9999",
+        "messageLabel": "Como posso te ajudar?",
+        "messagePlaceholder": "Conte um pouco sobre o que você está buscando...",
+        "submitButton": "Solicitar agendamento",
+        "submittingButton": "Enviando...",
+        "successButton": "Enviado com sucesso!",
+        "privacyNote": "Ao enviar, você concorda com nossa política de privacidade"
+      }
+    },
+    "footer": {
+      "brand": {
+        "name": "Dra. Ana Paula Silva",
+        "credentials": "Psicóloga CRP 06/12345",
+        "tagline": "Cuidando da sua saúde mental com acolhimento, profissionalismo e dedicação."
+      },
+      "links": {
+        "title": "Links Rápidos",
+        "home": "Início",
+        "areas": "Áreas de Atuação",
+        "process": "Como Funciona",
+        "testimonials": "Depoimentos",
+        "faq": "Perguntas Frequentes"
+      },
+      "specialties": {
+        "title": "Especialidades",
+        "list": [
+          "Ansiedade",
+          "Depressão",
+          "Terapia de Casal",
+          "Autoestima",
+          "Estresse Profissional",
+          "Desenvolvimento Pessoal"
+        ]
+      },
+      "contact": {
+        "title": "Contato",
+        "address": {
+          "line1": "Av. Paulista, 1000 - Conj. 801",
+          "line2": "São Paulo, SP - CEP 01310-100"
+        },
+        "email": "contato@draanapaula.com.br",
+        "phone": "(11) 99999-9999",
+        "hours": "Seg - Sáb: 8h às 20h"
+      },
+      "copyright": "© {year} Dra. Ana Paula Silva - Psicóloga. Todos os direitos reservados.",
+      "privacyPolicy": "Política de Privacidade",
+      "termsOfUse": "Termos de Uso",
+      "developedBy": "Desenvolvido por"
     }
   }
 }
