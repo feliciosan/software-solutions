@@ -62,7 +62,7 @@ export function HealthFinalCTASection() {
           <Button
             size="lg"
             onClick={openWhatsApp}
-            className="bg-green-600 hover:bg-green-700 shadow-xl shadow-green-600/20 hover:shadow-2xl hover:shadow-green-600/30 transition-all text-lg px-12 py-4"
+            className="!bg-green-600 hover:!bg-green-700 shadow-xl shadow-green-600/20 hover:shadow-2xl hover:shadow-green-600/30 transition-all text-lg px-12 py-4"
             aria-label="Iniciar conversa no WhatsApp para orçamento"
           >
             💬 {t("cta")}

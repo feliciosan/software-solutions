@@ -44,7 +44,7 @@ export function HealthHeroSection() {
             <Button
               size="lg"
               onClick={openWhatsApp}
-              className="bg-green-600 hover:bg-green-700 shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30 transition-all"
+              className="!bg-green-600 hover:!bg-green-700 shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30 transition-all"
               aria-label="Falar com especialista no WhatsApp"
             >
               💬 {t("cta")}
