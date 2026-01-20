@@ -480,5 +480,175 @@
         "projects": "Projects"
       }
     }
+  },
+  "health": {
+    "meta": {
+      "title": "Professional Page for Healthcare Professionals | CodaCrew",
+      "description": "Professional page ready in a few days for psychologists, dentists, nutritionists and physical therapists. Build more credibility and professionalism.",
+      "ogTitle": "Page for Healthcare Professionals - Ready in Days",
+      "ogDescription": "Build trust and attract more patients with a professional page made especially for healthcare professionals."
+    },
+    "hero": {
+      "badge": "Ideal for Healthcare Professionals",
+      "headline": "Are you a healthcare professional without a professional website?",
+      "headlineHighlight": "Get a complete and modern online presence, ready in just a few days.",
+      "subheadline": "CodaCrew creates professional websites for nutritionists, psychologists, and other healthcare professionals who want more credibility and new patients, without hassle and high costs.",
+      "bullet1": "Professional page for a price that fits your pocket",
+      "bullet2": "Ready in a few days, no hassle",
+      "bullet3": "Ideal for psychologists, dentists, nutritionists and physical therapists",
+      "cta": "Chat on WhatsApp",
+      "whatsappMessage": "Hi! I'm a healthcare professional and want to know more about having my professional page.",
+      "trustBadge1": "Affordable pricing",
+      "trustBadge2": "Fast delivery",
+      "trustBadge3": "Human support",
+      "imageCaption": "For professionals who want to grow online",
+      "priceLabel": "Investment",
+      "priceText": "Affordable prices"
+    },
+    "mission": {
+      "headline": "Who's behind CodaCrew",
+      "subheadline": "We're Felício and Gabriel Santos. We created CodaCrew to help professionals stand out online, especially those just starting out.",
+      "member1": {
+        "role": "Co-founder",
+        "bio": "Over 12 years creating pages and systems on the internet. My mission is to make the internet accessible to those who really need it."
+      },
+      "member2": {
+        "role": "Co-founder",
+        "bio": "Specialist in creating pages for professionals. I believe every professional deserves quality online presence."
+      },
+      "missionBadge": "Our Mission",
+      "missionTitle": "Help new professionals have a professional presence on the internet",
+      "missionDescription": "We know that at the beginning of a career, budgets are tight. That's why we create professional pages with affordable prices, without compromising on quality.",
+      "stat1Value": "12+",
+      "stat1Label": "Years of experience",
+      "stat2Value": "100%",
+      "stat2Label": "Made with care",
+      "stat3Value": "💙",
+      "stat3Label": "Human support"
+    },
+    "problem": {
+      "badge": "Common Challenge",
+      "headline": "Instagram alone doesn't build trust",
+      "subheadline": "When someone looks for a healthcare professional, trust is everything. But many professionals still rely only on social media.",
+      "problem1": {
+        "title": "Instagram Dependency",
+        "description": "You're limited to what Instagram allows and could lose all your followers if something goes wrong."
+      },
+      "problem2": {
+        "title": "Doesn't convey credibility",
+        "description": "Potential patients may doubt your seriousness when you don't have a professional page."
+      },
+      "problem3": {
+        "title": "Loses patients",
+        "description": "Many professionals lose opportunities by appearing too amateur or informal."
+      },
+      "emphasis": "A professional page shows you take your career seriously and gives patients the confidence they need."
+    },
+    "solution": {
+      "badge": "The Solution",
+      "headline": "A professional page changes how you're perceived",
+      "subheadline": "Have a serious presence on the internet that conveys professionalism and inspires confidence.",
+      "benefit1": {
+        "title": "More Credibility",
+        "description": "Patients trust professionals with a professional and well-structured presence on the internet more."
+      },
+      "benefit2": {
+        "title": "More Professionalism",
+        "description": "A well-made page shows you care about your image and career."
+      },
+      "benefit3": {
+        "title": "Serious Presence on the Internet",
+        "description": "Be found on Google and have your own space, independent of social media."
+      },
+      "benefit4": {
+        "title": "Your Own Space",
+        "description": "A place where patients can learn about you, your services and contact you easily."
+      },
+      "emphasis": "You don't need to understand the internet.",
+      "emphasisSub": "We take care of everything for you."
+    },
+    "included": {
+      "headline": "What's included in your page",
+      "subheadline": "Everything you need to start serving with professionalism. Simple and complete.",
+      "items": {
+        "0": {
+          "title": "Complete Page",
+          "description": "Modern and professional design, made especially for healthcare professionals."
+        },
+        "1": {
+          "title": "Professional Design",
+          "description": "Visual that conveys trust and credibility to your patients."
+        },
+        "2": {
+          "title": "Works on Phone and Computer",
+          "description": "Your patients can access it perfectly from any device."
+        },
+        "3": {
+          "title": "About You",
+          "description": "Page to tell your story, education and experience."
+        },
+        "4": {
+          "title": "Your Services",
+          "description": "Clearly show what you offer and how you can help."
+        }
+      },
+      "ctaTitle": "Everything ready for you to start",
+      "ctaSubtitle": "No need to worry about anything technical. We take care of everything.",
+      "ctaBadge": "No hassle"
+    },
+    "audience": {
+      "badge": "Who It's For",
+      "headline": "Who is it for",
+      "prof1": "Psychologists",
+      "prof2": "Dentists",
+      "prof3": "Nutritionists",
+      "prof4": "Physical Therapists",
+      "prof5": "Recent Graduates",
+      "closing": "If you see patients, this page is for you.",
+      "closingSub": "It doesn't matter if you're just starting or have been practicing for years."
+    },
+    "team": {
+      "headline": "Who we are",
+      "subheadline": "We're a small, experienced team. We've worked on major projects and now help professionals position themselves better online.",
+      "member1": {
+        "name": "Felício Santos",
+        "role": "Co-founder",
+        "bio": "Over 12 years of experience creating pages and systems. I've worked on projects for Hugo Boss, Calvin Klein and Globo."
+      },
+      "member2": {
+        "name": "Gabriel Santos",
+        "role": "Co-founder",
+        "bio": "Specialist in creating pages that work. Experience in large-scale projects."
+      },
+      "closing": "Our goal isn't to flaunt experience, but to use it to create something simple, functional and professional for you."
+    },
+    "credibility": {
+      "badge": "Our Experience",
+      "headline": "Why trust us",
+      "subheadline": "We don't make up numbers. But we have real, proven experience.",
+      "item1": {
+        "title": "Years of Experience",
+        "description": "Over a decade creating pages and systems for companies and professionals."
+      },
+      "item2": {
+        "title": "Real Projects",
+        "description": "We've been part of products serving millions of users worldwide."
+      },
+      "item3": {
+        "title": "Focus on Quality",
+        "description": "We prioritize clarity, simplicity and real results."
+      }
+    },
+    "finalCta": {
+      "badge": "Start now",
+      "headline": "Ready to have your professional page?",
+      "subheadline": "Talk to us with no commitment. We'll understand your needs and present a clear and affordable proposal.",
+      "benefit1": "Fast delivery",
+      "benefit2": "Affordable price",
+      "benefit3": "Dedicated support",
+      "cta": "Chat on WhatsApp",
+      "whatsappMessage": "Hi! I want to talk about having my professional page.",
+      "guarantee": "Quick response with no commitment"
+    }
   }
 }

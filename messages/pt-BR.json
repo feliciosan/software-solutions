@@ -480,5 +480,175 @@
         "projects": "Projetos"
       }
     }
+  },
+  "health": {
+    "meta": {
+      "title": "Página Profissional para Profissionais de Saúde | CodaCrew",
+      "description": "Página profissional pronta em poucos dias para psicólogos, dentistas, nutricionistas e fisioterapeutas. Passe mais credibilidade e profissionalismo.",
+      "ogTitle": "Página para Profissionais de Saúde - Pronto em Poucos Dias",
+      "ogDescription": "Crie confiança e atraia mais pacientes com uma página profissional feita especialmente para profissionais de saúde."
+    },
+    "hero": {
+      "badge": "Ideal para Profissionais de Saúde",
+      "headline": "Você é profissional de saúde e ainda não tem um site profissional?",
+      "headlineHighlight": "Tenha sua presença online completa e moderna, pronta em poucos dias.",
+      "subheadline": "A CodaCrew cria sites profissionais para nutricionistas, psicólogos e outros profissionais da saúde que querem mais credibilidade e novos pacientes, sem complicação e sem altos custos.",
+      "bullet1": "Página profissional por um valor que cabe no seu bolso",
+      "bullet2": "Pronto em poucos dias, sem complicação",
+      "bullet3": "Ideal para psicólogos, dentistas, nutricionistas e fisioterapeutas",
+      "cta": "Conversar no WhatsApp",
+      "whatsappMessage": "Olá! Sou profissional de saúde e quero saber mais sobre ter minha página profissional.",
+      "trustBadge1": "Orçamento acessível",
+      "trustBadge2": "Entrega rápida",
+      "trustBadge3": "Suporte humanizado",
+      "imageCaption": "Para profissionais que querem crescer online",
+      "priceLabel": "Investimento",
+      "priceText": "Valores acessíveis"
+    },
+    "mission": {
+      "headline": "Quem está por trás da CodaCrew",
+      "subheadline": "Somos Felício e Gabriel Santos. Criamos a CodaCrew para ajudar profissionais a se destacarem online, especialmente quem está começando.",
+      "member1": {
+        "role": "Co-fundador",
+        "bio": "Mais de 12 anos criando páginas e sistemas na internet. Minha missão é tornar a internet acessível para quem realmente precisa."
+      },
+      "member2": {
+        "role": "Co-fundador",
+        "bio": "Especialista em criar páginas para profissionais. Acredito que todo profissional merece ter presença online de qualidade."
+      },
+      "missionBadge": "Nossa Missão",
+      "missionTitle": "Ajudar novos profissionais a terem uma presença profissional na internet",
+      "missionDescription": "Sabemos que no início da carreira o orçamento é apertado. Por isso, criamos páginas profissionais com valores acessíveis, sem abrir mão da qualidade.",
+      "stat1Value": "12+",
+      "stat1Label": "Anos de experiência",
+      "stat2Value": "100%",
+      "stat2Label": "Feito com cuidado",
+      "stat3Value": "💙",
+      "stat3Label": "Atendimento humano"
+    },
+    "problem": {
+      "badge": "Desafio Comum",
+      "headline": "Só Instagram não passa confiança",
+      "subheadline": "Quando alguém procura um profissional de saúde, confiança é tudo. Mas muitos profissionais ainda dependem apenas de redes sociais.",
+      "problem1": {
+        "title": "Dependência do Instagram",
+        "description": "Você está limitado ao que o Instagram permite e pode perder todos os seus seguidores se algo der errado."
+      },
+      "problem2": {
+        "title": "Não transmite credibilidade",
+        "description": "Pacientes em potencial podem duvidar da sua seriedade quando você não tem uma página profissional."
+      },
+      "problem3": {
+        "title": "Perde pacientes",
+        "description": "Muitos profissionais perdem oportunidades por parecerem amadores ou informais demais."
+      },
+      "emphasis": "Uma página profissional mostra que você leva sua carreira a sério e dá aos pacientes a confiança que eles precisam."
+    },
+    "solution": {
+      "badge": "A Solução",
+      "headline": "Uma página profissional muda a forma como você é visto",
+      "subheadline": "Tenha uma presença na internet séria, que transmite profissionalismo e inspira confiança.",
+      "benefit1": {
+        "title": "Mais Credibilidade",
+        "description": "Pacientes confiam mais em profissionais que têm uma presença profissional e bem estruturada na internet."
+      },
+      "benefit2": {
+        "title": "Mais Profissionalismo",
+        "description": "Uma página bem feita mostra que você se importa com sua imagem e carreira."
+      },
+      "benefit3": {
+        "title": "Presença Séria na Internet",
+        "description": "Seja encontrado no Google e tenha um espaço próprio, independente de redes sociais."
+      },
+      "benefit4": {
+        "title": "Seu Espaço Próprio",
+        "description": "Um lugar onde pacientes podem conhecer você, seus serviços e entrar em contato com facilidade."
+      },
+      "emphasis": "Você não precisa entender de internet.",
+      "emphasisSub": "Nós cuidamos de tudo para você."
+    },
+    "included": {
+      "headline": "O que está incluso na sua página",
+      "subheadline": "Tudo que você precisa para começar a atender com profissionalismo. Simples e completo.",
+      "items": {
+        "0": {
+          "title": "Página Completa",
+          "description": "Design moderno e profissional, feito especialmente para profissionais de saúde."
+        },
+        "1": {
+          "title": "Design Profissional",
+          "description": "Visual que transmite confiança e credibilidade aos seus pacientes."
+        },
+        "2": {
+          "title": "Funciona em Celular e Computador",
+          "description": "Seus pacientes conseguem acessar perfeitamente de qualquer aparelho."
+        },
+        "3": {
+          "title": "Sobre Você",
+          "description": "Página para contar sua história, formação e experiência."
+        },
+        "4": {
+          "title": "Seus Serviços",
+          "description": "Mostre claramente o que você oferece e como pode ajudar."
+        }
+      },
+      "ctaTitle": "Tudo pronto para você começar",
+      "ctaSubtitle": "Não precisa se preocupar com nada técnico. Nós cuidamos de tudo.",
+      "ctaBadge": "Sem complicação"
+    },
+    "audience": {
+      "badge": "Para Quem É",
+      "headline": "Para quem é",
+      "prof1": "Psicólogos",
+      "prof2": "Dentistas",
+      "prof3": "Nutricionistas",
+      "prof4": "Fisioterapeutas",
+      "prof5": "Profissionais Recém-formados",
+      "closing": "Se você atende pacientes, essa página é para você.",
+      "closingSub": "Não importa se você está começando agora ou já atua há anos."
+    },
+    "team": {
+      "headline": "Quem somos",
+      "subheadline": "Somos uma equipe pequena e experiente. Já trabalhamos em grandes projetos e hoje ajudamos profissionais a se posicionarem melhor online.",
+      "member1": {
+        "name": "Felício Santos",
+        "role": "Co-fundador",
+        "bio": "Mais de 12 anos de experiência criando páginas e sistemas. Trabalhei em projetos para Hugo Boss, Calvin Klein e Globo."
+      },
+      "member2": {
+        "name": "Gabriel Santos",
+        "role": "Co-fundador",
+        "bio": "Especialista em criar páginas que funcionam. Experiência em projetos de grande escala."
+      },
+      "closing": "Nosso objetivo não é ostentar experiência, mas usar ela para criar algo simples, funcional e profissional para você."
+    },
+    "credibility": {
+      "badge": "Nossa Experiência",
+      "headline": "Por que confiar em nós",
+      "subheadline": "Não inventamos números. Mas temos experiência real e comprovada.",
+      "item1": {
+        "title": "Anos de Experiência",
+        "description": "Mais de uma década criando páginas e sistemas para empresas e profissionais."
+      },
+      "item2": {
+        "title": "Projetos Reais",
+        "description": "Participamos de produtos que atendem milhões de usuários ao redor do mundo."
+      },
+      "item3": {
+        "title": "Foco em Qualidade",
+        "description": "Priorizamos clareza, simplicidade e resultados reais."
+      }
+    },
+    "finalCta": {
+      "badge": "Comece agora",
+      "headline": "Pronto para ter sua página profissional?",
+      "subheadline": "Converse com a gente sem compromisso. Vamos entender sua necessidade e apresentar uma proposta clara e acessível.",
+      "benefit1": "Entrega rápida",
+      "benefit2": "Preço acessível",
+      "benefit3": "Suporte dedicado",
+      "cta": "Conversar no WhatsApp",
+      "whatsappMessage": "Olá! Quero conversar sobre ter minha página profissional.",
+      "guarantee": "Resposta rápida e sem compromisso"
+    }
   }
 }
