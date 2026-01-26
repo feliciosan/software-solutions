@@ -16,8 +16,12 @@ export async function POST(request: NextRequest) {
     const validatedData = contactSchema.parse(body);
 
     const { data, error } = await resend.emails.send({
-      from: "CodaCrew <contato@codacrew.com>",
-      to: ["feliciosantoslive@gmail.com", "xgabriel.st@gmail.com"],
+      from: "CodaCrew <contact@codacrew.com>",
+      to: [
+        "feliciosantoslive@gmail.com",
+        "xgabriel.st@gmail.com",
+        "contact@codacrew.com",
+      ],
       subject: `Novo contato de ${validatedData.company}`,
       html: `
         <!DOCTYPE html>
@@ -109,13 +113,13 @@ export async function POST(request: NextRequest) {
       console.error("Resend error:", error);
       return NextResponse.json(
         { error: "Failed to send email" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     return NextResponse.json(
       { success: true, messageId: data?.id },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error processing contact form:", error);
@@ -123,13 +127,13 @@ export async function POST(request: NextRequest) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: "Invalid form data", details: error.issues },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
