@@ -4,9 +4,11 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HealthHeroSection() {
   const t = useTranslations("health.hero");
+  const tIncluded = useTranslations("health.included");
 
   const openWhatsApp = () => {
     const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -107,7 +109,7 @@ export function HealthHeroSection() {
               <div className="relative bg-white rounded-3xl p-3 shadow-2xl">
                 <div className="bg-gradient-to-br from-blue-50 to-green-50/30 rounded-2xl w-80 h-80 sm:w-[28rem] sm:h-[28rem] lg:w-[32rem] lg:h-[32rem] flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/woman-nutri.png"
+                    src="/dra-mock.png"
                     alt="Profissional de saúde - Nutricionista"
                     width={512}
                     height={512}
@@ -117,8 +119,8 @@ export function HealthHeroSection() {
                 </div>
               </div>
 
-              {/* Badge flutuante com destaque - posicionado abaixo */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl p-3 border-2 border-blue-200 z-10">
+              {/* Badge flutuante com destaque - posicionado no topo */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl p-3 border-2 border-blue-200 z-10">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg
@@ -141,6 +143,50 @@ export function HealthHeroSection() {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Link ver exemplo posicionado no bottom center */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-auto">
+                <Link
+                  href={`/demos/health/psicologo`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-all hover:scale-105 shadow-lg z-10 whitespace-nowrap"
+                >
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                  <span className="inline">{tIncluded("demoButton")}</span>
+                  <svg
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

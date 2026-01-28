@@ -1,11 +1,11 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/Container";
+import Link from "next/link";
 
 export function HealthIncludedSection() {
   const t = useTranslations("health.included");
-  const locale = useLocale();
 
   const items = [
     { icon: "🌐", gradient: "from-blue-400 to-blue-600" },
@@ -72,8 +72,8 @@ export function HealthIncludedSection() {
               </svg>
               <span className="font-semibold">{t("ctaBadge")}</span>
             </div>
-            <a
-              href={`/${locale}/demos/health/psicologo`}
+            <Link
+              href={`/demos/health/psicologo`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
@@ -111,7 +111,7 @@ export function HealthIncludedSection() {
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
