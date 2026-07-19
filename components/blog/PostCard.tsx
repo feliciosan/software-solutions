@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import type { BlogPost } from "@/lib/blog";
 import { Icon } from "@/components/Icon";
 
@@ -14,7 +15,23 @@ export function PostCard({ post }: { post: BlogPost }) {
   });
 
   return (
-    <article className="group flex flex-col bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-blue-300 transition-all duration-300">
+    <article className="group flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-blue-300 transition-all duration-300">
+      {post.cover && (
+        <Link
+          href={`/${locale}/blog/${post.slug}`}
+          className="relative block aspect-[1200/630] bg-slate-100 overflow-hidden"
+        >
+          <Image
+            src={post.cover}
+            alt={localized.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+          />
+        </Link>
+      )}
+
+      <div className="flex flex-col flex-1 p-6">
       <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
         <span className="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full font-medium">
           {t(`categories.${post.category}`)}
@@ -40,6 +57,7 @@ export function PostCard({ post }: { post: BlogPost }) {
         {t("readMore")}
         <Icon name="arrowRight" className="w-4 h-4" />
       </Link>
+      </div>
     </article>
   );
 }

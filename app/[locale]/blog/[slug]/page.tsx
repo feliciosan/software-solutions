@@ -3,6 +3,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { locales } from "@/i18n";
 import { baseUrl } from "@/lib/siteConfig";
 import { getPost, getAllPostSlugs } from "@/lib/blog";
@@ -28,6 +29,11 @@ export async function generateMetadata({
   if (!post) return {};
   const localized = post.content[locale];
   const url = `${baseUrl}/${locale}/blog/${slug}`;
+  // Use the post cover as the social image when present; otherwise Next falls
+  // back to the site-wide dynamic OpenGraph image.
+  const ogImages = post.cover
+    ? [{ url: `${baseUrl}${post.cover}`, width: 1200, height: 630, alt: localized.title }]
+    : undefined;
 
   return {
     title: localized.title,
@@ -49,11 +55,13 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      ...(ogImages ? { images: ogImages } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: localized.title,
       description: localized.description,
+      ...(ogImages ? { images: ogImages.map((i) => i.url) } : {}),
     },
   };
 }
@@ -155,6 +163,19 @@ export default async function BlogPostPage({
             </h1>
             <p className="mt-4 text-lg text-slate-600">{localized.description}</p>
             <p className="mt-4 text-sm text-slate-500">{post.author}</p>
+
+            {post.cover && (
+              <div className="relative mt-8 aspect-[1200/630] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+                <Image
+                  src={post.cover}
+                  alt={localized.title}
+                  fill
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  priority
+                  className="object-cover"
+                />
+              </div>
+            )}
 
             <div className="mt-10 space-y-6">
               {localized.body.map((block, i) => {

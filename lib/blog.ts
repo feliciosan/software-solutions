@@ -25,12 +25,19 @@ export interface BlogPost {
   date: string; // ISO date
   readingMinutes: number;
   author: string;
+  /**
+   * Topic cover image, language-independent. Path under /public, ideally
+   * 1200x630 so it doubles as the social (OpenGraph) image and the card
+   * thumbnail. Optional: cards and metadata fall back gracefully when absent.
+   */
+  cover?: string;
   content: Record<string, LocalizedPost>;
 }
 
 const posts: BlogPost[] = [
   {
     slug: "how-long-to-build-an-mvp",
+    cover: "/blog/how-long-to-build-an-mvp.jpg",
     category: "startup",
     date: "2026-06-18",
     readingMinutes: 6,
@@ -102,6 +109,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "mvp-vs-full-product",
+    cover: "/blog/mvp-vs-full-product.jpg",
     category: "product",
     date: "2026-07-02",
     readingMinutes: 5,
@@ -179,6 +187,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "vibe-coding-vs-production-code",
+    cover: "/blog/vibe-coding-vs-production-code.jpg",
     category: "ai",
     date: "2026-07-08",
     readingMinutes: 6,
@@ -318,6 +327,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "how-much-does-a-saas-cost-2026",
+    cover: "/blog/how-much-does-a-saas-cost-2026.jpg",
     category: "saas",
     date: "2026-07-11",
     readingMinutes: 7,
@@ -453,6 +463,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "vertical-ai-saas-2026",
+    cover: "/blog/vertical-ai-saas-2026.jpg",
     category: "saas",
     date: "2026-07-15",
     readingMinutes: 6,
@@ -562,6 +573,7 @@ const posts: BlogPost[] = [
   },
   {
     slug: "ai-agents-beyond-the-chatbot",
+    cover: "/blog/ai-agents-beyond-the-chatbot.jpg",
     category: "ai",
     date: "2026-07-18",
     readingMinutes: 6,
