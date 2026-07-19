@@ -1,94 +1,229 @@
 {
   "metadata": {
-    "title": "Software Development | Construindo soluções digitais",
-    "description": "Time especializado em construir aplicações web e mobile de alta qualidade. Do zero ao deploy, com arquitetura sólida e código limpo."
+    "title": "CodaCrew: Parceiro Técnico para Startups, MVPs e SaaS",
+    "description": "Ajudamos fundadores a transformar ideias em produtos digitais escaláveis. Engenheiros seniores construindo MVPs, SaaS e produtos com IA desde o primeiro dia."
+  },
+  "nav": {
+    "services": "Serviços",
+    "process": "Processo",
+    "cases": "Cases",
+    "team": "Time",
+    "blog": "Blog",
+    "cta": "Agende uma Conversa Gratuita",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "header": {
-    "tagline": "Parceiro Estratégico de Desenvolvimento"
+    "tagline": "Seu parceiro técnico para startups"
   },
   "hero": {
-    "headline": "Do MVP à escala: Desenvolvemos produtos digitais que crescem com seu negócio",
-    "subheadline": "Transformamos sua ideia em produto digital rodando em produção. Arquitetura escalável, código documentado e decisões técnicas transparentes desde o primeiro dia.",
-    "foundersIntro": "Felício Santos e Gabriel Santos. Criamos a CodaCrew para ajudar fundadores a transformar ideias em produtos digitais que escalam, com o time certo ao seu lado.",
-    "cta": "Conversar sobre o projeto",
     "availableBadge": "Disponível para novos projetos",
-    "teamBadge": "Time Especializado",
-    "learnMore": "Saber mais",
-    "experienceBadge": {
-      "years": "12+ anos",
-      "label": "Experiência"
-    },
-    "photoPlaceholder": {
-      "text": "Adicione sua foto em",
-      "path": "public/profile.jpg"
+    "headline": "Transforme sua ideia em um produto escalável.",
+    "subheadline": "Ajudamos fundadores a projetar, construir e escalar produtos digitais com engenheiros seniores e tecnologia moderna, da primeira linha de código à produção.",
+    "ctaPrimary": "Agende uma Conversa Estratégica Gratuita",
+    "ctaSecondary": "Veja nosso Processo",
+    "microcopy": "Sem compromisso • Conversa gratuita de 30 min",
+    "journey": {
+      "title": "A jornada do seu produto",
+      "idea": "Ideia",
+      "ideaCaption": "Valide a visão",
+      "mvp": "MVP",
+      "mvpCaption": "Lance em semanas",
+      "scale": "Escala",
+      "scaleCaption": "Cresça com confiança",
+      "seniorTeam": "Time sênior",
+      "ideaTime": "Semana 0",
+      "mvpTime": "~8 semanas",
+      "scaleTime": "Contínuo",
+      "stackLabel": "Construído com stack moderna",
+      "shippedTitle": "Vai para produção",
+      "shippedSub": "CI/CD incluso"
+    }
+  },
+  "trustBar": {
+    "title": "Engenharia de confiança, comprovada em escala",
+    "indicators": {
+      "seniorEngineers": "Engenheiros Seniores",
+      "globalExperience": "Experiência Global",
+      "modernStack": "Stack Moderna",
+      "aiReady": "Pronto para IA",
+      "startupFocus": "Foco em Startups"
     }
   },
   "social": {
-    "title": "Experiência comprovada em produtos reais",
-    "description": "Participamos do desenvolvimento de produtos para Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg, processando milhões de transações e atendendo usuários ao redor do mundo."
+    "title": "Experiência construindo produtos usados por milhões",
+    "description": "Nossos engenheiros já construíram e escalaram produtos para marcas globais como Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg."
   },
   "problems": {
-    "badge": "Desafios Comuns",
-    "title": "Talvez você esteja enfrentando isso",
+    "badge": "A Realidade",
+    "title": "A maioria dos projetos de software falha antes de escalar",
+    "emphasis": "A CodaCrew resolve todos eles.",
     "list": [
       {
-        "title": "Precisa de um time técnico confiável",
-        "description": "Quer começar um projeto mas não tem time especializado"
+        "title": "Decisões técnicas erradas",
+        "description": "Erros de arquitetura no início viram reescritas caras."
       },
       {
-        "title": "Não sabe como começar tecnicamente",
-        "description": "Muitas dúvidas sobre arquitetura, stack e melhores práticas"
+        "title": "Desenvolvimento lento",
+        "description": "O momentum morre quando features levam meses em vez de semanas."
       },
       {
-        "title": "Preocupação com escalabilidade",
-        "description": "Quer uma base sólida que aguente crescimento futuro"
+        "title": "Comunicação ruim",
+        "description": "Agências caixa-preta deixam os fundadores no escuro."
       },
       {
-        "title": "Busca qualidade desde o início",
-        "description": "Não quer lidar com reescritas e débito técnico depois"
+        "title": "Falta de visão de produto",
+        "description": "Código sem visão de produto constrói a coisa errada rapidamente."
       }
     ]
   },
-  "solution": {
-    "title": "Como podemos ajudar",
-    "offerName": "Desenvolvimento de Software",
-    "offerDuration": "Projetos completos",
-    "description": "Desenvolvemos sua aplicação do zero com code review desde o primeiro commit, testes automatizados, decisões técnicas documentadas e setup completo de CI/CD. Você acompanha todo o processo e entende cada decisão.",
-    "stats": {
-      "experience": "Anos desenvolvendo produtos",
-      "projects": "Produtos em produção",
-      "satisfaction": "Taxa de sucesso"
+  "process": {
+    "badge": "Como Trabalhamos",
+    "title": "Da ideia ao produto escalável",
+    "subtitle": "Um caminho claro e comprovado, onde você entende cada decisão ao longo do processo.",
+    "steps": {
+      "discovery": {
+        "title": "Descoberta",
+        "description": "Alinhamos sua visão, usuários e objetivos de negócio."
+      },
+      "architecture": {
+        "title": "Arquitetura",
+        "description": "Projetamos uma base escalável e escolhemos a stack certa."
+      },
+      "development": {
+        "title": "Desenvolvimento",
+        "description": "Entregamos em sprints semanais com code review desde o primeiro dia."
+      },
+      "testing": {
+        "title": "Testes",
+        "description": "Testes automatizados e QA mantêm a qualidade alta enquanto você cresce."
+      },
+      "launch": {
+        "title": "Lançamento",
+        "description": "Colocamos em produção com CI/CD e monitoramento."
+      },
+      "improvement": {
+        "title": "Melhoria Contínua",
+        "description": "Iteramos com dados e seguimos como seu parceiro técnico de longo prazo."
+      }
     }
   },
-  "included": {
-    "badge": "O Que Está Incluído",
-    "title": "Como trabalhamos",
-    "steps": [
-      {
-        "title": "Planejamento e arquitetura",
-        "description": "Definimos stack, arquitetura e estrutura do projeto com clareza"
+  "services": {
+    "badge": "O Que Fazemos",
+    "title": "Feito para fundadores, não apenas para código",
+    "subtitle": "Engenharia de produto ponta a ponta para cada estágio da sua startup.",
+    "learnMore": "Saiba mais",
+    "items": {
+      "mvp": {
+        "title": "Desenvolvimento de MVP",
+        "description": "Lance um MVP validado com usuários reais em semanas, não meses."
       },
-      {
-        "title": "Desenvolvimento completo",
-        "description": "Frontend, backend, APIs e banco de dados - solução completa"
+      "saas": {
+        "title": "Desenvolvimento de SaaS",
+        "description": "Produtos SaaS escaláveis e multi-tenant feitos para crescer."
       },
-      {
-        "title": "Apps nativos (quando necessário)",
-        "description": "Desenvolvimento de aplicações iOS e Android com React Native"
+      "ai": {
+        "title": "Integrações com IA",
+        "description": "Aplique IA e automação a problemas reais de negócio."
       },
-      {
-        "title": "Deploy e infraestrutura",
-        "description": "Configuramos ambiente de produção, CI/CD e monitoramento"
+      "modernization": {
+        "title": "Modernização de Produto",
+        "description": "Resgate e modernize softwares legados sem parar a operação."
       },
-      {
-        "title": "Documentação técnica",
-        "description": "Código documentado e guias para facilitar manutenção futura"
-      },
-      {
-        "title": "Consultoria (opcional)",
-        "description": "Orientação técnica para times que já possuem projetos em andamento"
+      "team": {
+        "title": "Team Augmentation",
+        "description": "Engenheiros seniores para reforçar e acelerar seu time."
       }
-    ]
+    }
+  },
+  "differentiators": {
+    "badge": "Por Que a CodaCrew",
+    "title": "Por que fundadores escolhem a CodaCrew",
+    "subtitle": "Mais que uma software house, somos um parceiro técnico comprometido com seu crescimento.",
+    "items": {
+      "seniorEngineers": {
+        "title": "Engenheiros Seniores",
+        "description": "Engenheiros experientes que já entregaram produtos em escala."
+      },
+      "startupMindset": {
+        "title": "Mentalidade de Startup",
+        "description": "Pensamos em tração, velocidade e validação, como um co-fundador."
+      },
+      "fastDelivery": {
+        "title": "Entrega Rápida",
+        "description": "Sprints e demos semanais mantêm você avançando rápido."
+      },
+      "scalableArchitecture": {
+        "title": "Arquitetura Escalável",
+        "description": "Bases que aguentam o crescimento sem reescritas."
+      },
+      "productThinking": {
+        "title": "Visão de Produto",
+        "description": "Ajudamos você a construir a coisa certa, não qualquer coisa."
+      },
+      "partnership": {
+        "title": "Parceria de Longo Prazo",
+        "description": "Ficamos com você do MVP à escala."
+      }
+    }
+  },
+  "cases": {
+    "badge": "Cases",
+    "title": "O tipo de produto que construímos",
+    "subtitle": "Produtos representativos em diferentes setores, mostrando como transformamos ideias em software funcionando.",
+    "experienceNote": "Feito por engenheiros que construíram produtos para Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg.",
+    "items": {
+      "digitalMenu": {
+        "title": "Cardápio Digital & Pedidos",
+        "description": "Plataforma de cardápio via QR code e pedidos para restaurantes, com pedidos em tempo real e pagamentos integrados."
+      },
+      "managementSystem": {
+        "title": "Sistema de Gestão",
+        "description": "Sistemas internos e dashboards que otimizam a operação de times em crescimento."
+      },
+      "dashboard": {
+        "title": "Dashboard de Analytics",
+        "description": "Dashboards de dados que transformam métricas em decisões claras de negócio."
+      },
+      "marketplace": {
+        "title": "Marketplace",
+        "description": "Marketplaces de dois lados com pagamentos, busca e infraestrutura escalável."
+      }
+    }
+  },
+  "team": {
+    "badge": "O Time",
+    "title": "Conheça os fundadores",
+    "subtitle": "Você trabalha diretamente com engenheiros seniores que se importam com o seu produto.",
+    "specialtiesLabel": "Especialidades",
+    "linkedinLabel": "LinkedIn",
+    "members": {
+      "felicio": {
+        "role": "Co-fundador · Engenheiro de Software Sênior",
+        "bio": "12+ anos construindo e escalando produtos web e mobile. Focado em arquitetura, cloud e liderança de times que entregam."
+      },
+      "gabriel": {
+        "role": "Co-fundador · Engenheiro de Software Sênior",
+        "bio": "Engenheiro sênior especializado em desenvolvimento focado em produto, de apps React Native a APIs escaláveis na nuvem."
+      }
+    }
+  },
+  "ctaBanner": {
+    "build": {
+      "title": "Pronto para construir sua startup?",
+      "subtitle": "Vamos transformar sua ideia em um produto que fundadores e usuários amam.",
+      "button": "Vamos Construir sua Startup"
+    },
+    "estimate": {
+      "title": "Não sabe por onde começar?",
+      "subtitle": "Receba uma estimativa gratuita e sem compromisso para seu MVP.",
+      "button": "Estimativa Gratuita de MVP"
+    },
+    "talk": {
+      "title": "Tem dúvidas técnicas?",
+      "subtitle": "Fale direto com um engenheiro sênior, sem discurso de vendas.",
+      "button": "Fale com um Engenheiro"
+    }
   },
   "audience": {
     "badge": "Para Quem É",
@@ -96,46 +231,34 @@
     "isFor": {
       "title": "Faz sentido se:",
       "list": [
-        "Você tem uma ideia de produto digital",
-        "Precisa de um time para começar ou evoluir",
-        "Busca parceiros técnicos, não apenas execução",
-        "Quer desenvolvimento com clareza técnica",
-        "Valoriza qualidade e boas decisões"
+        "Você é fundador com uma ideia de produto digital",
+        "Precisa de um time para construir ou escalar seu MVP",
+        "Quer um parceiro técnico, não apenas execução",
+        "Valoriza arquitetura escalável e decisões claras",
+        "Está construindo para crescer, não um site pontual"
       ]
     },
     "isNotFor": {
       "title": "Não faz sentido se:",
       "list": [
-        "Busca apenas horas de desenvolvimento",
-        "Quer solução milagrosa e rápida",
-        "Não aceita envolvimento em decisões técnicas",
-        "Procura apenas código sem acompanhamento",
-        "Quer a opção mais barata possível"
+        "Você busca apenas horas de desenvolvimento",
+        "Quer uma solução milagrosa da noite para o dia",
+        "Não quer se envolver nas decisões de produto",
+        "Precisa de um site institucional simples de uma página",
+        "Está atrás da opção mais barata possível"
       ]
     }
   },
-  "about": {
-    "badge": "Sobre",
-    "title": "Quem somos",
-    "description": "Somos uma equipe de engenheiros de software com experiência em produtos reais. Já trabalhamos em projetos para Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg. Trabalhamos de forma colaborativa com o cliente, desenvolvendo soluções completas: aplicações web, apps nativos e backend.",
-    "skills": {
-      "react": "React & React Native",
-      "nextjs": "Next.js",
-      "nodejs": "Node.js",
-      "typescript": "TypeScript",
-      "databases": "SQL & NoSQL"
-    }
-  },
   "finalCta": {
-    "badge": "Apenas 2 vagas disponíveis para Q1 2026",
-    "title": "Vamos conversar sobre o seu caso",
-    "description": "Se quiser entender se podemos ajudar no seu projeto, é só preencher o formulário abaixo. Sem pressão.",
+    "badge": "Vagas limitadas para novos projetos",
+    "title": "Vamos construir sua startup",
+    "description": "Conte sobre sua ideia. Respondemos em até 24h com próximos passos claros, sem pressão, sem jargão.",
     "cta": "Conversar sobre o projeto",
     "disclaimer": "Sem compromisso • Gratuito",
     "stats": {
       "experience": "Anos de experiência",
-      "projects": "Projetos entregues",
-      "satisfaction": "Satisfação"
+      "projects": "Produtos em produção",
+      "satisfaction": "Taxa de sucesso"
     }
   },
   "contactForm": {
@@ -170,6 +293,41 @@
     "sending": "Enviando...",
     "success": "Mensagem enviada com sucesso! Responderemos em breve.",
     "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+  },
+  "footer": {
+    "tagline": "Seu parceiro técnico para transformar ideias em startups escaláveis.",
+    "cta": "Agende uma Conversa Gratuita",
+    "navigate": "Navegar",
+    "servicesTitle": "Serviços",
+    "connect": "Conecte-se",
+    "rights": "Todos os direitos reservados.",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Olá CodaCrew! Gostaria de conversar sobre construir meu produto."
+  },
+  "blog": {
+    "title": "Blog",
+    "metaTitle": "Blog: Insights para Fundadores | CodaCrew",
+    "metaDescription": "Insights práticos sobre construir startups, MVPs, SaaS e produtos com IA, escritos por engenheiros seniores.",
+    "subtitle": "Insights sobre startups, MVPs, SaaS, IA e como construir produtos que escalam.",
+    "allCategories": "Todos",
+    "readMore": "Ler artigo",
+    "backToBlog": "Voltar ao blog",
+    "minRead": "min de leitura",
+    "empty": "Ainda não há artigos. Volte em breve.",
+    "categories": {
+      "startup": "Startup",
+      "saas": "SaaS",
+      "ai": "IA",
+      "architecture": "Arquitetura",
+      "engineering": "Engenharia de Software",
+      "product": "Produto",
+      "cloud": "Cloud"
+    },
+    "postCta": {
+      "title": "Tem um projeto em mente?",
+      "subtitle": "Vamos conversar sobre transformar sua ideia em um produto.",
+      "button": "Agende uma Conversa Gratuita"
+    }
   },
   "languageSwitcher": {
     "label": "Idioma"

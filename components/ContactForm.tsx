@@ -133,7 +133,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-slate-800 mb-2"
+            className="block text-sm font-semibold text-slate-200 mb-2"
           >
             {t("email.label")}
           </label>
@@ -148,7 +148,7 @@ export function ContactForm() {
             placeholder={t("email.placeholder")}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{t("email.error")}</p>
+            <p className="mt-1 text-sm text-red-300">{t("email.error")}</p>
           )}
         </div>
 
@@ -156,7 +156,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="company"
-            className="block text-sm font-semibold text-slate-800 mb-2"
+            className="block text-sm font-semibold text-slate-200 mb-2"
           >
             {t("company.label")}
           </label>
@@ -170,7 +170,7 @@ export function ContactForm() {
             placeholder={t("company.placeholder")}
           />
           {errors.company && (
-            <p className="mt-1 text-sm text-red-600">{t("company.error")}</p>
+            <p className="mt-1 text-sm text-red-300">{t("company.error")}</p>
           )}
         </div>
 
@@ -178,7 +178,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="budget"
-            className="block text-sm font-semibold text-slate-800 mb-2"
+            className="block text-sm font-semibold text-slate-200 mb-2"
           >
             {t("budget.label")}
           </label>
@@ -215,7 +215,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-semibold text-slate-800 mb-2"
+            className="block text-sm font-semibold text-slate-200 mb-2"
           >
             {t("message.label")}
           </label>
@@ -229,7 +229,7 @@ export function ContactForm() {
             placeholder={t("message.placeholder")}
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-600">{t("message.error")}</p>
+            <p className="mt-1 text-sm text-red-300">{t("message.error")}</p>
           )}
         </div>
 

@@ -29,7 +29,11 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} className={inter.className}>
+    <html
+      lang={locale}
+      className={inter.className}
+      data-scroll-behavior="smooth"
+    >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

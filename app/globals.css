@@ -34,3 +34,21 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset anchored scroll targets for the fixed header */
+  scroll-padding-top: 5rem;
+}

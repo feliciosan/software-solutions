@@ -24,7 +24,7 @@ export function FinalCtaSection() {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
       observer.observe(node);
     }
@@ -77,7 +77,7 @@ export function FinalCtaSection() {
             </p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-white">50+</p>
+            <p className="text-3xl font-bold text-white">20+</p>
             <p className="text-sm text-slate-400 mt-1">{t("stats.projects")}</p>
           </div>
           <div>

@@ -59,7 +59,7 @@ export default async function Image() {
             maxWidth: 900,
           }}
         >
-          Building high-quality web and mobile applications
+          Turn your idea into a scalable product
         </div>
 
         {/* Tech stack badges */}
@@ -70,7 +70,7 @@ export default async function Image() {
             marginTop: 40,
           }}
         >
-          {["React", "Next.js", "TypeScript", "Node.js"].map((tech) => (
+          {["MVP", "SaaS", "AI", "Startups"].map((tech) => (
             <div
               key={tech}
               style={{

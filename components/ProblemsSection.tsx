@@ -40,6 +40,10 @@ export function ProblemsSection() {
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-xl sm:text-2xl font-semibold text-slate-900">
+          {t("emphasis")}
+        </p>
       </Container>
     </Section>
   );

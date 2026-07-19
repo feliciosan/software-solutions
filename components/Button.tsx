@@ -1,13 +1,37 @@
+"use client";
+
 import { ReactNode } from "react";
+import Link from "next/link";
+import { scrollToHash } from "@/lib/scroll";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "primary" | "secondary";
-  size?: "md" | "lg";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
   href?: string;
   onClick?: () => void;
   className?: string;
+  target?: string;
+  rel?: string;
+  "aria-label"?: string;
 }
+
+const baseStyles =
+  "inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2";
+
+const variantStyles = {
+  primary: "bg-slate-900 text-white hover:bg-slate-800 active:bg-slate-950",
+  secondary:
+    "bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300",
+  outline:
+    "bg-transparent text-slate-900 border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50",
+};
+
+const sizeStyles = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-6 py-3 text-base",
+  lg: "px-8 py-4 text-lg",
+};
 
 export function Button({
   children,
@@ -16,33 +40,51 @@ export function Button({
   href,
   onClick,
   className = "",
+  target,
+  rel,
+  "aria-label": ariaLabel,
 }: ButtonProps) {
-  const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200";
-
-  const variantStyles = {
-    primary: "bg-slate-900 text-white hover:bg-slate-800 active:bg-slate-950",
-    secondary:
-      "bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300",
-  };
-
-  const sizeStyles = {
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
-  };
-
   const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
+    const isExternal =
+      /^(https?:|mailto:|tel:)/.test(href) || target === "_blank";
+    // Hash links (same-page or locale-prefixed anchors) use native anchor
+    // behavior with smooth in-page scrolling instead of a navigation reset.
+    const isHashLink = !isExternal && href.includes("#");
+
+    if (isExternal || isHashLink) {
+      const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (isHashLink) scrollToHash(href, e);
+        onClick?.();
+      };
+      return (
+        <a
+          href={href}
+          onClick={handleClick}
+          className={classes}
+          target={target}
+          rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)}
+          aria-label={ariaLabel}
+        >
+          {children}
+        </a>
+      );
+    }
     return (
-      <a href={href} onClick={onClick} className={classes}>
+      <Link
+        href={href}
+        onClick={onClick}
+        className={classes}
+        aria-label={ariaLabel}
+      >
         {children}
-      </a>
+      </Link>
     );
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={onClick} className={classes} aria-label={ariaLabel}>
       {children}
     </button>
   );

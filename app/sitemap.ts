@@ -1,26 +1,43 @@
 import { MetadataRoute } from "next";
+import { locales } from "@/i18n";
+import { baseUrl } from "@/lib/siteConfig";
+import { getAllPostSlugs } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com";
-  const locales = ["pt-BR", "en-US"];
+  const now = new Date();
+  const slugs = getAllPostSlugs();
 
-  // Generate entries for each locale
-  const localeUrls = locales.flatMap((locale) => [
-    {
-      url: `${baseUrl}/${locale}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 1.0,
-    },
-  ]);
-
-  return [
+  const entries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
+      lastModified: now,
+      changeFrequency: "weekly",
       priority: 1.0,
     },
-    ...localeUrls,
   ];
+
+  for (const locale of locales) {
+    entries.push({
+      url: `${baseUrl}/${locale}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    });
+    entries.push({
+      url: `${baseUrl}/${locale}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    });
+    for (const slug of slugs) {
+      entries.push({
+        url: `${baseUrl}/${locale}/blog/${slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
+  }
+
+  return entries;
 }

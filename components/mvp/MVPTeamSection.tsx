@@ -138,7 +138,7 @@ export function MVPTeamSection() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white mb-1">
-                      50+
+                      20+
                     </div>
                     <div className="text-xs text-slate-300">
                       {t("stats.projects")}

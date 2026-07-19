@@ -5,15 +5,22 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { locales } from "@/i18n";
+import { baseUrl, services, founders, socialLinks } from "@/lib/siteConfig";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { SocialProofSection } from "@/components/SocialProofSection";
+import { TrustBar } from "@/components/TrustBar";
 import { ProblemsSection } from "@/components/ProblemsSection";
-import { SolutionSection } from "@/components/SolutionSection";
-import { IncludedSection } from "@/components/IncludedSection";
+import { ProcessSection } from "@/components/ProcessSection";
+import { ServicesSection } from "@/components/ServicesSection";
+import { DifferentiatorsSection } from "@/components/DifferentiatorsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { TeamSection } from "@/components/TeamSection";
 import { AudienceSection } from "@/components/AudienceSection";
-import { AboutSection } from "@/components/AboutSection";
 import { FinalCtaSection } from "@/components/FinalCtaSection";
+import { CtaBanner } from "@/components/CtaBanner";
+import { Footer } from "@/components/Footer";
+import { StickyCta } from "@/components/StickyCta";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export async function generateMetadata({
   params,
@@ -22,26 +29,26 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com";
   const currentUrl = `${baseUrl}/${locale}`;
 
   return {
     title: t("title"),
     description: t("description"),
     keywords: [
-      "software development",
-      "desenvolvimento de software",
-      "web development",
-      "mobile development",
+      "startup development",
+      "MVP development",
+      "SaaS development",
+      "technical partner",
+      "product development",
+      "AI integration",
+      "team augmentation",
       "React",
       "Next.js",
       "TypeScript",
       "Node.js",
-      "full stack development",
-      "desenvolvimento full stack",
-      "consultoria técnica",
-      "technical consulting",
+      "desenvolvimento de startups",
+      "desenvolvimento de MVP",
+      "parceiro técnico",
     ],
     authors: [{ name: "CodaCrew" }],
     creator: "CodaCrew",
@@ -59,23 +66,14 @@ export async function generateMetadata({
       description: t("description"),
       url: currentUrl,
       siteName: "CodaCrew",
-      locale: locale,
+      locale,
       type: "website",
-      images: [
-        {
-          url: `${baseUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: t("title"),
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
       creator: "@codacrew",
-      images: [`${baseUrl}/og-image.jpg`],
     },
     robots: {
       index: true,
@@ -88,9 +86,9 @@ export async function generateMetadata({
         "max-snippet": -1,
       },
     },
-    verification: {
-      google: "your-google-verification-code",
-    },
+    verification: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION }
+      : undefined,
   };
 }
 
@@ -107,50 +105,48 @@ export default async function HomePage({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const tServices = await getTranslations({ locale, namespace: "services" });
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     name: "CodaCrew",
-    description:
-      locale === "pt-BR"
-        ? "Time especializado em construir aplicações web e mobile de alta qualidade"
-        : "Specialized team building high-quality web and mobile applications",
-    url: `${
-      process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com"
-    }/${locale}`,
-    logo: `${
-      process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com"
-    }/logo.png`,
-    sameAs: [
-      "https://github.com/codacrew",
-      "https://linkedin.com/company/codacrew",
-    ],
-    founder: {
+    description: t("description"),
+    url: `${baseUrl}/${locale}`,
+    logo: `${baseUrl}/logo.svg`,
+    image: `${baseUrl}/${locale}/opengraph-image`,
+    sameAs: [socialLinks.github, socialLinks.linkedin],
+    areaServed: "Worldwide",
+    founder: founders.map((f) => ({
       "@type": "Person",
-      name: "CodaCrew Team",
-    },
-    offers: {
-      "@type": "Offer",
-      name:
-        locale === "pt-BR"
-          ? "Desenvolvimento de Software"
-          : "Software Development",
-      description:
-        locale === "pt-BR"
-          ? "Desenvolvimento completo de aplicações web e mobile"
-          : "Complete web and mobile application development",
-    },
+      name: f.name,
+      jobTitle: "Co-founder & Senior Software Engineer",
+    })),
     knowsAbout: [
+      "Startup Development",
+      "MVP Development",
+      "SaaS Development",
+      "AI Integration",
+      "Software Architecture",
       "React",
       "Next.js",
       "TypeScript",
       "Node.js",
-      "React Native",
-      "Web Development",
-      "Mobile Development",
-      "Full Stack Development",
+      "Cloud",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: tServices("title"),
+      itemListElement: services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: tServices(`items.${s.key}.title`),
+          description: tServices(`items.${s.key}.description`),
+        },
+      })),
+    },
   };
 
   return (
@@ -164,14 +160,21 @@ export default async function HomePage({
         <Header />
         <main>
           <HeroSection />
-          <SocialProofSection />
+          <TrustBar />
           <ProblemsSection />
-          <SolutionSection />
-          <IncludedSection />
+          <ProcessSection />
+          <ServicesSection />
+          <CtaBanner variant="estimate" />
+          <DifferentiatorsSection />
+          <CaseStudiesSection />
+          <TeamSection />
+          <CtaBanner variant="build" />
           <AudienceSection />
-          <AboutSection />
           <FinalCtaSection />
         </main>
+        <Footer />
+        <StickyCta />
+        <WhatsAppButton />
       </NextIntlClientProvider>
     </>
   );
