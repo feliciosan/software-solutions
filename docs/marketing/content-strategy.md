@@ -3,7 +3,7 @@
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
 Last updated: 2026-07-19
-Related: [Brand Positioning](../company/brand-positioning.md) · [Ideal Customer Profile](../company/ideal-customer-profile.md) · [Blog Standards](./blog-standards.md) · [Content Backlog](./content-backlog.md) · [SEO Checklist](../website/seo-checklist.md) · [Case Study Template](./case-study-template.md)
+Related: [Brand Positioning](../company/brand-positioning.md) · [Ideal Customer Profile](../company/ideal-customer-profile.md) · [Blog Standards](./blog-standards.md) · [Content Backlog](./content-backlog.md) · [Social Distribution](./social-distribution.md) · [SEO Checklist](../website/seo-checklist.md) · [Case Study Template](./case-study-template.md)
 
 ---
 
@@ -105,6 +105,8 @@ Publishing is not the finish line.
 - **LinkedIn** (founders' and company) for reach into the founder network. Repackage the article's core argument, link back.
 - **Sales** reuses articles directly in conversations and proposals.
 - **SEO** is the long game: internal linking, service-page links, and the home page blog preview all drive discovery.
+
+The operational playbook for channels, cadence, and turning an article into social posts lives in [Social Distribution](./social-distribution.md). In short: LinkedIn (founders' personal profiles) is primary, X/Twitter secondary, and every article is repurposed into a value-first post, not just a link.
 
 Every piece of content should be reusable across at least two of these.
 
