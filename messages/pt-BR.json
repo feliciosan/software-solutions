@@ -38,6 +38,14 @@
       "stackLabel": "Construído com stack moderna",
       "shippedTitle": "Vai para produção",
       "shippedSub": "CI/CD incluso"
+    },
+    "dashboard": {
+      "label": "Dashboard",
+      "live": "Ao vivo",
+      "period": "Últimos 30 dias",
+      "revenue": "Receita",
+      "users": "Usuários ativos",
+      "growth": "Crescimento"
     }
   },
   "trustBar": {
@@ -309,6 +317,9 @@
     "metaTitle": "Blog: Insights para Fundadores | CodaCrew",
     "metaDescription": "Insights práticos sobre construir startups, MVPs, SaaS e produtos com IA, escritos por engenheiros seniores.",
     "subtitle": "Insights sobre startups, MVPs, SaaS, IA e como construir produtos que escalam.",
+    "homeTitle": "Do blog",
+    "homeSubtitle": "Insights práticos para fundadores construindo produtos.",
+    "viewAll": "Ver todos os artigos",
     "allCategories": "Todos",
     "readMore": "Ler artigo",
     "backToBlog": "Voltar ao blog",

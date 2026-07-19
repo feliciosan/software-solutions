@@ -38,6 +38,14 @@
       "stackLabel": "Built with a modern stack",
       "shippedTitle": "Ships to production",
       "shippedSub": "CI/CD included"
+    },
+    "dashboard": {
+      "label": "Dashboard",
+      "live": "Live",
+      "period": "Last 30 days",
+      "revenue": "Revenue",
+      "users": "Active users",
+      "growth": "Growth"
     }
   },
   "trustBar": {
@@ -309,6 +317,9 @@
     "metaTitle": "Blog: Insights for Founders | CodaCrew",
     "metaDescription": "Practical insights on building startups, MVPs, SaaS and AI products, written by senior engineers.",
     "subtitle": "Insights on startups, MVPs, SaaS, AI and building products that scale.",
+    "homeTitle": "From the blog",
+    "homeSubtitle": "Practical insights for founders building products.",
+    "viewAll": "View all articles",
     "allCategories": "All",
     "readMore": "Read article",
     "backToBlog": "Back to blog",

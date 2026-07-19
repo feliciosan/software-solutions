@@ -16,6 +16,7 @@ import { DifferentiatorsSection } from "@/components/DifferentiatorsSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { TeamSection } from "@/components/TeamSection";
 import { AudienceSection } from "@/components/AudienceSection";
+import { BlogPreviewSection } from "@/components/BlogPreviewSection";
 import { FinalCtaSection } from "@/components/FinalCtaSection";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Footer } from "@/components/Footer";
@@ -170,6 +171,7 @@ export default async function HomePage({
           <TeamSection />
           <CtaBanner variant="build" />
           <AudienceSection />
+          <BlogPreviewSection />
           <FinalCtaSection />
         </main>
         <Footer />
