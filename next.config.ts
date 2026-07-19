@@ -12,6 +12,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Self-hosted PostHog reverse proxy (EU Cloud). Analytics traffic is served
+  // through our own domain at /ingest so ad/tracking blockers do not drop events.
+  skipTrailingSlashRedirect: true,
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://eu-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://eu.i.posthog.com/:path*",
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
