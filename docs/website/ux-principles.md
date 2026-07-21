@@ -2,130 +2,122 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Website Strategy](./website-strategy.md) · [UI Principles](./ui-principles.md) · [SEO Checklist](./seo-checklist.md) · [Brand Positioning](../company/brand-positioning.md) · [Engineering Standards](../engineering/engineering-standards.md) · [Definition of Done](../engineering/definition-of-done.md)
+Last updated: 2026-07-21
+Related: [Website Strategy](./website-strategy.md) · [UI Principles](./ui-principles.md) · [SEO Checklist](./seo-checklist.md) · [Blog Standards](../marketing/blog-standards.md) · [Engineering Standards](../engineering/engineering-standards.md)
 
 ---
 
 ## Why this document exists
 
-UX is where our positioning is either proven or exposed. We tell founders we build clear, fast, scalable products. If our own site is confusing, slow, or inaccessible, the pitch dies on contact. These principles apply first to the CodaCrew website and second to every product we build for clients. They are opinionated and enforceable, not aspirational.
+We are a publication, so UX is mostly about one thing: **making excellent technical content easy to find and a pleasure to read.** These principles apply to the CodaCrew website first, and to any product we build second. They are opinionated and enforceable.
 
-The guiding sentence: **every screen should make the next action obvious and the current state clear.**
-
----
-
-## 1. Clarity beats cleverness
-
-The visitor is a busy founder, not an audience for our creativity.
-
-- Say the obvious thing plainly. A headline the reader understands beats a headline they admire.
-- One primary action per view. Secondary actions are visibly secondary.
-- Remove anything that does not help the user decide or act. Empty cleverness is a cost, not a feature.
-- If a section needs a caption to explain what it is, redesign the section.
+Guiding sentence: **optimize every screen for reading and discovery.**
 
 ---
 
-## 2. Respect attention and speed
+## 1. Optimize for reading
+
+The article page is the most important screen we have.
+
+- **Typography first.** Comfortable font size (about 18px body), generous line height (around 1.6 to 1.7), and a readable measure (about 65 to 75 characters per line).
+- **Calm layout.** Plenty of whitespace, clear hierarchy, no sidebars competing with the text.
+- **Long-form friendly.** Headings, short paragraphs, and pacing that make a 10-minute read feel effortless.
+- **Reading aids.** Reading time, publish/updated date, and author are visible without clutter.
+
+---
+
+## 2. Code snippets are a core UX element
+
+Engineers judge us by our code blocks.
+
+- **Readable:** proper syntax highlighting, adequate contrast, monospaced, comfortable padding.
+- **Copyable:** a one-click copy affordance (planned) and code that is complete enough to run.
+- **Language-aware:** language labels; do not wrap or truncate important lines.
+- **Honest:** examples match what we claim and are version-aware.
+
+---
+
+## 3. Fast scanning
+
+Engineers scan before they commit to reading.
+
+- Lead with the point; make the value obvious in the first screen.
+- Descriptive headings that tell the story on their own.
+- Chips, lists, and callouts for criteria, steps, and trade-offs.
+- A reader should get the gist from headings alone.
+
+---
+
+## 4. Discoverability and navigation
+
+Help readers find the next thing worth reading.
+
+- **Topic navigation:** clear entry points into clusters (see [Topic Clusters](../marketing/topic-clusters.md)).
+- **Related articles:** surface relevant posts at the end of each article (planned).
+- **Category and author pages:** browsable groupings that build authority and keep readers on-site.
+- **Search:** fast, forgiving search (planned).
+- **Internal linking:** every article links to related content naturally.
+
+---
+
+## 5. Respect attention and speed
 
 Perceived speed is a feature and a trust signal.
 
-- Optimize the first meaningful paint. Keep the hero light: minimal `priority` images, inline SVG and CSS over heavy assets. See [UI Principles](./ui-principles.md).
-- Do not block content on JavaScript that is not needed. Server-render by default; hydrate only what must be interactive.
-- No layout shift. Reserve space for media. Content should not jump as it loads.
-- Motion is subtle and purposeful. No animation for its own sake, and never animation that delays comprehension.
+- Optimize first paint and LCP: minimal priority images, inline SVG/CSS, server-first rendering.
+- No layout shift; reserve space for media and code.
+- Ship minimal client JavaScript; hydrate only what must be interactive.
+- Motion is subtle and purposeful, and respects `prefers-reduced-motion`.
 
 ---
 
-## 3. Guide, do not dump
+## 6. Accessibility is a requirement
 
-Structure information as a path, not a pile.
+We build for every engineer.
 
-- Progressive disclosure: lead with the outcome, reveal detail on demand.
-- One idea per section, in a deliberate order that builds an argument (see the home page narrative in [Website Strategy](./website-strategy.md)).
-- Scannable by default: meaningful headings, short paragraphs, chips and lists over walls of text.
-- The reader should be able to skim the headings alone and still get the story.
+- Exactly one `h1` per page, then ordered `h2`/`h3`.
+- Full keyboard operability with a visible focus ring on every interactive element.
+- Real buttons and links; `aria-label` on icon-only controls; meaningful `alt`, decorative images `aria-hidden`.
+- WCAG AA contrast on light and dark surfaces; never rely on color alone.
+- Forms: labels tied to inputs, errors announced in text.
 
----
-
-## 4. Conversion is a courtesy, not a trap
-
-We help the visitor take the next step; we never manipulate them into it.
-
-- CTAs are honest about what happens next ("Schedule a Free Call," "No commitment").
-- Provide multiple low-friction paths: form, WhatsApp, sticky CTA. Let the user choose.
-- Never use fake scarcity, dark patterns, or forced steps. Trust is the whole game.
-- The contact form asks only for what we need. Every extra field is friction and a reason to leave.
+Accessibility failures are bugs, not polish. See [Definition of Done](../engineering/definition-of-done.md).
 
 ---
 
-## 5. Accessibility is a requirement, not a setting
+## 7. Mobile and bilingual first
 
-We build for everyone, and this is non-negotiable per [Values](../company/values.md).
-
-- **Structure:** exactly one `h1` per page, then ordered `h2`/`h3`. Headings describe content, not style.
-- **Keyboard:** everything operable by keyboard, with a visible focus ring on every interactive element.
-- **Semantics:** real buttons and links, `aria-label` on icon-only controls, `alt` text on meaningful images, `aria-hidden` on decorative ones.
-- **Color and contrast:** meet WCAG AA. Never rely on color alone to convey meaning.
-- **Motion:** honor `prefers-reduced-motion`; animations reduce to near-instant.
-- **Forms:** labels tied to inputs, errors announced in text (not color alone), readable on their background (light labels on dark sections).
-
-Accessibility failures are treated as bugs, not polish. See [Definition of Done](../engineering/definition-of-done.md).
+- Mobile is the baseline; desktop is the enhancement.
+- No horizontal scroll; wide elements (tables, code) scroll within their own bounds.
+- Layouts survive Portuguese, which often runs longer than English. Test both locales.
+- Comfortable touch targets; nothing important hidden behind hover on touch.
 
 ---
 
-## 6. Design for mobile and both languages first
+## 8. Content is UX
 
-- **Mobile-first:** the primary experience is a phone. The desktop is the enhancement, not the baseline.
-- **Responsive containers:** content reflows and never causes horizontal scroll. Wide elements scroll within their own bounds.
-- **Bilingual layouts:** designs must survive Portuguese, which often runs longer than English. Never hardcode widths that assume English length. Test both locales.
-- Touch targets are comfortable (at least 44px), spacing is generous, and nothing important hides behind hover on touch devices.
-
----
-
-## 7. Feedback and system state
-
-The user should never wonder what is happening.
-
-- Every action gets immediate feedback (loading, success, error states on forms and buttons).
-- Errors are human and specific ("Please enter a valid email"), never a raw code or a dead end.
-- Success is confirmed clearly. Destructive or irreversible actions ask first (relevant for client products).
-- Anchor navigation scrolls smoothly to the target and accounts for the fixed header, so users are never dropped into a section hidden under the nav.
+- Microcopy is part of the interface; keep it clear and honest.
+- Write for the busy engineer: front-load meaning, cut filler, prefer verbs.
+- Voice follows [Brand Voice](../company/brand-voice.md): direct, technical, no fluff.
 
 ---
 
-## 8. Consistency lowers cognitive load
+## 9. Evaluation checklist
 
-- Reuse shared primitives (`Button`, `Container`, `Section`, `Icon`) rather than one-off components. Consistency is a UX feature, not just an engineering one. See [Coding Conventions](../engineering/coding-conventions.md).
-- The same action looks the same everywhere. The same concept uses the same word everywhere (see the terminology table in [Brand Positioning](../company/brand-positioning.md)).
-- Predictable patterns let users transfer what they learned on one screen to the next.
+Before shipping a change:
 
----
+- [ ] Is the article comfortable to read (size, spacing, measure)?
+- [ ] Are code blocks readable and complete?
+- [ ] Can I understand the page from headings alone?
+- [ ] Can readers easily find related and topic content?
+- [ ] Keyboard, focus, and contrast pass?
+- [ ] Holds up on mobile and in Portuguese?
+- [ ] Fast, with no layout shift?
 
-## 9. Content is UX
-
-- Microcopy is part of the interface. "No commitment, free 30-min call" does real UX work.
-- Write for the anxious skimmer: front-load meaning, cut filler, prefer verbs.
-- Voice follows [Content Strategy](../marketing/content-strategy.md): direct, founder-facing, confident, no jargon-for-jargon's-sake.
-
----
-
-## 10. How we evaluate UX
-
-Before shipping, review a change against this checklist:
-
-- [ ] Is the primary action on this view obvious within a few seconds?
-- [ ] Can I understand the page from the headings alone?
-- [ ] Does it work by keyboard, with visible focus, and pass a contrast check?
-- [ ] Does it hold up on a small screen and in Portuguese?
-- [ ] Are loading, empty, and error states designed, not just the happy path?
-- [ ] Did I remove everything that does not help the user decide or act?
-- [ ] Is motion subtle and reduced for `prefers-reduced-motion`?
-
-If any answer is "no," it is not done. This checklist is part of the [Definition of Done](../engineering/definition-of-done.md).
+If any answer is "no," it is not done.
 
 ---
 
 ## Maintaining this document
 
-Update when we learn something from real user behavior (analytics, session recordings, sales feedback) or when a new pattern becomes common enough to standardize. UX principles should be few, sharp, and enforced, not a growing wish list.
+Update from real reader behavior (analytics, feedback) and when new reading or discovery patterns become standard. Keep the principles few and enforced.

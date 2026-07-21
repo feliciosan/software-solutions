@@ -2,136 +2,124 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Website Strategy](./website-strategy.md) · [Content Strategy](../marketing/content-strategy.md) · [Blog Standards](../marketing/blog-standards.md) · [Roadmap](./roadmap.md) · [Engineering Standards](../engineering/engineering-standards.md)
+Last updated: 2026-07-21
+Related: [Website Strategy](./website-strategy.md) · [Content Strategy](../marketing/content-strategy.md) · [Blog Standards](../marketing/blog-standards.md) · [Topic Clusters](../marketing/topic-clusters.md) · [Roadmap](./roadmap.md)
 
 ---
 
 ## Why this document exists
 
-Organic search is our compounding growth channel: content written once that attracts in-profile founders for years. But SEO only compounds if the technical foundation is correct and every new page follows the same rules. This is the operational checklist that turns "we should do SEO" into "here is exactly what every page must have." It reflects how SEO is actually implemented in the codebase (Next.js metadata API, JSON-LD, dynamic sitemap and robots, `next-intl` localization).
+Organic search is our compounding growth engine: technical articles that keep attracting engineers for years. It only compounds if the technical foundation is correct and every article follows the same rules. This is the operational checklist.
 
-Rule of thumb: **write for founders first, for crawlers second.** Content that genuinely helps a founder is what ranks and converts. Everything below makes sure that content is discoverable and correctly understood.
-
----
-
-## 1. Foundations (site-wide, already in place)
-
-These exist and must not regress:
-
-- [ ] `metadataBase` set from `NEXT_PUBLIC_BASE_URL` (via `lib/siteConfig.ts` `baseUrl`), so relative URLs resolve correctly.
-- [ ] Root and per-locale metadata correct (title template `%s | CodaCrew`, real brand description). No leftover placeholder titles.
-- [ ] Dynamic `app/sitemap.ts` includes home, both locales, `/blog`, and every post; updated whenever routes are added.
-- [ ] `app/robots.ts` allows crawling, disallows `/api/`, `/calculadora-interna`, `/demos/`, and points to the sitemap. No stale static `robots.txt`.
-- [ ] Dynamic OpenGraph image (`app/opengraph-image.tsx`) reflects current positioning.
-- [ ] `next-intl` localization with `pt-BR` and `en-US`, full parity.
-- [ ] `verification.google` wired to `NEXT_PUBLIC_GOOGLE_VERIFICATION` (set when verifying in Search Console). See [Roadmap](./roadmap.md).
+Rule of thumb: **write for engineers first, for crawlers second.** Content that genuinely helps an engineer is what ranks and earns trust.
 
 ---
 
-## 2. Per-page checklist (every new page or route)
+## 1. Foundations (site-wide, in place)
 
-Complete all of these before a page is considered shippable.
+- [ ] `metadataBase` from `NEXT_PUBLIC_BASE_URL` (via `lib/siteConfig.ts`).
+- [ ] Correct root and per-locale metadata (title template, real description).
+- [ ] Dynamic `app/sitemap.ts` includes home, both locales, `/blog`, every article, and (when built) topic and author pages.
+- [ ] `app/robots.ts` allows crawling, disallows internal/utility routes, points to the sitemap.
+- [ ] Dynamic OpenGraph image (`app/opengraph-image.tsx`).
+- [ ] `next-intl` localization (pt-BR, en-US), full parity.
+- [ ] `verification.google` via env when verifying in Search Console.
+
+---
+
+## 2. Per-article checklist
+
+Complete all before an article is shippable.
 
 ### Metadata
-- [ ] Unique, descriptive `title` (roughly 50 to 60 characters), leads with the value, includes the brand via the template.
-- [ ] Unique `description` (roughly 150 to 160 characters), written for a human, includes the primary intent naturally.
-- [ ] Relevant, non-spammy `keywords` where used (do not stuff).
-- [ ] `alternates.canonical` set to the page's own absolute URL.
-- [ ] `alternates.languages` with `pt-BR` and `en-US` variants (hreflang).
+- [ ] Unique, descriptive `title` (~50 to 60 chars) matching search intent.
+- [ ] Unique `description` (~150 to 160 chars) written for a human.
+- [ ] `alternates.canonical` set to the article's own URL.
+- [ ] `alternates.languages` for pt-BR and en-US (hreflang).
 
 ### Social
-- [ ] OpenGraph `title`, `description`, `url`, `siteName`, `locale`, `type` set.
-- [ ] Twitter card (`summary_large_image`) set.
-- [ ] OG image resolves (dynamic default or a page-specific image).
+- [ ] OpenGraph and Twitter card set; cover image resolves.
 
 ### Structure and content
-- [ ] Exactly one `h1`, then ordered `h2`/`h3` that describe content.
-- [ ] Primary intent addressed in the first screen of content.
-- [ ] Internal links to relevant pages (services, related posts, home) with descriptive anchor text.
-- [ ] Images have meaningful `alt`; decorative images are `aria-hidden`.
-- [ ] Both `pt-BR` and `en-US` versions exist with parity.
+- [ ] Exactly one `h1`, then ordered `h2`/`h3` describing the content.
+- [ ] Search intent addressed in the first screen.
+- [ ] Descriptive, keyword-bearing, kebab-case slug (stable once published).
+- [ ] Author and publish/updated date present (feed `Article` schema and byline).
+- [ ] Accurate reading time.
+- [ ] Meaningful `alt` on images; `aria-hidden` on decorative ones.
+- [ ] Both locales exist with parity.
+- [ ] No thin content: every article earns its place by helping an engineer.
 
 ### Structured data (JSON-LD)
-- [ ] Home: `Organization` / `ProfessionalService` with founders, `hasOfferCatalog` (services), `sameAs`, `areaServed`.
+- [ ] Article: `BlogPosting` (or `TechArticle` where appropriate) plus `BreadcrumbList`.
 - [ ] Blog listing: `Blog` with `blogPost` entries.
-- [ ] Blog post: `BlogPosting` plus `BreadcrumbList`.
-- [ ] Service pages (planned): `Service` schema. See [Roadmap](./roadmap.md).
+- [ ] Author pages (planned): `Person`.
 - [ ] Validate with Google's Rich Results Test before shipping.
 
 ---
 
-## 3. Content SEO (owned with Marketing)
+## 3. Topic clusters and internal linking
 
-Detail in [Content Strategy](../marketing/content-strategy.md) and [Blog Standards](../marketing/blog-standards.md).
+This is how we build topical authority (see [Topic Clusters](../marketing/topic-clusters.md)).
 
-- [ ] Each article targets one primary intent / keyword cluster mapped to an [ICP](../company/ideal-customer-profile.md) job to be done.
-- [ ] Title and first paragraph make the promise and the payoff obvious.
-- [ ] Scannable structure: headings, short paragraphs, lists.
-- [ ] Internal links to related posts and to relevant service pages.
-- [ ] Descriptive slug (kebab-case, keyword-bearing, stable once published).
-- [ ] Author and publish date present (feeds `BlogPosting` schema).
-- [ ] No thin content: every article earns its place by genuinely helping a founder.
+- [ ] Each article belongs to a defined cluster (Next.js, NestJS, Node.js, TypeScript, databases, testing, CI/CD, architecture, performance, DX, AI for developers).
+- [ ] Pillar pages link down to cluster articles; cluster articles link up to the pillar and across to siblings.
+- [ ] Every article links to 2 to 4 genuinely related articles with descriptive anchor text.
+- [ ] Category pages exist and are indexable, grouping each cluster.
+- [ ] Author pages (planned) link an engineer's articles together.
 
 ---
 
-## 4. Technical performance (Core Web Vitals)
+## 4. Evergreen and freshness
 
-Search rewards fast, stable pages, and so do founders. See [UI Principles](./ui-principles.md) and [Engineering Standards](../engineering/engineering-standards.md).
+- [ ] Prefer evergreen, deeply useful topics over news that decays (with room for timely trend pieces).
+- [ ] Keep flagship articles updated; refresh code and versions, and note "last updated".
+- [ ] Improve an existing ranking article before writing a new competing one.
 
-- [ ] LCP kept low: minimal `priority` images, inline SVG/CSS for hero visuals, server-first rendering.
-- [ ] No layout shift (CLS): reserve space for media, avoid late-injected content.
-- [ ] Ship minimal client JavaScript: Server Components by default, `"use client"` only where needed.
+---
+
+## 5. Core Web Vitals
+
+Search and engineers both reward fast, stable pages. See [UX Principles](./ux-principles.md).
+
+- [ ] LCP low: minimal priority images, inline SVG/CSS, server-first rendering.
+- [ ] No layout shift (CLS): reserve space for media and code.
+- [ ] Minimal client JavaScript; static generation for content.
 - [ ] Fonts via `next/font` with `display: swap`.
-- [ ] Static generation (SSG) for content pages via `generateStaticParams`.
-- [ ] Lighthouse performance and SEO checked on changed pages; no regressions.
+- [ ] Lighthouse performance and SEO checked on changed pages.
 
 ---
 
-## 5. Indexation hygiene
+## 6. Indexation hygiene
 
-- [ ] Marketing pages: indexable, in the sitemap.
-- [ ] Utility and funnel-only routes (`/calculadora-interna`, `/demos/`): excluded from robots and out of the sitemap.
-- [ ] No duplicate content across locales (hreflang resolves this) or across trailing-slash variants.
-- [ ] Canonical always points to the preferred URL of the page itself.
-- [ ] 404s handled gracefully (`notFound()` for unknown slugs and locales).
-
----
-
-## 6. Off-page and measurement
-
-- [ ] Google Search Console verified and sitemap submitted (blocked on domain + verification token, see [Roadmap](./roadmap.md)).
-- [ ] Track organic entrances, top queries, and top landing pages; feed learnings into the [Content Backlog](../marketing/content-backlog.md).
-- [ ] Build backlinks honestly: useful content, guest posts, real relationships. No link schemes.
-- [ ] Keep `sameAs` profiles (LinkedIn, GitHub) accurate and consistent.
+- [ ] Articles, listing, topic, and author pages: indexable and in the sitemap.
+- [ ] Utility/internal routes: excluded from robots and sitemap.
+- [ ] No duplicate content across locales (hreflang) or trailing-slash variants.
+- [ ] Canonical always points to the preferred URL.
+- [ ] Unknown slugs/locales handled with `notFound()`.
 
 ---
 
-## 7. Release gate for SEO
+## 7. Off-page and discoverability
 
-A page cannot ship unless:
-
-- [ ] Metadata, canonical, and hreflang are present and correct.
-- [ ] JSON-LD for the page type is present and validates.
-- [ ] Sitemap and robots reflect the route.
-- [ ] Both locales exist with parity.
-- [ ] Core Web Vitals are not regressed.
-
-This gate is part of the broader [Definition of Done](../engineering/definition-of-done.md) and the deploy quality gate in [Website Strategy](./website-strategy.md).
+- [ ] Google Search Console verified; sitemap submitted.
+- [ ] Track top queries, entrances, and landing articles; feed learnings into the [Content Backlog](../marketing/content-backlog.md).
+- [ ] Earn links honestly: useful content shared in developer communities and on LinkedIn.
+- [ ] LinkedIn discoverability: consistent company-page posting that links back to articles (see [LinkedIn Growth Playbook](../marketing/linkedin-growth-playbook.md)).
+- [ ] Keep `sameAs` profiles accurate.
 
 ---
 
 ## 8. Common mistakes to avoid
 
-- Duplicate or missing `title`/`description` across pages.
-- Forgetting hreflang, causing the two locales to compete.
-- Canonical pointing at the wrong URL (or missing entirely).
-- Keyword stuffing or writing for crawlers instead of founders.
-- Shipping a new route without adding it to the sitemap.
-- Invented stats or claims in content (also a trust and honesty violation, see [Brand Positioning](../company/brand-positioning.md)).
+- Duplicate or missing titles/descriptions.
+- Missing hreflang (locales competing) or wrong canonical.
+- Writing for crawlers instead of engineers; keyword stuffing.
+- Shipping a route without adding it to the sitemap.
+- Thin or inaccurate content (also a trust violation, see [Brand Positioning](../company/brand-positioning.md)).
 
 ---
 
 ## Maintaining this document
 
-Update when Next.js SEO capabilities change, when we add a new page type (for example service landing pages), or when Search Console reveals a recurring issue. Keep it operational: every item should be a concrete thing someone can check.
+Update when Next.js SEO capabilities change, when a new page type ships (topic, author), or when Search Console reveals a recurring issue. Keep every item concrete and checkable.

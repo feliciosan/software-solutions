@@ -2,145 +2,131 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Brand Positioning](../company/brand-positioning.md) · [Ideal Customer Profile](../company/ideal-customer-profile.md) · [Blog Standards](./blog-standards.md) · [Content Backlog](./content-backlog.md) · [Social Distribution](./social-distribution.md) · [SEO Checklist](../website/seo-checklist.md) · [Case Study Template](./case-study-template.md)
+Last updated: 2026-07-21
+Related: [Brand Positioning](../company/brand-positioning.md) · [Audience Profile](../company/ideal-customer-profile.md) · [Brand Voice](../company/brand-voice.md) · [Topic Clusters](./topic-clusters.md) · [Editorial Calendar](./editorial-calendar.md) · [Editorial Guidelines](./editorial-guidelines.md) · [Blog Standards](./blog-standards.md) · [Content Backlog](./content-backlog.md) · [LinkedIn Growth Playbook](./linkedin-growth-playbook.md) · [SEO Checklist](../website/seo-checklist.md)
 
 ---
 
 ## Why this document exists
 
-Content is how CodaCrew earns trust at scale before a founder ever contacts us. It is the mission ("help founders turn ideas into scalable products," see [Mission](../company/mission.md)) expressed as generosity: we give away the thinking so that the founders who need a partner recognize us as the obvious one. This document defines what we publish, for whom, in what voice, and why. It governs the blog first, and by extension every word we put in public.
+Content is the entire product. This document defines what we publish, for whom, and how we become a trusted source for the JavaScript and TypeScript ecosystem. It governs the blog first and, by extension, everything we publish.
 
-The strategic bet: **be the most useful voice for early-stage founders on the technical decisions that make or break a product.** Useful compounds. Clever does not.
+The strategic bet: **be one of the most useful, accurate, and respected voices on modern JS/TS engineering.** Useful and accurate compound. Shallow and generic do not.
 
 ---
 
 ## 1. Goals
 
-Content serves three goals, in order:
+1. **Technical authority.** Be recognized by engineers as a deep, trustworthy source on our ecosystem.
+2. **Audience growth.** Grow returning readers and the LinkedIn community (see [LinkedIn Growth Playbook](./linkedin-growth-playbook.md)).
+3. **Organic reach.** Rank for the real questions engineers search (see [SEO Checklist](../website/seo-checklist.md)).
 
-1. **Trust and authority.** Demonstrate that we understand founders' real problems better than a generic agency ever could.
-2. **Organic growth.** Rank for the questions founders actually search, and turn readers into qualified conversations. See [SEO Checklist](../website/seo-checklist.md).
-3. **Sales enablement.** Give the sales conversation a library to point to ("we wrote about exactly this").
-
-Content is not for impressing other engineers, chasing traffic that never converts, or publishing on a schedule for its own sake.
+Not goals: chasing traffic that does not serve engineers, publishing on a schedule for its own sake, or any form of selling.
 
 ---
 
 ## 2. Audience
 
-We write for the [Ideal Customer Profile](../company/ideal-customer-profile.md): early-stage founders and small product teams. Concretely, the reader is often:
-
-- A non-technical or semi-technical founder trying to make a technical decision.
-- A founder deciding how to build (freelancer vs agency vs hire vs partner).
-- A founder worried about cost, speed, scale, or being taken advantage of.
-
-We are not writing for senior engineers looking for deep implementation tutorials. When we go technical, we translate it into founder consequences (cost, speed, risk, scalability).
+We write for the [Audience Profile](../company/ideal-customer-profile.md): senior and mid-level engineers, tech leads, staff engineers, engineering managers, and JS/TS/full-stack developers, plus engineers moving into modern stacks. We assume working engineers, not absolute beginners.
 
 ---
 
-## 3. Voice and tone
+## 3. Pillar topics
 
-Our voice is the same everywhere: the website, the blog, proposals, social. It follows directly from [Brand Positioning](../company/brand-positioning.md).
+Our authority is concentrated on the JS/TS ecosystem, end to end. Full structure in [Topic Clusters](./topic-clusters.md). The pillars:
 
-**We sound like:** a senior technical co-founder giving a straight, generous answer over coffee. Confident, direct, warm, and honest, including about trade-offs.
-
-**Principles:**
-- **Plain over clever.** If a smart founder without a CS degree cannot follow it, rewrite it.
-- **Opinionated.** We take positions. "It depends" is only acceptable when we then say what it depends on.
-- **Founder-framed.** Translate technology into business consequences.
-- **Honest.** We name trade-offs and limits. We never oversell or invent proof (see [Values](../company/values.md)).
-- **Concise.** Respect the reader's time. Cut throat-clearing and filler.
-
-**We avoid:** hype, buzzword soup, fear-mongering, "we build software" commodity framing, and anything that reads as AI-generated boilerplate.
-
-**House style (hard rules):**
-- No em dash character. Use commas, colons, periods, or parentheses.
-- American English for `en-US`, Brazilian Portuguese for `pt-BR`, full parity, neither a machine-translation afterthought.
-- Active voice, second person ("you"), verbs over nouns.
+1. **Next.js and React** (frontend, rendering, App Router, performance).
+2. **NestJS and Node.js** (backend architecture, APIs, patterns).
+3. **TypeScript** (types, patterns, DX).
+4. **Databases** (PostgreSQL, MongoDB, Firebase; data modeling, performance).
+5. **Testing and quality** (Playwright, unit/integration/e2e, strategy).
+6. **CI/CD and infrastructure** (GitHub Actions, Docker, deployments, cloud).
+7. **Architecture** (clean architecture, scalable systems, monorepos, API design, observability, security).
+8. **Developer experience and tooling.**
+9. **AI for developers** (practical, honest).
+10. **Industry trends** (analysis, not hype).
 
 ---
 
-## 4. Content pillars
+## 4. Content types
 
-Everything we publish maps to one of these pillars, which mirror the positioning pillars and the [Service Catalog](../sales/service-catalog.md):
-
-1. **Startup and MVP.** Validation, scope, cost, timelines, first users. (Category: Startup, Product.)
-2. **SaaS and scale.** Architecture, growth, avoiding rewrites, technical debt. (Category: SaaS, Architecture, Cloud.)
-3. **AI applied to business.** Practical AI and automation for real products, not hype. (Category: AI.)
-4. **Building well.** Engineering practices translated for founders: why tests, CI/CD, and code review protect their investment. (Category: Software Engineering.)
-5. **Hiring and partnership.** Freelancer vs agency vs hire vs partner, working with a technical team, when to bring in help. (Category: Product, Startup.)
-
-The blog category taxonomy (Startup, SaaS, AI, Architecture, Software Engineering, Product, Cloud) is defined in `lib/siteConfig.ts` and must stay in sync.
+- **Deep dives (primary):** thorough, technical, opinionated pieces using the [Technical Deep Dive Template](./technical-deep-dive-template.md). Our signature format.
+- **Practical guides:** how to do a real thing well, with runnable code.
+- **Comparisons and decision frameworks:** honest trade-offs (for example, when to reach for NestJS, choosing a database).
+- **Lessons learned:** post-mortems and hard-won experience from building and scaling.
+- **Trend analysis:** what is changing in the ecosystem and why it matters.
 
 ---
 
-## 5. Content types
-
-- **Founder guides (primary).** Answer a real question a founder searches ("How long does it take to build an MVP?"). Practical, opinionated, evergreen. This is the core of the blog.
-- **Decision frameworks.** Help a founder choose (MVP vs full product, when to hire a technical partner). High sales value.
-- **Case studies.** Real project stories using the [Case Study Template](./case-study-template.md). Strongest proof asset; gated by having real results to share honestly.
-- **Perspective pieces.** Our opinion on a shift that matters to founders (how AI changes building products). Builds authority.
-- **Service pages.** SEO-and-conversion landing pages per service, owned jointly with the website (see [Roadmap](../website/roadmap.md)).
-
----
-
-## 6. Topic selection and prioritization
+## 5. Topic selection
 
 A topic earns a place when it satisfies all three:
 
-1. **ICP relevance:** it answers a question an in-profile founder actually has.
-2. **Search or sales demand:** people search for it, or it recurs in sales conversations.
-3. **Right to speak:** we have genuine, senior experience to offer, not a rehash.
+1. **Audience relevance:** a real question an engineer in our audience has.
+2. **Search or discussion demand:** people search or talk about it.
+3. **Right to speak:** we have genuine, deep experience to offer, not a rehash of docs.
 
-Prioritize with a simple lens: **impact (does it serve an ICP job to be done and rank) over effort.** The living, ranked list lives in [Content Backlog](./content-backlog.md).
+Prioritize impact (relevance + demand + our depth) over effort. The living, ranked list is the [Content Backlog](./content-backlog.md).
 
 ---
 
-## 7. Distribution
+## 6. Editorial quality bar
+
+Every piece must clear the bar in [Editorial Guidelines](./editorial-guidelines.md) and [Blog Standards](./blog-standards.md). In short: technically accurate, genuinely useful, opinionated with evidence, real code, no fluff, no generic AI-sounding prose, and something only we could have written.
+
+---
+
+## 7. Cadence
+
+- **Quality over frequency, always.** One excellent deep dive beats four thin posts. A thin post is a net negative for authority and SEO.
+- Hold a sustainable cadence we can actually maintain; plan it in the [Editorial Calendar](./editorial-calendar.md).
+- Every article meets standards before publishing.
+
+---
+
+## 8. Distribution
 
 Publishing is not the finish line.
 
-- **Blog** is the home base (owned, indexable, evergreen).
-- **LinkedIn** (founders' and company) for reach into the founder network. Repackage the article's core argument, link back.
-- **Sales** reuses articles directly in conversations and proposals.
-- **SEO** is the long game: internal linking, service-page links, and the home page blog preview all drive discovery.
-
-The operational playbook for channels, cadence, and turning an article into social posts lives in [Social Distribution](./social-distribution.md). In short: LinkedIn (founders' personal profiles) is primary, X/Twitter secondary, and every article is repurposed into a value-first post, not just a link.
-
-Every piece of content should be reusable across at least two of these.
+- **Blog:** the owned, evergreen home base.
+- **LinkedIn company page:** the primary distribution and growth channel; every article is repurposed (see [LinkedIn Growth Playbook](./linkedin-growth-playbook.md)).
+- **SEO:** topic clusters and internal linking drive discovery over time.
+- **Developer communities:** share genuinely useful pieces where engineers gather.
 
 ---
 
-## 8. Cadence and quality bar
+## 9. Authority-building strategy
 
-- **Quality over frequency, always.** One genuinely useful article beats four thin ones. A thin post is a net negative: it dilutes authority and SEO.
-- Start with a sustainable cadence the founders can actually hold, and never sacrifice the quality bar to hit a date.
-- Every article meets [Blog Standards](./blog-standards.md) before publishing, and the SEO items in [SEO Checklist](../website/seo-checklist.md).
-
----
-
-## 9. Measurement
-
-Track what maps to the goals in Section 1, not vanity:
-
-- **Authority and growth:** organic entrances, keyword rankings, returning readers, articles that rank on page one.
-- **Conversion:** blog-to-contact and blog-to-WhatsApp actions (PostHog).
-- **Sales enablement:** how often content is used in deals, and whether prospects reference it.
-
-Feed every learning back into the [Content Backlog](./content-backlog.md). Low performers get improved or retired, not left to rot.
+- **Go deep, not wide:** own the JS/TS ecosystem rather than covering everything shallowly.
+- **Be consistently excellent:** authority compounds from a steady stream of great work.
+- **Show real engineering:** code, benchmarks, post-mortems, and trade-offs earn respect.
+- **Have a voice:** distinct, honest, human (see [Brand Voice](../company/brand-voice.md)).
+- **Engage:** participate in the conversation, do not just broadcast.
 
 ---
 
-## 10. Guardrails
+## 10. Measurement
 
-- Never invent statistics, client names, or outcomes. Honesty is a competitive advantage. See [Brand Positioning](../company/brand-positioning.md).
-- Never publish content a competitor could have written with their logo swapped in. If it is not distinctly ours, it is not ready.
-- Never write for crawlers at the expense of founders.
-- Always ship both language versions, or hold the piece until both are ready.
+Track what maps to the goals, not vanity:
+
+- **Authority and growth:** organic entrances, rankings, returning readers, articles engineers save and share, LinkedIn followers and engagement.
+- **Depth:** completion and scroll depth on articles.
+- **Signal:** references and mentions by other engineers.
+
+Feed learnings back into the [Content Backlog](./content-backlog.md); improve or retire low performers.
+
+---
+
+## 11. Guardrails
+
+- Never publish inaccurate content; correct fast when wrong.
+- Never publish something a competitor could publish unchanged (too generic).
+- Never write for crawlers at the expense of engineers.
+- Always ship en-US and pt-BR with parity, and never use the em dash character.
+- No selling, and no "customer" framing.
 
 ---
 
 ## Maintaining this document
 
-Review quarterly, and whenever positioning, ICP, or the service mix changes. The strategy is stable; the backlog is where fast-moving decisions live. Keep this document about principles and let [Content Backlog](./content-backlog.md) carry the specifics.
+Review quarterly and whenever the ecosystem focus or channel mix changes. Keep this about principles; let the [Content Backlog](./content-backlog.md) and [Editorial Calendar](./editorial-calendar.md) carry the specifics.

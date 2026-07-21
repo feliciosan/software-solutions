@@ -2,125 +2,121 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Content Strategy](./content-strategy.md) · [Content Backlog](./content-backlog.md) · [SEO Checklist](../website/seo-checklist.md) · [Brand Positioning](../company/brand-positioning.md) · [Coding Conventions](../engineering/coding-conventions.md)
+Last updated: 2026-07-21
+Related: [Content Strategy](./content-strategy.md) · [Editorial Guidelines](./editorial-guidelines.md) · [Brand Voice](../company/brand-voice.md) · [Technical Deep Dive Template](./technical-deep-dive-template.md) · [Content Backlog](./content-backlog.md) · [SEO Checklist](../website/seo-checklist.md) · [Coding Conventions](../engineering/coding-conventions.md)
 
 ---
 
 ## Why this document exists
 
-[Content Strategy](./content-strategy.md) decides what to write and why. This document is the operational standard for how to write and ship a single post: the editorial bar, the structure, the SEO requirements, and the exact technical steps to add it to the site. If a post does not meet this bar, it does not publish. A weak post is not neutral; it dilutes authority and SEO.
+[Content Strategy](./content-strategy.md) decides what to write and why. This document is the operational standard for how to write and ship a single article: the bar, the structure, and the exact technical steps to publish. A weak article is not neutral; it dilutes our technical authority.
 
 ---
 
-## 1. The editorial bar (every post must clear all of these)
+## 1. The editorial bar (every article clears all of these)
 
-- **Serves an ICP founder.** It answers a real question an in-profile founder has. See [Ideal Customer Profile](../company/ideal-customer-profile.md).
-- **Has a point of view.** It takes a position, not a neutral survey. We are a senior partner, not Wikipedia.
-- **Is genuinely useful.** A founder finishes it able to make a better decision.
-- **Only we could have written it.** It carries our experience and opinion, not generic advice.
-- **Is honest.** No invented stats, no fabricated outcomes, trade-offs stated plainly. See [Values](../company/values.md).
-- **Reads as human.** Not AI boilerplate, not buzzword soup.
+- **Teaches something real.** The reader finishes able to do or decide something better.
+- **Demonstrates expertise.** It shows depth only an experienced engineer would have: internals, trade-offs, edge cases.
+- **Technically accurate.** Code is tested, claims are verified, versions are current. See [Editorial Guidelines](./editorial-guidelines.md).
+- **Practical.** Real, runnable examples, not toy snippets.
+- **Opinionated with evidence.** Takes a position and backs it.
+- **Only we could have written it.** Carries our experience and voice, not a rehash of docs.
+- **Reads as human.** No generic AI-sounding filler.
 
-If any of these is false, revise or kill the piece.
+If any is false, revise or kill it.
 
 ---
 
 ## 2. Structure
 
-A CodaCrew post is scannable and front-loaded.
+Scannable and front-loaded.
 
-- **Title:** clear and specific, promises a payoff, matches search intent. Prefer the founder's own phrasing ("How Long Does It Take to Build an MVP?").
-- **Opening (1 to 2 short paragraphs):** state the question and the honest answer up front. Do not bury the lede or warm up slowly.
-- **Body:** organized under descriptive `h2` headings. One idea per section. Short paragraphs. Use lists for criteria, steps, and trade-offs.
-- **Closing:** a crisp takeaway or the one thing to remember. No filler conclusion.
-- **CTA:** the post page already appends a founder CTA; the writing should lead naturally toward "talk to us," never with a hard sell.
+- **Title:** specific and honest, matches how an engineer would search ("How to test Next.js App Router with Playwright", not "Testing tips").
+- **Opening (1 to 2 short paragraphs):** the problem and what the reader will get. No warm-up.
+- **Body:** descriptive `h2` sections, one idea each, short paragraphs, lists for criteria/steps/trade-offs.
+- **Code:** minimal, complete, runnable, version-aware; follows [Coding Conventions](../engineering/coding-conventions.md).
+- **Diagrams:** include where they clarify architecture or flow (a diagram often beats three paragraphs).
+- **Closing:** the key takeaway, plus what to read or try next.
 
-Length is whatever the topic needs and no more. Depth beats word count. If it can be said in 800 useful words, do not pad it to 1500.
-
----
-
-## 3. Voice and house style
-
-Follow [Content Strategy](./content-strategy.md) section 3. The non-negotiables:
-
-- Plain, direct, opinionated, founder-framed. Translate technical points into business consequences.
-- Second person ("you"), active voice, verbs over nouns.
-- **No em dash character.** Use commas, colons, periods, or parentheses.
-- No hype, no fear-mongering, no "we build software" commodity framing.
-- Define jargon on first use, or avoid it.
+Deep, structured pieces should use the [Technical Deep Dive Template](./technical-deep-dive-template.md). Length is whatever the topic needs and no more; depth beats word count.
 
 ---
 
-## 4. Bilingual requirement
+## 3. Code and examples
 
-Every post ships in both `en-US` and `pt-BR` with full parity. Neither is a raw machine translation; both read natively. If only one language is ready, the post waits. This mirrors the parity rule across the whole site (see [Website Strategy](../website/website-strategy.md)).
-
----
-
-## 5. SEO requirements per post
-
-From [SEO Checklist](../website/seo-checklist.md), the post-specific items:
-
-- Unique `title` and `description` targeting one primary intent.
-- Descriptive, keyword-bearing, kebab-case `slug` that is stable once published (never change a live slug without a redirect).
-- One primary keyword cluster mapped to an ICP job to be done.
-- Internal links to related posts and to relevant service pages, with descriptive anchor text.
-- `author` and `date` set (they feed the `BlogPosting` schema and the byline).
-- Accurate `readingMinutes`.
-- Category chosen from the fixed taxonomy (Startup, SaaS, AI, Architecture, Software Engineering, Product, Cloud).
+- Fenced blocks with a language tag; inline code for identifiers.
+- Examples must actually run; prefer complete-enough snippets over fragments.
+- Pin versions or state the version assumed ("Next.js 15", "Node 22").
+- Show the wrong way and the right way when it teaches.
+- Keep examples focused on the point; strip unrelated noise.
 
 ---
 
-## 6. How to add a post (technical steps)
+## 4. Diagrams and images
 
-Posts live in the typed registry `lib/blog.ts` (no MDX dependency yet; this is the single swap point when we migrate). To publish:
+- Use diagrams for architecture, data flow, and sequences.
+- Optimize images; meaningful `alt`, or `aria-hidden` if decorative.
+- Screenshots must be current and legible; annotate when helpful.
+- No decorative filler images.
 
-1. **Add a `BlogPost` entry** to the `posts` array in `lib/blog.ts` with:
-   - `slug` (kebab-case, stable), `category` (from `BlogCategory`), `date` (ISO `YYYY-MM-DD`), `readingMinutes`, `author`.
-   - `content` with both `"en-US"` and `"pt-BR"` `LocalizedPost` objects: `title`, `description`, and a `body` array of `ContentBlock`s.
-2. **Author the `body`** using the supported block types:
-   - `{ type: "p", text: "..." }` for paragraphs.
-   - `{ type: "h2", text: "..." }` for section headings.
-   - `{ type: "ul", items: ["...", "..."] }` for lists.
-   (If a post needs a block type we do not have yet, add it to the `ContentBlock` union and render it in the post page, rather than hacking markup into a paragraph.)
-3. **Verify locally:** `npm run build` (the post is statically generated via `generateStaticParams`), then open `/en-US/blog/<slug>` and `/pt-BR/blog/<slug>`. Confirm the `<title>`, canonical, and JSON-LD (Article plus Breadcrumb).
-4. **Confirm it appears** on `/blog` and in the homepage blog preview (latest three), and that `sitemap.xml` includes it.
+---
+
+## 5. Voice and house style
+
+Follow [Brand Voice](../company/brand-voice.md). Non-negotiables:
+
+- Engineer to engineer, second person, active voice, direct.
+- Define jargon on first use or avoid it.
+- **No em dash character.** Use commas, colons, or periods.
+- No hype, no fear, no clickbait, no padding.
+
+---
+
+## 6. Bilingual requirement
+
+Every article ships in en-US and pt-BR with full parity. Both read natively; neither is a raw machine translation. If only one language is ready, the article waits.
+
+---
+
+## 7. SEO requirements per article
+
+From [SEO Checklist](../website/seo-checklist.md): unique title/description, stable kebab-case slug, one primary intent, a topic cluster assignment, 2 to 4 internal links, author and date, accurate reading time, and correct JSON-LD.
+
+---
+
+## 8. How to add an article (technical steps)
+
+Articles live in the typed registry `lib/blog.ts` (no MDX yet; the single swap point when we migrate).
+
+1. **Add a `BlogPost` entry** with `slug` (kebab-case, stable), `category` (from the cluster taxonomy), `date` (ISO), `readingMinutes`, `author`, optional `cover` (1200x630), and `content` for both `"en-US"` and `"pt-BR"`.
+2. **Author the `body`** with the supported `ContentBlock` types (`p`, `h2`, `ul`). If a needed block type is missing (for example a code block), add it to the `ContentBlock` union and render it in the post page rather than hacking markup into a paragraph.
+3. **Verify locally:** `npm run build`, then open `/en-US/blog/<slug>` and `/pt-BR/blog/<slug>`; check `<title>`, canonical, and JSON-LD.
+4. **Confirm** it appears on `/blog`, in the homepage preview, and in `sitemap.xml`.
 5. **Run the quality gate** in [Website Strategy](../website/website-strategy.md) (build, lint, both locales, no em dash).
 
-Coding conventions for the registry and rendering follow [Coding Conventions](../engineering/coding-conventions.md).
+---
+
+## 9. Review workflow
+
+1. Draft against the bar (Section 1) and structure (Section 2).
+2. Self-edit for accuracy, clarity, and voice; run every code sample.
+3. Peer review by the other founder for technical accuracy and voice.
+4. Localize to full parity.
+5. Technical add (Section 8) and verify.
+6. Publish, then distribute per [LinkedIn Growth Playbook](./linkedin-growth-playbook.md).
+7. Update the [Content Backlog](./content-backlog.md) status.
 
 ---
 
-## 7. Images and media
+## 10. Maintaining published articles
 
-- Prefer none over decorative filler. An image must add information.
-- If used: optimized, with meaningful `alt` (or `aria-hidden` if decorative), no layout shift. See [UI Principles](../website/ui-principles.md).
-- Illustrative product screenshots must be clearly illustrative, never implying a false client or metric.
-
----
-
-## 8. Review and publishing workflow
-
-1. **Draft** against the editorial bar (Section 1) and structure (Section 2).
-2. **Self-edit** for clarity, honesty, and house style. Read it aloud; cut anything that does not earn its place.
-3. **Peer review** by the other founder for accuracy and voice.
-4. **Localize** to full parity.
-5. **Technical add** (Section 6) and verify.
-6. **Publish,** then distribute per [Content Strategy](./content-strategy.md) section 7.
-7. **Update** the [Content Backlog](./content-backlog.md) status.
-
----
-
-## 9. Maintenance of published posts
-
-- Evergreen by intent: revisit periodically and update rather than let posts go stale.
-- If a post underperforms, improve it (better title, intro, depth, internal links) before writing something new. Improving an existing ranking page often beats a new one.
+- Evergreen by intent: update rather than let posts rot; refresh code and versions and note "last updated".
+- Improve an underperforming article before writing a new competing one.
 - Fix inaccuracies immediately; our credibility is the asset.
-- Never silently change a published slug; redirect if it must change.
+- Never silently change a live slug; redirect if it must change.
 
 ---
 
 ## Maintaining this document
 
-Update when the blog's technical model changes (for example, migrating `lib/blog.ts` to MDX), when the category taxonomy changes, or when we learn a repeatable editorial lesson worth encoding. Keep it operational: every rule should be checkable.
+Update when the blog's technical model changes (for example, migrating `lib/blog.ts` to MDX or adding code-block components) or when we learn a repeatable editorial lesson. Keep it operational and checkable.

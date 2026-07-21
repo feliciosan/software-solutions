@@ -40,12 +40,12 @@ docs/                     Internal documentation
 
 ## 2. Naming
 
-- **Components:** PascalCase, one primary component per file, file named after the component (`ServicesSection.tsx` exports `ServicesSection`).
+- **Components:** PascalCase, one primary component per file, file named after the component (`TopicsSection.tsx` exports `TopicsSection`).
 - **Exports:** prefer named exports for components (`export function Button(...)`). Default exports only where the framework requires them (route `page.tsx`, `layout.tsx`, `sitemap.ts`, and similar).
 - **Helpers and variables:** camelCase. Functions are verbs (`getWhatsAppUrl`, `scrollToHash`); booleans read as questions (`isExternal`, `isHashLink`).
-- **Constants and config:** camelCase objects/arrays in `lib/` (`navItems`, `services`, `founders`). Reserve SCREAMING_CASE for true environment-level constants.
-- **Types and interfaces:** PascalCase (`BlogPost`, `ContentBlock`, `ServiceKey`).
-- **i18n keys:** camelCase, namespaced by feature (`hero.ctaPrimary`, `services.items.mvp.title`). Keys mirror the component that consumes them.
+- **Constants and config:** camelCase objects/arrays in `lib/` (`navItems`, `blogCategories`, `founders`). Reserve SCREAMING_CASE for true environment-level constants.
+- **Types and interfaces:** PascalCase (`BlogPost`, `ContentBlock`, `BlogCategory`).
+- **i18n keys:** camelCase, namespaced by feature (`hero.ctaPrimary`, `blog.categories.startup`). Keys mirror the component that consumes them.
 
 ---
 
@@ -55,7 +55,7 @@ docs/                     Internal documentation
 - **Type the boundaries:** props, function returns where non-trivial, and all data structures (`lib/blog.ts` types its content blocks and posts).
 - **Prefer `type`/`interface` over inline shapes** for anything reused.
 - **`as const`** for fixed config arrays so keys and values stay literal (see `siteConfig` lists).
-- **Derive, do not duplicate:** union types from config (`ServiceKey`, `BlogCategory`) rather than restating string literals.
+- **Derive, do not duplicate:** union types from config (`BlogCategory`) rather than restating string literals.
 - No non-null assertions (`!`) without a clear, local reason.
 
 ---
@@ -88,7 +88,7 @@ A second, slightly different version of any of these is a regression. If a primi
 ## 6. Styling (Tailwind)
 
 - **Tailwind utilities in JSX**; no ad hoc CSS files except the global `globals.css` (base, keyframes, reduced-motion, scroll behavior).
-- **Use the token system:** the `slate`/`blue` palette, the spacing scale, and the standard radii. No arbitrary hex values or one-off spacing without reason. See [UI Principles](../website/ui-principles.md).
+- **Use the semantic token system:** the Moss & Stone tokens (`background`, `surface`, `primary`, `foreground`, `muted`, `border`, `accent`, `code`), the spacing scale, and the standard radii. No hardcoded hex or raw palette steps (`stone-600`, `blue-500`) in components. See [UI Principles](../website/ui-principles.md).
 - **Order classes** roughly layout, then spacing, then color, then state, for readability. Keep long class strings on the element, not abstracted prematurely.
 - **Responsive and state variants** (`sm:`, `lg:`, `hover:`, `focus-visible:`) rather than JavaScript for styling.
 - **Dark surfaces flip text to light.** Never leave dark text on a dark background.
@@ -107,7 +107,7 @@ A second, slightly different version of any of these is a regression. If a primi
 
 ## 8. Content and data (lib)
 
-- **Config is centralized** in `lib/siteConfig.ts` (nav, services, founders, categories, base URL). Consume it; do not duplicate it.
+- **Config is centralized** in `lib/siteConfig.ts` (nav, topics/categories, founders, base URL). Consume it; do not duplicate it.
 - **The blog registry** (`lib/blog.ts`) is typed. Add posts as `BlogPost` entries with both locales; author bodies with the supported `ContentBlock` types. Extend the union rather than smuggling markup into text. See [Blog Standards](../marketing/blog-standards.md).
 - **Pure helpers** in `lib/` are framework-light and easily testable (`getWhatsAppUrl`, `scrollToHash`).
 

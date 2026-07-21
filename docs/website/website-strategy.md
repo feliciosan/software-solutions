@@ -2,132 +2,123 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Brand Positioning](../company/brand-positioning.md) · [Ideal Customer Profile](../company/ideal-customer-profile.md) · [UX Principles](./ux-principles.md) · [UI Principles](./ui-principles.md) · [SEO Checklist](./seo-checklist.md) · [Roadmap](./roadmap.md) · [Content Strategy](../marketing/content-strategy.md) · [Engineering Standards](../engineering/engineering-standards.md)
-
-History: this document replaced the original root-level strategy brief (`CODACREW_WEBSITE_STRATEGY.md`, now removed). The next-steps plan it shipped with was folded into [Roadmap](./roadmap.md).
+Last updated: 2026-07-21
+Related: [Brand Positioning](../company/brand-positioning.md) · [Audience Profile](../company/ideal-customer-profile.md) · [UX Principles](./ux-principles.md) · [UI Principles](./ui-principles.md) · [SEO Checklist](./seo-checklist.md) · [Roadmap](./roadmap.md) · [Content Strategy](../marketing/content-strategy.md)
 
 ---
 
 ## Why this document exists
 
-The website is our highest-leverage marketing asset and, for most founders, the first proof of whether we practice what we preach. A studio that builds scalable products cannot ship a slow, generic, or sloppy site. This document defines what the website is for, how it is structured, and the rules it must obey. It is the bridge between [Brand Positioning](../company/brand-positioning.md) and the actual implemented code.
+The website is the home of our content and the proof that we are serious engineers. A brand claiming JS/TS authority cannot ship a slow, generic, or sloppy site. This document defines what the website is for, how it is structured, and the rules it must obey.
 
 ---
 
-## 1. The north-star question
+## 1. Purpose
 
-Every decision about the site is judged against one question:
+> Become the best destination for modern JavaScript and TypeScript engineering content.
 
-> How do we make a founder trust CodaCrew in under thirty seconds?
-
-If a change does not help answer that question, it is decoration. Trust, clarity, and a clear next action beat cleverness every time.
+The site exists to publish excellent technical articles, help engineers find and read them, and grow our audience. It is a publication, not a funnel. There is no service to sell and no lead to capture; success is engineers reading, learning, returning, and following us on LinkedIn.
 
 ---
 
-## 2. Goals and non-goals
+## 2. North-star question
 
-**Primary goal.** Convert in-profile founders (see [ICP](../company/ideal-customer-profile.md)) into qualified conversations (contact form, WhatsApp, or a call).
+Every decision is judged against:
 
-**Secondary goals.**
-- Communicate the positioning ("technical partner that turns ideas into scalable products") instantly.
-- Build organic traffic over time through the blog and service pages (see [SEO Checklist](./seo-checklist.md)).
-- Demonstrate craft: the site itself is a portfolio piece.
+> Would an engineer bookmark this, read to the end, and come back for the next article?
 
-**Non-goals.**
-- Impress other developers.
-- Win design awards for their own sake.
-- Serve out-of-ICP visitors (price shoppers, one-page-site buyers).
+If a change does not help discovery, reading, or trust, it is decoration.
 
 ---
 
-## 3. Positioning to page: the through-line
+## 3. Goals and non-goals
 
-The site is a linear argument built to move a founder from stranger to lead. Each section does one job.
+**Goals**
+- Publish and showcase high-quality technical content.
+- Make articles easy to discover (search, topics, internal linking) and a pleasure to read.
+- Grow the LinkedIn audience by feeding it genuinely shareable content.
+- Demonstrate craft: the site itself is evidence of our engineering standards.
 
-1. **Hero:** state the promise (what, for whom, why different) and the primary action, in under ten seconds. No founder photos here; the visual is a product-journey and dashboard mockup that shows what we build.
-2. **Trust bar:** senior engineers, global experience, modern stack, AI ready, startup focus, plus prior-experience brand logos.
-3. **Problems:** name the founder's real fears (wrong technical decisions, slow development, poor communication, no product vision), then assert we solve them.
-4. **Process:** Discovery to Continuous Improvement, so the path feels concrete and low-risk.
-5. **Services:** MVP, SaaS, AI Integrations, Product Modernization, Team Augmentation.
-6. **Differentiators:** why founders choose CodaCrew (the five pillars from [Brand Positioning](../company/brand-positioning.md)).
-7. **Case studies:** representative products, framed honestly (see Section 6).
-8. **Team:** the founders, with names, roles, specialties, and LinkedIn. Trust through real people.
-9. **Blog preview:** latest articles for internal linking, freshness, and softer-funnel engagement.
-10. **Final CTA and contact form:** the primary conversion endpoint.
-
-Distributed CTAs (inline banners, a sticky "Schedule a Free Call," and a floating WhatsApp button) mean conversion never depends on the visitor reaching the bottom.
+**Non-goals**
+- Selling anything. No services, no pricing, no proposals.
+- Treating readers as leads. No aggressive capture, no dark patterns.
+- Chasing traffic that does not serve engineers.
 
 ---
 
-## 4. Conversion model
+## 4. Information architecture
 
-- **Primary action:** the contact form (Resend-backed), for a free strategy call.
-- **Fast path:** floating WhatsApp button, using `NEXT_PUBLIC_WHATSAPP_NUMBER`.
-- **Persistent nudge:** dismissible sticky "Schedule a Free Call" pill after the hero.
-- **CTA copy** rotates by intent: "Let's Build Your Startup," "Get a Free MVP Estimate," "Talk to an Engineer," "Schedule a Free Strategy Call."
-- **Analytics:** PostHog events on hero CTA, sticky CTA, WhatsApp, and form lifecycle (started, submitted, error). Use these to find drop-off, not vanity totals.
+The site is organized around **reading and discovery**:
 
-Future conversion work (Calendly, exit intent, newsletter) is tracked in [Roadmap](./roadmap.md).
+- **Home:** what CodaCrew is, the topics we cover, the latest articles, and the people behind them.
+- **Blog:** `/[locale]/blog` (listing) and `/[locale]/blog/[slug]` (article). Content lives in `lib/blog.ts` (typed registry; MDX is the future upgrade).
+- **Topics / categories:** entry points into clusters (Next.js, NestJS, Node.js, TypeScript, databases, testing, CI/CD, architecture, performance, DX, AI for developers). See [Topic Clusters](../marketing/topic-clusters.md).
+- **Authors:** engineer bylines that build individual and brand credibility (planned; see [Roadmap](./roadmap.md)).
+- **Newsletter:** future capture for return readership (planned).
+- **Search:** find content fast (planned).
+- **Contact:** a simple, general way to reach us (questions, feedback, collaboration), never a sales form.
 
----
-
-## 5. Information architecture and routes
-
-- **Localized routes:** everything lives under `/[locale]` with `pt-BR` and `en-US`, full parity, via `next-intl`.
-- **Home:** `/[locale]` (the argument in Section 3).
-- **Blog:** `/[locale]/blog` (listing) and `/[locale]/blog/[slug]` (article). Content registry in `lib/blog.ts`.
-- **Campaign and demo routes** (`/mvp`, `/campaigns/health`, `/demos/...`, `/calculadora-interna`) exist for specific funnels and are intentionally outside the main narrative. The internal calculator stays out of the index.
-- **Planned:** dedicated service landing pages (`/mvp-development`, `/saas-development`, `/ai-development`, `/team-augmentation`). See [Roadmap](./roadmap.md).
-- **Single source of truth for nav, services, founders, categories, and base URL:** `lib/siteConfig.ts`. Header, Footer, sitemap, and JSON-LD all read from it.
+Localized under `/[locale]` with `pt-BR` and `en-US`, full parity. Single source of truth for nav, topics, and config: `lib/siteConfig.ts`.
 
 ---
 
-## 6. Content and honesty rules on the site
+## 5. The reading experience is the product
 
-These are hard constraints, enforced in review. They inherit from [Values](../company/values.md) and [Brand Positioning](../company/brand-positioning.md).
+Because we are a publication, the article experience matters most:
 
-- **Speak to founders.** Never "we build software." Prefer "we help founders build scalable businesses."
-- **No invented proof.** No fabricated client names, revenue, or outcome metrics. Prior experience (Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo, Carlsberg) is always framed as the team's prior work, never as CodaCrew client engagements.
-- **Illustrative is labeled.** The hero dashboard mockup uses sample product numbers, clearly a product illustration, not CodaCrew metrics.
-- **No em dash character** in any copy. Use commas, colons, periods, or parentheses. Enforced in the quality gate below.
-- **Bilingual parity.** Every user-facing string exists in both `messages/en-US.json` and `messages/pt-BR.json`.
-- Open items where legacy copy still needs verification (for example the `50+` / `100%` stats and the `/mvp` case metrics) are tracked in [Roadmap](./roadmap.md).
+- Fast load, excellent typography, comfortable measure and line height.
+- First-class code blocks (readable, copyable, language-aware).
+- Clear structure, headings, and scannability.
+- Related articles and topic navigation to keep readers reading.
+- Covers and author bylines for credibility and shareability.
+
+Detailed rules in [UX Principles](./ux-principles.md) and [UI Principles](./ui-principles.md).
 
 ---
 
-## 7. Technical guardrails
+## 6. Growth model
 
-The site is built to the same standard as client work. Full detail in [Engineering Standards](../engineering/engineering-standards.md).
+- **SEO** is the compounding engine: technical articles ranking for real engineering questions (see [SEO Checklist](./seo-checklist.md)).
+- **LinkedIn** is the primary distribution channel: every article is repurposed for the company page (see [LinkedIn Growth Playbook](../marketing/linkedin-growth-playbook.md)).
+- **Internal linking and topic clusters** keep readers on-site and build topical authority.
+- **Newsletter** (future) converts one-time readers into returning ones.
+
+---
+
+## 7. Content and honesty rules
+
+- **Write for engineers**, in the JS/TS ecosystem, with depth and accuracy.
+- **No selling language** anywhere; readers are audience, not customers.
+- **No em dash character**; en-US and pt-BR parity on all published copy.
+- **No invented claims or metrics.** Technical accuracy is the brand (see [Values](../company/values.md)).
+
+---
+
+## 8. Technical guardrails
+
+Built to the standard we champion. Full detail in [Engineering Standards](../engineering/engineering-standards.md).
 
 - **Stack:** Next.js (App Router), React, TypeScript, Tailwind, `next-intl`, PostHog, Resend, Zod, react-hook-form.
-- **Server-first:** Server Components by default; `"use client"` only for genuine interactivity (header menu, sticky CTA, WhatsApp button, forms, hero CTA tracking).
-- **Performance:** minimize `priority` images, prefer inline SVG and CSS over heavy assets, keep the hero LCP light. See [UI Principles](./ui-principles.md).
-- **Accessibility:** one `h1` per page, ordered headings, visible focus states, `aria-label` on icon-only controls, `prefers-reduced-motion` respected. See [UX Principles](./ux-principles.md).
-- **SEO infrastructure:** per-route metadata, canonical and `hreflang`, OpenGraph and Twitter cards, JSON-LD (Organization/Service, Blog, Breadcrumb), dynamic sitemap and robots. See [SEO Checklist](./seo-checklist.md).
+- **Server-first:** Server Components by default; client only where needed.
+- **Performance:** minimize priority images, prefer SVG/CSS, keep LCP low, static generation for content.
+- **Accessibility:** one `h1`, ordered headings, visible focus, `aria` on icon-only controls, `prefers-reduced-motion` respected.
+- **SEO infra:** per-route metadata, canonical + hreflang, OpenGraph/Twitter, JSON-LD (Organization/Blog/Article/Breadcrumb), dynamic sitemap and robots.
+- **Design system:** "Moss & Stone" semantic tokens (see [UI Principles](./ui-principles.md)).
 
 ---
 
-## 8. Quality gate (run before every deploy)
+## 9. Quality gate (before every deploy)
 
-A change is not shippable until all of these pass:
-
-- [ ] `npm run build` succeeds (typecheck plus static params for all routes).
-- [ ] `npm run lint` is clean.
-- [ ] Both locales render with no missing i18n keys (console clean).
-- [ ] New user-facing strings added to both `en-US` and `pt-BR`.
-- [ ] No em dash character in any copy.
-- [ ] Accessibility spot check: single `h1`, focus states, reduced-motion respected, alt text present.
-- [ ] `sitemap.xml` and `robots.txt` reflect any new routes.
-- [ ] Lighthouse sanity check on changed pages (performance and accessibility not regressed).
+- [ ] `npm run build` passes; `npm run lint` clean.
+- [ ] Both locales render with no missing i18n keys.
+- [ ] New strings added to `en-US` and `pt-BR`.
+- [ ] No em dash character in copy.
+- [ ] Accessibility spot check (single `h1`, focus, alt text, reduced motion).
+- [ ] `sitemap.xml` and `robots.txt` reflect new routes.
+- [ ] Lighthouse: performance and accessibility not regressed.
 
 ---
 
-## 9. Ownership and change management
+## 10. Maintaining this document
 
-- **Owner:** founders, with engineering accountable for implementation fidelity.
-- **Source of truth precedence:** [Brand Positioning](../company/brand-positioning.md) governs message; this document governs how the site expresses it; [UX Principles](./ux-principles.md) and [UI Principles](./ui-principles.md) govern how it looks and behaves.
-- **When positioning changes,** the hero, differentiators, and services sections must be reviewed for alignment.
-- **Review cadence:** quarterly, plus whenever a new page type is introduced.
-
-The site is never "done." It is a living argument for why a founder should trust us, and it should keep getting sharper.
+Review quarterly and whenever a new content or growth surface is added. The site is never "done"; it should keep getting better at helping engineers discover and read great content.

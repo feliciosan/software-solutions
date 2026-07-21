@@ -11,7 +11,7 @@ Related: [Engineering Standards](./engineering-standards.md) · [Coding Conventi
 
 An Architecture Decision Record (ADR) captures a significant technical decision, the context that forced it, and the consequences we accept. We keep this log so that six months from now nobody has to reverse-engineer "why is it built this way?" from the code, and so that reversing a decision is a deliberate act rather than an accident. Decisions are cheap to make and expensive to forget.
 
-This log covers the CodaCrew website. Client projects keep their own ADR log in their repository, following this same format.
+This log covers the CodaCrew website and content platform.
 
 ---
 
@@ -48,21 +48,21 @@ Each ADR uses this shape. ADRs are immutable once Accepted: to change a decision
 ### ADR-001: Next.js App Router as the framework
 - **Status:** Accepted
 - **Date:** 2026-01-01
-- **Context:** We need a modern React framework with first-class SSR/SSG, file-based routing, built-in metadata and image handling, and strong performance defaults. It is also our recommended client stack, so our own site should exemplify it.
+- **Context:** We need a modern React framework with first-class SSR/SSG, file-based routing, built-in metadata and image handling, and strong performance defaults. It is also the stack we champion in our content, so our own site should exemplify it.
 - **Decision:** Build on Next.js with the App Router and React Server Components.
-- **Consequences:** Excellent performance and SEO defaults, server-first rendering, and a single mental model shared with client projects. Cost: the App Router and RSC model has a learning curve and some ecosystem libraries assume client components. We accept a server-first discipline as the default.
+- **Consequences:** Excellent performance and SEO defaults, server-first rendering, and a single, consistent mental model across our work. Cost: the App Router and RSC model has a learning curve and some ecosystem libraries assume client components. We accept a server-first discipline as the default.
 
 ### ADR-002: `next-intl` for localization with full parity
 - **Status:** Accepted
 - **Date:** 2026-01-01
-- **Context:** CodaCrew serves founders in Portuguese and English. Both languages must be first-class, not a machine-translated afterthought (a value from [Values](../company/values.md)).
+- **Context:** CodaCrew publishes for engineers in Portuguese and English. Both languages must be first-class, not a machine-translated afterthought (a value from [Values](../company/values.md)).
 - **Decision:** Use `next-intl` with locale-prefixed routes (`/[locale]`) and message catalogs in `messages/en-US.json` and `messages/pt-BR.json`, kept at full parity.
 - **Consequences:** Clean localized routing, server and client translation access, and correct `hreflang`. Cost: every user-facing string must be added to both catalogs in the same change, and layouts must tolerate longer Portuguese text. Enforced in review.
 
 ### ADR-003: Server Components by default, client only at the leaves
 - **Status:** Accepted
 - **Date:** 2026-01-01
-- **Context:** Shipping unnecessary client JavaScript hurts performance and, by extension, SEO and conversion.
+- **Context:** Shipping unnecessary client JavaScript hurts performance and, by extension, SEO and the reading experience.
 - **Decision:** Author components as Server Components by default. Add `"use client"` only for genuine interactivity (header menu, sticky CTA, WhatsApp button, forms, hero CTA analytics), keeping those components small.
 - **Consequences:** Low client JS, fast first paint. Cost: engineers must be deliberate about the server/client boundary, and some patterns require passing data down rather than fetching in a client component.
 

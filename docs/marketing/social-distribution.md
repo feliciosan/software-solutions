@@ -2,167 +2,121 @@
 
 Status: Active
 Owner: Founders (Felício Santos, Gabriel Santos)
-Last updated: 2026-07-19
-Related: [Content Strategy](./content-strategy.md) · [Blog Standards](./blog-standards.md) · [Content Backlog](./content-backlog.md) · [Brand Positioning](../company/brand-positioning.md) · [Ideal Customer Profile](../company/ideal-customer-profile.md)
+Last updated: 2026-07-21
+Related: [LinkedIn Growth Playbook](./linkedin-growth-playbook.md) · [Content Strategy](./content-strategy.md) · [Blog Standards](./blog-standards.md) · [Brand Voice](../company/brand-voice.md) · [Audience Profile](../company/ideal-customer-profile.md)
 
 ---
 
 ## Why this document exists
 
-The blog is where our thinking lives, but nobody reads a blog they never hear about. Distribution is how content reaches founders. This playbook makes distribution a repeatable habit rather than an afterthought: which channels, who posts, how often, and exactly how to turn one article into a social post that earns attention. It operationalizes the distribution section of [Content Strategy](./content-strategy.md).
+The blog is home base, but content only builds authority if engineers see it. This playbook is how we turn each article into distribution, primarily on **LinkedIn**, which is our main growth channel. The deeper LinkedIn-specific tactics live in the [LinkedIn Growth Playbook](./linkedin-growth-playbook.md); this document is the day-to-day "publish, then distribute" routine.
 
-Guiding rule: **one channel done consistently beats five done occasionally.** Pick the primary, win it, then expand.
+Guiding rule: **one channel done consistently beats five done occasionally.** LinkedIn is that channel for now.
+
+> Channel note: the founders' personal profiles are intentionally not the primary channel. The **CodaCrew company page** is the primary public voice.
 
 ---
 
 ## 1. Channel priority
 
-| Priority | Channel | Role | Why |
-| --- | --- | --- | --- |
-| Primary | LinkedIn (founders' personal profiles) | Reach and trust with the ICP | Founders, CTOs, and product leads make decisions here; strongest B2B channel in Brazil and globally |
-| Amplifier | LinkedIn (CodaCrew company page) | Social proof and reposts | Where people check the brand; amplifies the personal posts |
-| Secondary | X / Twitter | Global startup and tech reach | The international founder and indie-hacker community lives here |
-| Opportunistic | Niche communities | Qualified, algorithm-free reach | Indie Hackers, relevant subreddits (r/startups, r/SaaS), founder Discords/Slacks |
-| Not now | Instagram / TikTok / YouTube | Deferred | High reach but wrong buyer and a different format cost (video). Revisit only with a video investment |
-
-The single most important lever: **post from the founders' personal profiles, not primarily the company page.** People follow and trust people. Personal-profile organic reach on LinkedIn far outpaces a company page. The company page reposts and amplifies.
+| Priority | Channel | Role |
+| --- | --- | --- |
+| Primary | LinkedIn company page | Reach and community growth with engineers |
+| Secondary | Developer communities | Qualified reach where good content is shared (Reddit, Hacker News, dev.to, Discords) |
+| Support | Search / SEO | Long-term discovery of evergreen articles |
+| Not now | Personal profiles, other networks | Deferred (constraints and focus) |
 
 ---
 
 ## 2. Voice on social
 
-Same voice as everywhere (see [Content Strategy](./content-strategy.md) and [Brand Positioning](../company/brand-positioning.md)): a senior technical co-founder giving a straight, generous answer. On social specifically:
+Same voice as everywhere (see [Brand Voice](../company/brand-voice.md)): engineer to engineer, direct, technical, generous. On social specifically:
 
-- Write as a person, not a brand. First person, opinionated, specific.
-- Lead with a real insight, not a teaser. Give value in the post itself; the article is the deeper version.
-- Talk to founders about their business, never "we build software."
-- No hype, no engagement bait, no fake urgency.
-- **No em dash character.** Use commas, colons, periods, or parentheses.
-- Post in the language of the audience you are addressing. Portuguese for the BR founder network, English for global reach. A strong article deserves a post in both, adapted (not machine-translated).
-
----
-
-## 3. The LinkedIn playbook (primary)
-
-### Cadence
-- **1 to 2 posts per week per founder**, sustainable and consistent. Consistency beats bursts.
-- At least one per week reinforces a blog article; the other can be a standalone insight, a lesson from a build, or a take on a trend.
-- The company page reposts each founder post within a day.
-
-### Post format that works
-LinkedIn rewards posts that are read and spark comments. Structure:
-
-1. **Hook (first 1 to 2 lines).** This is all most people see before "see more." Make it a concrete, opinionated claim or a sharp question. No throat-clearing.
-2. **Body (short lines, whitespace).** 3 to 6 short paragraphs or a tight list. One idea. Deliver real value.
-3. **Takeaway.** The one thing to remember.
-4. **Soft link.** Point to the full article for depth. Putting the link in the first comment (and a "full write-up in comments") is a common tactic to protect reach; test both.
-5. **A genuine question** at the end to invite comments.
-
-### Hooks that fit our topics
-- "Most MVPs fail before they scale. Here is why."
-- "AI can write your MVP in a weekend. That is exactly the problem."
-- "Founders keep asking me what a SaaS costs to build in 2026. The honest answer:"
-- "The cheapest way to build your product is usually the most expensive."
-
-### Hashtags and mentions
-- 3 to 5 relevant hashtags max (for example #startups #SaaS #MVP #founders #IA in PT). More looks spammy.
-- Tag people or companies only when genuinely relevant, never to farm reach.
+- Lead with a real insight, not a teaser. Give value in the post itself.
+- Talk to engineers about engineering, never about selling.
+- No hype, no engagement bait, no clickbait.
+- **No em dash character.**
+- Publish in the language of the audience (mostly English for global reach; Portuguese where it fits the audience), without duplicating the same content on the same day.
 
 ---
 
-## 4. Turning one article into social (the repurpose flow)
+## 3. Turn one article into distribution
 
 Every published article (see [Blog Standards](./blog-standards.md)) should produce, at minimum:
 
-1. **One LinkedIn post per founder profile** built from the article's core argument (not a summary, the actual insight).
-2. **One company-page repost.**
-3. **Optionally one X/Twitter post or short thread** for global reach.
+1. **One LinkedIn company-page post** built from the article's core insight (not a summary, the actual takeaway).
+2. **Optionally one developer-community share** where it genuinely fits and adds value.
 
-Do not just paste "New blog post: [title] [link]." That underperforms every time. Extract the strongest idea and make the post valuable on its own.
+Never just "New blog post: [title] [link]." Extract the strongest idea and make the post valuable on its own; put the link in the first comment to protect reach.
 
-### Post template (fill in from the article)
+### Post template
 
 ```
-[HOOK: one bold, specific claim or question from the article]
+[HOOK: one specific, technical claim or question from the article]
 
-[2 to 4 short lines that deliver the core insight. Give it away.]
+[2 to 4 short lines delivering the core insight. Give it away.]
 
-[Optional tight list of 3 points.]
+[Optional: a tight list of 3 points, or a short code snippet.]
 
 [TAKEAWAY: the one line to remember.]
 
-[Soft pointer: "I wrote the full breakdown" + link (post or first comment).]
+[Soft pointer: "Full write-up" + link in the first comment.]
 
-[QUESTION to the reader that invites a real answer.]
+[A genuine question that invites engineers to reply.]
 ```
 
-Keep a lightweight record (in [Content Backlog](./content-backlog.md) or a simple sheet) of which article was posted where and when, so nothing is double-posted or forgotten.
+---
+
+## 4. LinkedIn formats that work
+
+Detailed in the [LinkedIn Growth Playbook](./linkedin-growth-playbook.md). In brief:
+
+- **Insight posts:** one sharp technical point, well explained.
+- **Carousels:** step-by-step or "N things about X" in slides (great for saves).
+- **Code snippets:** a small, screenshot-clean snippet plus the "why".
+- **Discussion posts:** an honest opinion or trade-off question that invites debate.
 
 ---
 
-## 5. X / Twitter (secondary)
+## 5. Engagement, not just broadcasting
 
-- Best for the global (en-US) startup, SaaS, and AI founder crowd.
-- Formats: a single strong insight, or a short thread (5 to 8 tweets) unpacking an article. First tweet is the hook and must stand alone.
-- Engage: reply thoughtfully to founders and relevant conversations. On X, replies often out-reach posts.
-- Lower priority for the BR B2B audience, so do not let it compete with LinkedIn for your best energy.
-
----
-
-## 6. Communities (opportunistic)
-
-- Indie Hackers, r/startups, r/SaaS, founder Discords and Slacks.
-- Rule: contribute value first, self-promote rarely. Answer questions genuinely; link to an article only when it truly helps.
-- These channels do not scale like LinkedIn, but the reach is highly qualified and there is no algorithm tax.
+- Reply to every meaningful comment promptly; comments drive reach and relationships.
+- Spend a few minutes commenting substantively on other engineers' and brands' posts.
+- Turn good discussions into future article ideas (feed the [Content Backlog](./content-backlog.md)).
 
 ---
 
-## 7. Engagement, not just broadcasting
+## 6. Measurement
 
-Posting is half the job. The other half is showing up:
+Track what maps to authority and growth, not vanity likes:
 
-- Reply to every meaningful comment on your posts, promptly. Comments drive reach and start relationships.
-- Spend a few minutes commenting substantively on other founders' posts. Visibility compounds from participation, not just publishing.
-- When a conversation turns into interest, move it to a real conversation (see [Proposal Guidelines](../sales/proposal-guidelines.md)).
-
----
-
-## 8. Measurement
-
-Track what maps to the goals in [Content Strategy](./content-strategy.md), not vanity likes:
-
-- **Reach and resonance:** impressions, and more importantly comments and saves (signals of value).
-- **Profile and page follows** from the ICP (quality over quantity).
-- **Referral traffic** from social to the blog and site (PostHog).
-- **Conversations started:** DMs and comments that turn into real interest. This is the metric that matters most.
-
-Feed learnings back: which hooks and topics performed becomes input to the [Content Backlog](./content-backlog.md).
+- Impressions, and more importantly **saves and comments** (signals of value).
+- **Follower growth** from the target engineering audience.
+- **Referral traffic** from LinkedIn to the blog (PostHog).
+- Which hooks/formats performed, fed back into the backlog.
 
 ---
 
-## 9. Anti-patterns
+## 7. Anti-patterns
 
-- Posting only from the company page and ignoring personal profiles.
 - "New blog post: [link]" with no standalone value.
-- Spreading thin across five networks and doing none well.
-- Engagement bait, fake urgency, or hashtag stuffing.
-- Broadcasting without ever replying or engaging.
-- Machine-translated posts that read as second-class in either language.
-- Any invented metric or claim (also a trust violation, see [Brand Positioning](../company/brand-positioning.md)).
+- Broadcasting without ever engaging.
+- Engagement bait, hype, or clickbait.
+- Duplicating identical content across channels on the same day.
+- Any selling or "customer" framing.
+- Machine-translated posts that read as second-class.
 
 ---
 
-## 10. Weekly checklist
+## 8. Weekly checklist
 
-- [ ] At least one value-first post per founder profile.
-- [ ] Company page reposted the founder posts.
-- [ ] The week's published article was repurposed into a post (not just linked).
-- [ ] Optional: one X/Twitter post or thread for global reach.
-- [ ] Replied to comments on our posts and commented on a few others'.
-- [ ] Logged what was posted where, and any standout performer.
+- [ ] The week's article(s) repurposed into a company-page post (value-first, not just a link).
+- [ ] Link in the first comment.
+- [ ] Replied to comments on our posts and engaged on a few others'.
+- [ ] Logged what was posted and any standout performer.
 
 ---
 
 ## Maintaining this document
 
-Review monthly against what actually drove reach and conversations. Double down on the hooks and formats that work, drop what does not. If a new channel starts consistently sending qualified founders, promote it in the priority table (Section 1) deliberately, not out of shiny-object impulse.
+Review monthly against what actually drove reach and follows. Keep the deep LinkedIn tactics in the [LinkedIn Growth Playbook](./linkedin-growth-playbook.md); keep this focused on the repeatable "publish then distribute" routine.
