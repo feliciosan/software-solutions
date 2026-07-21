@@ -29,19 +29,19 @@ export function TrustBar() {
       <Container>
         <div className="text-center">
           {/* Indicator chips */}
-          <ul className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <ul className="flex flex-wrap items-center justify-center gap-2.5">
             {indicators.map((key) => (
               <li
                 key={key}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-sm font-medium text-slate-700"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded-lg font-mono text-xs text-foreground"
               >
-                <Icon name="check" className="w-4 h-4 text-green-600" />
+                <Icon name="check" className="w-3.5 h-3.5 text-primary" />
                 {t(`indicators.${key}`)}
               </li>
             ))}
           </ul>
 
-          <h2 className="mt-10 text-sm font-semibold text-slate-500 uppercase tracking-wider">
+          <h2 className="mt-10 font-mono text-xs text-muted uppercase tracking-wider">
             {s("title")}
           </h2>
 
@@ -49,20 +49,20 @@ export function TrustBar() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               >
                 <Image
                   src={brand.logo}
                   alt={`${brand.name} logo`}
                   width={brand.width}
                   height={brand.height}
-                  className="max-h-10 sm:max-h-12 w-auto object-contain"
+                  className="max-h-9 sm:max-h-11 w-auto object-contain"
                 />
               </div>
             ))}
           </div>
 
-          <p className="mt-6 text-base text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-6 text-base text-muted max-w-2xl mx-auto">
             {s("description")}
           </p>
         </div>

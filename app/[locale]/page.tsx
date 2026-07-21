@@ -5,22 +5,15 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { locales } from "@/i18n";
-import { baseUrl, services, founders, socialLinks } from "@/lib/siteConfig";
+import { baseUrl, founders, socialLinks } from "@/lib/siteConfig";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustBar } from "@/components/TrustBar";
-import { ProblemsSection } from "@/components/ProblemsSection";
-import { ProcessSection } from "@/components/ProcessSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { DifferentiatorsSection } from "@/components/DifferentiatorsSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { TeamSection } from "@/components/TeamSection";
-import { AudienceSection } from "@/components/AudienceSection";
+import { TopicsSection } from "@/components/TopicsSection";
 import { BlogPreviewSection } from "@/components/BlogPreviewSection";
+import { TeamSection } from "@/components/TeamSection";
 import { FinalCtaSection } from "@/components/FinalCtaSection";
-import { CtaBanner } from "@/components/CtaBanner";
 import { Footer } from "@/components/Footer";
-import { StickyCta } from "@/components/StickyCta";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export async function generateMetadata({
@@ -36,20 +29,21 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords: [
-      "startup development",
-      "MVP development",
-      "SaaS development",
-      "technical partner",
-      "product development",
-      "AI integration",
-      "team augmentation",
+      "software engineering blog",
+      "tech stacks",
+      "software architecture",
+      "MVP",
+      "SaaS",
+      "AI",
+      "scalability",
+      "web development",
       "React",
       "Next.js",
       "TypeScript",
       "Node.js",
-      "desenvolvimento de startups",
-      "desenvolvimento de MVP",
-      "parceiro técnico",
+      "cloud",
+      "engenharia de software",
+      "arquitetura de software",
     ],
     authors: [{ name: "CodaCrew" }],
     creator: "CodaCrew",
@@ -107,47 +101,35 @@ export default async function HomePage({
   setRequestLocale(locale);
   const messages = await getMessages();
   const t = await getTranslations({ locale, namespace: "metadata" });
-  const tServices = await getTranslations({ locale, namespace: "services" });
 
+  // Content publisher: Organization + Blog. No service offers (content-first).
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     name: "CodaCrew",
     description: t("description"),
     url: `${baseUrl}/${locale}`,
     logo: `${baseUrl}/logo.svg`,
     image: `${baseUrl}/${locale}/opengraph-image`,
     sameAs: [socialLinks.github, socialLinks.linkedin],
-    areaServed: "Worldwide",
     founder: founders.map((f) => ({
       "@type": "Person",
       name: f.name,
-      jobTitle: "Co-founder & Senior Software Engineer",
+      jobTitle: "Senior Software Engineer",
     })),
     knowsAbout: [
-      "Startup Development",
-      "MVP Development",
-      "SaaS Development",
-      "AI Integration",
+      "Software Engineering",
       "Software Architecture",
+      "MVP",
+      "SaaS",
+      "AI",
+      "Scalability",
       "React",
       "Next.js",
       "TypeScript",
       "Node.js",
       "Cloud",
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: tServices("title"),
-      itemListElement: services.map((s) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: tServices(`items.${s.key}.title`),
-          description: tServices(`items.${s.key}.description`),
-        },
-      })),
-    },
   };
 
   return (
@@ -162,20 +144,12 @@ export default async function HomePage({
         <main>
           <HeroSection />
           <TrustBar />
-          <ProblemsSection />
-          <ProcessSection />
-          <ServicesSection />
-          <CtaBanner variant="estimate" />
-          <DifferentiatorsSection />
-          <CaseStudiesSection />
-          <TeamSection />
-          <CtaBanner variant="build" />
-          <AudienceSection />
+          <TopicsSection />
           <BlogPreviewSection />
+          <TeamSection />
           <FinalCtaSection />
         </main>
         <Footer />
-        <StickyCta />
         <WhatsAppButton />
       </NextIntlClientProvider>
     </>

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Moss & Stone design tokens (single source of truth).
+ * Stored as "R G B" channels so Tailwind can apply opacity via <alpha-value>.
+ * Change a brand color here and it propagates across the whole app.
+ */
+:root {
+  --color-background: 246 244 239; /* #F6F4EF page background */
+  --color-surface: 255 255 255; /* #FFFFFF cards / raised surfaces */
+  --color-primary: 102 124 62; /* #667C3E brand green (CTAs, links) */
+  --color-primary-hover: 85 104 53; /* #556835 primary hover/active */
+  --color-dark: 50 45 41; /* #322D29 nav, footer, dark bands */
+  --color-text: 35 33 31; /* #23211F primary text */
+  --color-text-secondary: 107 102 96; /* #6B6660 secondary text */
+  --color-border: 221 216 208; /* #DDD8D0 hairlines / dividers */
+  --color-accent: 184 157 93; /* #B89D5D gold, badges/highlights only */
+  --color-code: 242 239 233; /* #F2EFE9 code + subtle fills */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +27,13 @@
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+/* Branded text selection (subtle moss tint) */
+::selection {
+  background-color: rgb(var(--color-primary) / 0.18);
+  color: rgb(var(--color-text));
 }
 
 @keyframes float {

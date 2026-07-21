@@ -17,14 +17,13 @@ interface ButtonProps {
 }
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2";
+  "inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 const variantStyles = {
-  primary: "bg-slate-900 text-white hover:bg-slate-800 active:bg-slate-950",
-  secondary:
-    "bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300",
+  primary: "bg-primary text-white hover:bg-primary-hover active:bg-primary-hover",
+  secondary: "bg-code text-foreground hover:bg-border active:bg-border",
   outline:
-    "bg-transparent text-slate-900 border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50",
+    "bg-transparent text-foreground border border-border hover:bg-code hover:border-muted",
 };
 
 const sizeStyles = {

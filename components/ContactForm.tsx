@@ -7,12 +7,11 @@ import { z } from "zod";
 import { useState, useRef } from "react";
 import posthog from "posthog-js";
 
-// Schema de validação
+// Validation schema (content-first contact: name optional, no budget)
 const contactSchema = z.object({
   email: z.string().email("Invalid email address"),
-  company: z.string().min(2, "Company name is required"),
-  budget: z.string().optional(),
-  message: z.string().min(10, "Please provide more details about your project"),
+  company: z.string().optional(),
+  message: z.string().min(10, "Please provide a bit more detail"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -44,15 +43,6 @@ export function ContactForm() {
     }
   };
 
-  const handleBudgetChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const budget = e.target.value;
-    if (budget) {
-      posthog.capture("budget_selected", {
-        budget_value: budget,
-      });
-    }
-  };
-
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
@@ -72,18 +62,15 @@ export function ContactForm() {
         throw new Error(result.error || "Failed to send message");
       }
 
-      // Track successful form submission (conversion event)
+      // Track successful form submission
       posthog.capture("contact_form_submitted", {
-        company: data.company,
-        budget: data.budget || "not_specified",
         message_length: data.message.length,
       });
 
       // Identify user by email after successful submission
       posthog.identify(data.email, {
         email: data.email,
-        company: data.company,
-        budget: data.budget,
+        name: data.company,
       });
 
       setSubmitStatus({
@@ -133,7 +120,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-slate-200 mb-2"
+            className="block text-sm font-semibold text-white/80 mb-2"
           >
             {t("email.label")}
           </label>
@@ -142,9 +129,9 @@ export function ContactForm() {
             type="email"
             {...register("email")}
             onFocus={handleFormStarted}
-            className={`w-full px-4 py-3 bg-white border-2 ${
-              errors.email ? "border-red-500" : "border-slate-300"
-            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm`}
+            className={`w-full px-4 py-3 bg-surface border-2 ${
+              errors.email ? "border-red-500" : "border-border"
+            } rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm`}
             placeholder={t("email.placeholder")}
           />
           {errors.email && (
@@ -156,7 +143,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="company"
-            className="block text-sm font-semibold text-slate-200 mb-2"
+            className="block text-sm font-semibold text-white/80 mb-2"
           >
             {t("company.label")}
           </label>
@@ -164,58 +151,18 @@ export function ContactForm() {
             id="company"
             type="text"
             {...register("company")}
-            className={`w-full px-4 py-3 bg-white border-2 ${
-              errors.company ? "border-red-500" : "border-slate-300"
-            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm`}
+            className={`w-full px-4 py-3 bg-surface border-2 ${
+              errors.company ? "border-red-500" : "border-border"
+            } rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm`}
             placeholder={t("company.placeholder")}
           />
-          {errors.company && (
-            <p className="mt-1 text-sm text-red-300">{t("company.error")}</p>
-          )}
-        </div>
-
-        {/* Budget Field */}
-        <div>
-          <label
-            htmlFor="budget"
-            className="block text-sm font-semibold text-slate-200 mb-2"
-          >
-            {t("budget.label")}
-          </label>
-          <select
-            id="budget"
-            {...register("budget", { onChange: handleBudgetChange })}
-            className="w-full px-4 py-3 bg-white border-2 border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
-          >
-            <option value="" className="bg-white text-slate-900">
-              {t("budget.placeholder")}
-            </option>
-            <option value="none" className="bg-white text-slate-900">
-              {t("budget.options.none")}
-            </option>
-            <option value="small" className="bg-white text-slate-900">
-              {t("budget.options.small")}
-            </option>
-            <option value="medium" className="bg-white text-slate-900">
-              {t("budget.options.medium")}
-            </option>
-            <option value="large" className="bg-white text-slate-900">
-              {t("budget.options.large")}
-            </option>
-            <option value="xlarge" className="bg-white text-slate-900">
-              {t("budget.options.xlarge")}
-            </option>
-            <option value="undefined" className="bg-white text-slate-900">
-              {t("budget.options.undefined")}
-            </option>
-          </select>
         </div>
 
         {/* Message Field */}
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-semibold text-slate-200 mb-2"
+            className="block text-sm font-semibold text-white/80 mb-2"
           >
             {t("message.label")}
           </label>
@@ -223,9 +170,9 @@ export function ContactForm() {
             id="message"
             rows={5}
             {...register("message")}
-            className={`w-full px-4 py-3 bg-white border-2 ${
-              errors.message ? "border-red-500" : "border-slate-300"
-            } rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm resize-none`}
+            className={`w-full px-4 py-3 bg-surface border-2 ${
+              errors.message ? "border-red-500" : "border-border"
+            } rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm resize-none`}
             placeholder={t("message.placeholder")}
           />
           {errors.message && (
@@ -237,7 +184,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl hover:scale-[1.02] transform"
+          className="w-full px-6 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? t("sending") : t("submit")}
         </button>

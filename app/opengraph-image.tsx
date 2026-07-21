@@ -59,7 +59,7 @@ export default async function Image() {
             maxWidth: 900,
           }}
         >
-          Turn your idea into a scalable product
+          Engineering notes on building modern software
         </div>
 
         {/* Tech stack badges */}
@@ -70,7 +70,7 @@ export default async function Image() {
             marginTop: 40,
           }}
         >
-          {["MVP", "SaaS", "AI", "Startups"].map((tech) => (
+          {["Architecture", "SaaS", "AI", "Cloud"].map((tech) => (
             <div
               key={tech}
               style={{

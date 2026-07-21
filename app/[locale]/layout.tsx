@@ -1,10 +1,17 @@
 import { locales } from "@/i18n";
 import { Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export function generateStaticParams() {
@@ -31,7 +38,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={inter.className}
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
       data-scroll-behavior="smooth"
     >
       <head>

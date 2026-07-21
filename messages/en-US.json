@@ -1,30 +1,28 @@
 {
   "metadata": {
-    "title": "CodaCrew: Technical Partner for Startups, MVPs & SaaS",
-    "description": "We help founders turn ideas into scalable digital products. Senior engineers building MVPs, SaaS and AI-powered products from day one."
+    "title": "CodaCrew: Engineering notes on building modern software",
+    "description": "A community of software engineers sharing practical writing on modern tech stacks, architecture, MVPs, SaaS, AI and scalability."
   },
   "nav": {
-    "services": "Services",
-    "process": "Process",
-    "cases": "Case Studies",
+    "topics": "Topics",
     "team": "Team",
     "blog": "Blog",
-    "cta": "Schedule a Free Call",
+    "cta": "Read the Blog",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "header": {
-    "tagline": "Your technical partner for startups"
+    "tagline": "Engineering notes on building modern software"
   },
   "hero": {
-    "availableBadge": "Available for new projects",
-    "headline": "Turn your idea into a scalable product.",
-    "subheadline": "We help founders design, build and scale digital products with senior engineers and modern technology, from the first line of code to production.",
-    "ctaPrimary": "Schedule a Free Strategy Call",
-    "ctaSecondary": "See our Process",
-    "microcopy": "No commitment • Free 30-min call",
+    "availableBadge": "New articles every week",
+    "headline": "Engineering notes on building modern software.",
+    "subheadline": "We are software engineers sharing what we learn about modern tech stacks, architecture, MVPs, SaaS, AI, and scaling products. Practical writing for people who build.",
+    "ctaPrimary": "Read the Blog",
+    "ctaSecondary": "Explore the Topics",
+    "microcopy": "New articles every week. No fluff.",
     "journey": {
-      "title": "Your product journey",
+      "title": "From idea to scale",
       "idea": "Idea",
       "ideaCaption": "Validate the vision",
       "mvp": "MVP",
@@ -46,10 +44,11 @@
       "revenue": "Revenue",
       "users": "Active users",
       "growth": "Growth"
-    }
+    },
+    "authorsLabel": "Who writes here"
   },
   "trustBar": {
-    "title": "Trusted engineering, proven at scale",
+    "title": "Written by senior engineers",
     "indicators": {
       "seniorEngineers": "Senior Engineers",
       "globalExperience": "Global Experience",
@@ -59,8 +58,8 @@
     }
   },
   "social": {
-    "title": "Experience building products used by millions",
-    "description": "Our engineers have built and scaled products for global brands like Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo and Carlsberg."
+    "title": "Experience behind the writing",
+    "description": "Our engineers have built and scaled products used by millions for global brands like Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo, and Carlsberg. We write from that experience."
   },
   "problems": {
     "badge": "The Reality",
@@ -85,124 +84,10 @@
       }
     ]
   },
-  "process": {
-    "badge": "How We Work",
-    "title": "From idea to scalable product",
-    "subtitle": "A clear, proven path where you understand every decision along the way.",
-    "steps": {
-      "discovery": {
-        "title": "Discovery",
-        "description": "We align on your vision, users and business goals."
-      },
-      "architecture": {
-        "title": "Architecture",
-        "description": "We design a scalable foundation and choose the right stack."
-      },
-      "development": {
-        "title": "Development",
-        "description": "We ship in weekly sprints with code review from day one."
-      },
-      "testing": {
-        "title": "Testing",
-        "description": "Automated tests and QA keep quality high as you grow."
-      },
-      "launch": {
-        "title": "Launch",
-        "description": "We deploy to production with CI/CD and monitoring."
-      },
-      "improvement": {
-        "title": "Continuous Improvement",
-        "description": "We iterate with data and stay your long-term technical partner."
-      }
-    }
-  },
-  "services": {
-    "badge": "What We Do",
-    "title": "Built for founders, not just for code",
-    "subtitle": "End-to-end product engineering for every stage of your startup.",
-    "learnMore": "Learn more",
-    "items": {
-      "mvp": {
-        "title": "MVP Development",
-        "description": "Launch a validated MVP with real users in weeks, not months."
-      },
-      "saas": {
-        "title": "SaaS Development",
-        "description": "Scalable, multi-tenant SaaS products built to grow."
-      },
-      "ai": {
-        "title": "AI Integrations",
-        "description": "Apply AI and automation to real business problems."
-      },
-      "modernization": {
-        "title": "Product Modernization",
-        "description": "Rescue and modernize legacy software without stopping."
-      },
-      "team": {
-        "title": "Team Augmentation",
-        "description": "Senior engineers to reinforce and accelerate your team."
-      }
-    }
-  },
-  "differentiators": {
-    "badge": "Why CodaCrew",
-    "title": "Why founders choose CodaCrew",
-    "subtitle": "More than a dev shop, we're a technical partner invested in your growth.",
-    "items": {
-      "seniorEngineers": {
-        "title": "Senior Engineers",
-        "description": "Experienced engineers who've shipped products at scale."
-      },
-      "startupMindset": {
-        "title": "Startup Mindset",
-        "description": "We think in traction, speed and validation, like a co-founder."
-      },
-      "fastDelivery": {
-        "title": "Fast Delivery",
-        "description": "Weekly sprints and demos keep you moving fast."
-      },
-      "scalableArchitecture": {
-        "title": "Scalable Architecture",
-        "description": "Foundations that handle growth without rewrites."
-      },
-      "productThinking": {
-        "title": "Product Thinking",
-        "description": "We help you build the right thing, not just any thing."
-      },
-      "partnership": {
-        "title": "Long-term Partnership",
-        "description": "We stay with you from MVP to scale."
-      }
-    }
-  },
-  "cases": {
-    "badge": "Case Studies",
-    "title": "The kind of products we build",
-    "subtitle": "Representative products across industries, showing how we turn ideas into working software.",
-    "experienceNote": "Backed by engineers who built products for Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo and Carlsberg.",
-    "items": {
-      "digitalMenu": {
-        "title": "Digital Menu & Ordering",
-        "description": "A QR-code menu and ordering platform for restaurants, with real-time orders and integrated payments."
-      },
-      "managementSystem": {
-        "title": "Management System",
-        "description": "Internal systems and dashboards that streamline operations for growing teams."
-      },
-      "dashboard": {
-        "title": "Analytics Dashboard",
-        "description": "Data dashboards that turn raw metrics into clear business decisions."
-      },
-      "marketplace": {
-        "title": "Marketplace",
-        "description": "Two-sided marketplaces with payments, search and scalable infrastructure."
-      }
-    }
-  },
   "team": {
     "badge": "The Team",
-    "title": "Meet the founders",
-    "subtitle": "You work directly with senior engineers who care about your product.",
+    "title": "The engineers behind CodaCrew",
+    "subtitle": "We write from years of building and scaling real products.",
     "specialtiesLabel": "Specialties",
     "linkedinLabel": "LinkedIn",
     "members": {
@@ -216,58 +101,10 @@
       }
     }
   },
-  "ctaBanner": {
-    "build": {
-      "title": "Ready to build your startup?",
-      "subtitle": "Let's turn your idea into a product founders and users love.",
-      "button": "Let's Build Your Startup"
-    },
-    "estimate": {
-      "title": "Not sure where to start?",
-      "subtitle": "Get a free, no-commitment estimate for your MVP.",
-      "button": "Get a Free MVP Estimate"
-    },
-    "talk": {
-      "title": "Have technical questions?",
-      "subtitle": "Talk directly to a senior engineer, no sales pitch.",
-      "button": "Talk to an Engineer"
-    }
-  },
-  "audience": {
-    "badge": "Who It's For",
-    "title": "Who it's for (and who it's not for)",
-    "isFor": {
-      "title": "Makes sense if:",
-      "list": [
-        "You're a founder with a digital product idea",
-        "You need a team to build or scale your MVP",
-        "You want a technical partner, not just execution",
-        "You value scalable architecture and clear decisions",
-        "You're building for growth, not a one-off site"
-      ]
-    },
-    "isNotFor": {
-      "title": "Doesn't make sense if:",
-      "list": [
-        "You're looking for development hours only",
-        "You want a miraculous overnight solution",
-        "You don't want to be involved in product decisions",
-        "You need a simple one-page institutional site",
-        "You're chasing the cheapest option possible"
-      ]
-    }
-  },
   "finalCta": {
-    "badge": "Limited spots for new projects",
-    "title": "Let's build your startup",
-    "description": "Tell us about your idea. We'll reply within 24h with clear next steps, no pressure, no jargon.",
-    "cta": "Talk about the project",
-    "disclaimer": "No commitment • Free",
-    "stats": {
-      "experience": "Years of experience",
-      "projects": "Products in production",
-      "satisfaction": "Success rate"
-    }
+    "badge": "Get in touch",
+    "title": "Questions, feedback, or just want to talk tech?",
+    "description": "Reach out about our articles, a topic you would like us to cover, or anything software. We read everything."
   },
   "contactForm": {
     "email": {
@@ -276,25 +113,12 @@
       "error": "Please enter a valid email address"
     },
     "company": {
-      "label": "Company/Project",
-      "placeholder": "Your company or project name",
-      "error": "Please provide the company or project name"
-    },
-    "budget": {
-      "label": "Estimated budget (optional)",
-      "placeholder": "Select a range",
-      "options": {
-        "none": "Prefer not to say",
-        "small": "Up to € 8,000",
-        "medium": "€ 8,000 - € 25,000",
-        "large": "€ 25,000 - € 50,000",
-        "xlarge": "Above € 50,000",
-        "undefined": "Not defined yet"
-      }
+      "label": "Name (optional)",
+      "placeholder": "Your name"
     },
     "message": {
-      "label": "Tell us about your project",
-      "placeholder": "Briefly describe what you need, challenges you're facing, or how we can help...",
+      "label": "Your message",
+      "placeholder": "Ask a question, suggest a topic, or just say hi...",
       "error": "Please provide more details about your project (minimum 10 characters)"
     },
     "submit": "Send message",
@@ -303,14 +127,15 @@
     "error": "Error sending message. Please try again."
   },
   "footer": {
-    "tagline": "Your technical partner to turn ideas into scalable startups.",
-    "cta": "Schedule a Free Call",
+    "tagline": "Engineering notes on building modern software.",
+    "cta": "Read the Blog",
     "navigate": "Navigate",
     "servicesTitle": "Services",
     "connect": "Connect",
     "rights": "All rights reserved.",
     "whatsapp": "WhatsApp",
-    "whatsappMessage": "Hi CodaCrew! I'd like to talk about building my product."
+    "whatsappMessage": "Hi CodaCrew, I have a question about your content.",
+    "topicsTitle": "Topics"
   },
   "blog": {
     "title": "Blog",
@@ -335,9 +160,9 @@
       "cloud": "Cloud"
     },
     "postCta": {
-      "title": "Have a project in mind?",
-      "subtitle": "Let's talk about turning your idea into a product.",
-      "button": "Schedule a Free Call"
+      "title": "Enjoyed this?",
+      "subtitle": "Explore more engineering articles from CodaCrew.",
+      "button": "Read more articles"
     }
   },
   "languageSwitcher": {
@@ -1065,6 +890,20 @@
       "privacyPolicy": "Privacy Policy",
       "termsOfUse": "Terms of Use",
       "developedBy": "Developed by"
+    }
+  },
+  "topics": {
+    "badge": "What We Write About",
+    "title": "Topics we cover",
+    "subtitle": "Practical writing across the stack, from first commit to scale.",
+    "descriptions": {
+      "startup": "Validating ideas, MVPs, and reaching first users.",
+      "saas": "Building multi-tenant products that scale.",
+      "ai": "Applying AI and automation to real software.",
+      "architecture": "Designing systems that grow without rewrites.",
+      "engineering": "Craft, testing, CI/CD, and clean code.",
+      "product": "Thinking in outcomes, not just features.",
+      "cloud": "Deploying, scaling, and running in production."
     }
   }
 }

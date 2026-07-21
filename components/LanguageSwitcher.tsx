@@ -36,10 +36,10 @@ export function LanguageSwitcher() {
         <button
           key={loc}
           onClick={() => switchLocale(loc)}
-          className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+          className={`px-2.5 py-1 font-mono text-xs rounded-md transition-colors ${
             locale === loc
-              ? "bg-slate-900 text-white"
-              : "text-slate-600 hover:bg-slate-100"
+              ? "bg-white text-dark"
+              : "text-white/60 hover:text-white hover:bg-white/10"
           }`}
         >
           {loc === "pt-BR" ? "PT" : "EN"}

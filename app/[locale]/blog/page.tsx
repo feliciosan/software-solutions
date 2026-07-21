@@ -81,17 +81,20 @@ export default async function BlogPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <main className="pt-28 pb-20 sm:pt-32 bg-slate-50 min-h-screen">
+      <main className="pt-28 pb-20 sm:pt-32 bg-background min-h-screen">
         <Container>
-          <header className="text-center max-w-2xl mx-auto mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900">
+          <header className="max-w-2xl mb-12">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+              {"// blog"}
+            </span>
+            <h1 className="mt-2 text-4xl sm:text-5xl font-bold text-foreground">
               {t("title")}
             </h1>
-            <p className="mt-4 text-lg text-slate-600">{t("subtitle")}</p>
+            <p className="mt-4 text-lg text-muted">{t("subtitle")}</p>
           </header>
 
           {posts.length === 0 ? (
-            <p className="text-center text-slate-500">{t("empty")}</p>
+            <p className="text-center font-mono text-muted">{t("empty")}</p>
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               {posts.map((post) => (

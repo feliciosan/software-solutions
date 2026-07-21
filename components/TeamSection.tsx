@@ -9,28 +9,28 @@ export function TeamSection() {
   const t = useTranslations("team");
 
   return (
-    <Section id="team" background="default">
+    <Section id="team" background="subtle">
       <Container size="narrow">
-        <div className="text-center mb-12 lg:mb-16">
-          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+        <div className="text-center mb-12">
+          <span className="font-mono text-xs text-primary uppercase tracking-wider">
             {t("badge")}
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mt-3">
             {t("title")}
           </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-lg text-muted max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 gap-5">
           {founders.map((member) => (
             <article
               key={member.key}
-              className="bg-white p-6 lg:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-background p-6 rounded-xl border border-border"
             >
               <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 ring-2 ring-slate-100">
+                <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-code flex-shrink-0 ring-1 ring-border">
                   <Image
                     src={member.photo}
                     alt={member.name}
@@ -40,28 +40,26 @@ export function TeamSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-blue-600 font-medium">
+                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                  <p className="font-mono text-xs text-muted">
                     {t(`members.${member.key}.role`)}
                   </p>
                 </div>
               </div>
 
-              <p className="mt-5 text-slate-600 leading-relaxed">
+              <p className="mt-4 text-muted leading-relaxed text-[15px]">
                 {t(`members.${member.key}.bio`)}
               </p>
 
-              <div className="mt-5">
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+              <div className="mt-4">
+                <p className="font-mono text-[11px] text-muted uppercase tracking-wider mb-2">
                   {t("specialtiesLabel")}
                 </p>
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-1.5">
                   {member.skills.map((skill) => (
                     <li
                       key={skill}
-                      className="px-3 py-1 bg-slate-50 border border-slate-200 rounded-full text-xs font-medium text-slate-700"
+                      className="font-mono text-[11px] text-muted bg-surface border border-border rounded-md px-2 py-0.5"
                     >
                       {skill}
                     </li>
@@ -73,7 +71,7 @@ export function TeamSection() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                className="mt-4 inline-flex items-center gap-2 font-mono text-sm text-foreground hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
                 aria-label={`${member.name}, ${t("linkedinLabel")}`}
               >
                 <Icon name="linkedin" className="w-4 h-4" />

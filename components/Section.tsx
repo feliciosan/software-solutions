@@ -14,8 +14,8 @@ export function Section({
   id,
 }: SectionProps) {
   const bgStyles = {
-    default: "bg-slate-50",
-    subtle: "bg-white",
+    default: "bg-background",
+    subtle: "bg-surface",
   };
 
   return (

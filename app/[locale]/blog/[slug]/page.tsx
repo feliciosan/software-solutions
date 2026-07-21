@@ -7,6 +7,7 @@ import Image from "next/image";
 import { locales } from "@/i18n";
 import { baseUrl } from "@/lib/siteConfig";
 import { getPost, getAllPostSlugs } from "@/lib/blog";
+import { categoryStyle } from "@/lib/categories";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -136,19 +137,21 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <main className="pt-28 pb-20 sm:pt-32 bg-white">
+      <main className="pt-28 pb-20 sm:pt-32 bg-surface">
         <Container size="narrow">
           <Link
             href={`/${locale}/blog`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+            className="inline-flex items-center gap-1.5 font-mono text-sm text-muted hover:text-foreground transition-colors"
           >
             <Icon name="arrowRight" className="w-4 h-4 rotate-180" />
             {t("backToBlog")}
           </Link>
 
           <article className="mt-6">
-            <div className="flex items-center gap-3 text-sm text-slate-500 mb-4">
-              <span className="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full font-medium">
+            <div className="flex items-center gap-2 font-mono text-xs text-muted mb-4">
+              <span
+                className={`px-2 py-0.5 rounded-md font-medium ${categoryStyle(post.category).chip}`}
+              >
                 {t(`categories.${post.category}`)}
               </span>
               <time dateTime={post.date}>{dateLabel}</time>
@@ -158,14 +161,14 @@ export default async function BlogPostPage({
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight text-balance">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
               {localized.title}
             </h1>
-            <p className="mt-4 text-lg text-slate-600">{localized.description}</p>
-            <p className="mt-4 text-sm text-slate-500">{post.author}</p>
+            <p className="mt-4 text-lg text-muted">{localized.description}</p>
+            <p className="mt-4 font-mono text-sm text-muted">{post.author}</p>
 
             {post.cover && (
-              <div className="relative mt-8 aspect-[1200/630] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+              <div className="relative mt-8 aspect-[1200/630] w-full overflow-hidden rounded-xl border border-border bg-code">
                 <Image
                   src={post.cover}
                   alt={localized.title}
@@ -181,10 +184,7 @@ export default async function BlogPostPage({
               {localized.body.map((block, i) => {
                 if (block.type === "h2") {
                   return (
-                    <h2
-                      key={i}
-                      className="text-2xl font-bold text-slate-900 pt-2"
-                    >
+                    <h2 key={i} className="text-2xl font-bold text-foreground pt-2">
                       {block.text}
                     </h2>
                   );
@@ -193,10 +193,13 @@ export default async function BlogPostPage({
                   return (
                     <ul key={i} className="space-y-2 pl-1">
                       {block.items.map((item, j) => (
-                        <li key={j} className="flex items-start gap-3 text-slate-700">
+                        <li
+                          key={j}
+                          className="flex items-start gap-3 text-foreground"
+                        >
                           <Icon
                             name="check"
-                            className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"
+                            className="w-5 h-5 text-primary flex-shrink-0 mt-1"
                           />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -205,7 +208,7 @@ export default async function BlogPostPage({
                   );
                 }
                 return (
-                  <p key={i} className="text-lg text-slate-700 leading-relaxed">
+                  <p key={i} className="text-lg text-foreground leading-relaxed">
                     {block.text}
                   </p>
                 );
@@ -214,16 +217,14 @@ export default async function BlogPostPage({
           </article>
 
           {/* Post-article CTA */}
-          <div className="mt-14 rounded-3xl bg-gradient-to-br from-slate-900 to-blue-900 p-8 sm:p-10 text-center">
-            <h2 className="text-2xl font-bold text-white">
-              {t("postCta.title")}
-            </h2>
-            <p className="mt-2 text-slate-300">{t("postCta.subtitle")}</p>
+          <div className="mt-14 rounded-xl bg-dark p-8 sm:p-10 text-center">
+            <h2 className="text-2xl font-bold text-white">{t("postCta.title")}</h2>
+            <p className="mt-2 text-white/70">{t("postCta.subtitle")}</p>
             <div className="mt-6">
               <Button
-                href={`/${locale}#contact`}
+                href={`/${locale}/blog`}
                 variant="secondary"
-                className="bg-white text-slate-900 hover:bg-slate-100"
+                className="bg-surface text-foreground hover:bg-code"
               >
                 {t("postCta.button")}
               </Button>

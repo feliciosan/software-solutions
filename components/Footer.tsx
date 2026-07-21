@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 import { NavLink } from "./NavLink";
 import {
   navItems,
-  services,
+  blogCategories,
   socialLinks,
   localizedHref,
 } from "@/lib/siteConfig";
@@ -14,12 +14,12 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
-  const tServices = useTranslations("services");
+  const tBlog = useTranslations("blog");
   const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-dark text-white/60 border-t border-accent/30">
       <Container className="py-14 lg:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Navigate */}
           <nav aria-label={t("navigate")}>
-            <h2 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h2 className="font-mono text-xs text-white uppercase tracking-wider mb-4">
               {t("navigate")}
             </h2>
             <ul className="space-y-3 text-sm">
@@ -55,19 +55,19 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Services */}
+          {/* Topics */}
           <div>
-            <h2 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              {t("servicesTitle")}
+            <h2 className="font-mono text-xs text-white uppercase tracking-wider mb-4">
+              {t("topicsTitle")}
             </h2>
             <ul className="space-y-3 text-sm">
-              {services.map((service) => (
-                <li key={service.key}>
+              {blogCategories.map((cat) => (
+                <li key={cat}>
                   <NavLink
-                    href={localizedHref(locale, "#services")}
+                    href={localizedHref(locale, "#topics")}
                     className="hover:text-white transition-colors"
                   >
-                    {tServices(`items.${service.key}.title`)}
+                    {tBlog(`categories.${cat}`)}
                   </NavLink>
                 </li>
               ))}
@@ -76,7 +76,7 @@ export function Footer() {
 
           {/* Connect */}
           <div>
-            <h2 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h2 className="font-mono text-xs text-white uppercase tracking-wider mb-4">
               {t("connect")}
             </h2>
             <ul className="space-y-3 text-sm">
@@ -114,7 +114,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400">
+        <div className="mt-12 pt-8 border-t border-white/10 font-mono text-xs text-white/50">
           © {year} CodaCrew. {t("rights")}
         </div>
       </Container>

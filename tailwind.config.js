@@ -7,6 +7,35 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        // Semantic Moss & Stone tokens (values live in globals.css :root).
+        background: "rgb(var(--color-background) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        primary: {
+          DEFAULT: "rgb(var(--color-primary) / <alpha-value>)",
+          hover: "rgb(var(--color-primary-hover) / <alpha-value>)",
+        },
+        dark: "rgb(var(--color-dark) / <alpha-value>)",
+        foreground: "rgb(var(--color-text) / <alpha-value>)",
+        muted: "rgb(var(--color-text-secondary) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        code: "rgb(var(--color-code) / <alpha-value>)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: [
+          "var(--font-mono)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "monospace",
+        ],
+      },
+      // Standardize radius to 8-12px: clamp the old large radii to 12px.
+      borderRadius: {
+        "2xl": "12px",
+        "3xl": "12px",
+      },
       animation: {
         blob: "blob 7s infinite",
         "bounce-slow": "bounce 3s infinite",

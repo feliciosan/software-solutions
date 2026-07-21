@@ -18,9 +18,7 @@ export const socialLinks = {
  * locale-relative routes.
  */
 export const navItems = [
-  { key: "services", href: "#services" },
-  { key: "process", href: "#process" },
-  { key: "cases", href: "#cases" },
+  { key: "topics", href: "#topics" },
   { key: "team", href: "#team" },
   { key: "blog", href: "/blog" },
 ] as const;

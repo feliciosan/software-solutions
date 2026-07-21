@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const contactSchema = z.object({
   email: z.email(),
-  company: z.string().min(2),
+  company: z.string().optional(),
   message: z.string().min(10),
 });
 
@@ -22,7 +22,9 @@ export async function POST(request: NextRequest) {
         "xgabriel.st@gmail.com",
         "contact@codacrew.com",
       ],
-      subject: `Novo contato de ${validatedData.company}`,
+      subject: validatedData.company
+        ? `Novo contato de ${validatedData.company}`
+        : `Novo contato via website`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -92,10 +94,14 @@ export async function POST(request: NextRequest) {
                 <div class="field-label">Email</div>
                 <div class="field-value">${validatedData.email}</div>
               </div>
-              <div class="field">
-                <div class="field-label">Empresa/Projeto</div>
+              ${
+                validatedData.company
+                  ? `<div class="field">
+                <div class="field-label">Nome</div>
                 <div class="field-value">${validatedData.company}</div>
-              </div>
+              </div>`
+                  : ""
+              }
               <div style="margin-top: 20px;">
                 <div class="field-label" style="margin-bottom: 10px;">Mensagem</div>
                 <div class="message-box">${validatedData.message}</div>

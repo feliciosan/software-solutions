@@ -1,30 +1,28 @@
 {
   "metadata": {
-    "title": "CodaCrew: Parceiro Técnico para Startups, MVPs e SaaS",
-    "description": "Ajudamos fundadores a transformar ideias em produtos digitais escaláveis. Engenheiros seniores construindo MVPs, SaaS e produtos com IA desde o primeiro dia."
+    "title": "CodaCrew: Notas de engenharia sobre construir software moderno",
+    "description": "Uma comunidade de engenheiros de software compartilhando conteúdo prático sobre stacks modernas, arquitetura, MVPs, SaaS, IA e escalabilidade."
   },
   "nav": {
-    "services": "Serviços",
-    "process": "Processo",
-    "cases": "Cases",
+    "topics": "Tópicos",
     "team": "Time",
     "blog": "Blog",
-    "cta": "Agende uma Conversa Gratuita",
+    "cta": "Ler o Blog",
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu"
   },
   "header": {
-    "tagline": "Seu parceiro técnico para startups"
+    "tagline": "Notas de engenharia sobre construir software moderno"
   },
   "hero": {
-    "availableBadge": "Disponível para novos projetos",
-    "headline": "Transforme sua ideia em um produto escalável.",
-    "subheadline": "Ajudamos fundadores a projetar, construir e escalar produtos digitais com engenheiros seniores e tecnologia moderna, da primeira linha de código à produção.",
-    "ctaPrimary": "Agende uma Conversa Estratégica Gratuita",
-    "ctaSecondary": "Veja nosso Processo",
-    "microcopy": "Sem compromisso • Conversa gratuita de 30 min",
+    "availableBadge": "Novos artigos toda semana",
+    "headline": "Notas de engenharia sobre construir software moderno.",
+    "subheadline": "Somos engenheiros de software compartilhando o que aprendemos sobre stacks modernas, arquitetura, MVPs, SaaS, IA e escalar produtos. Conteúdo prático para quem constrói.",
+    "ctaPrimary": "Ler o Blog",
+    "ctaSecondary": "Explorar os Tópicos",
+    "microcopy": "Novos artigos toda semana. Sem enrolação.",
     "journey": {
-      "title": "A jornada do seu produto",
+      "title": "Da ideia à escala",
       "idea": "Ideia",
       "ideaCaption": "Valide a visão",
       "mvp": "MVP",
@@ -46,10 +44,11 @@
       "revenue": "Receita",
       "users": "Usuários ativos",
       "growth": "Crescimento"
-    }
+    },
+    "authorsLabel": "Quem escreve aqui"
   },
   "trustBar": {
-    "title": "Engenharia de confiança, comprovada em escala",
+    "title": "Escrito por engenheiros seniores",
     "indicators": {
       "seniorEngineers": "Engenheiros Seniores",
       "globalExperience": "Experiência Global",
@@ -59,8 +58,8 @@
     }
   },
   "social": {
-    "title": "Experiência construindo produtos usados por milhões",
-    "description": "Nossos engenheiros já construíram e escalaram produtos para marcas globais como Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg."
+    "title": "A experiência por trás do conteúdo",
+    "description": "Nossos engenheiros já construíram e escalaram produtos usados por milhões para marcas globais como Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg. Escrevemos a partir dessa experiência."
   },
   "problems": {
     "badge": "A Realidade",
@@ -85,124 +84,10 @@
       }
     ]
   },
-  "process": {
-    "badge": "Como Trabalhamos",
-    "title": "Da ideia ao produto escalável",
-    "subtitle": "Um caminho claro e comprovado, onde você entende cada decisão ao longo do processo.",
-    "steps": {
-      "discovery": {
-        "title": "Descoberta",
-        "description": "Alinhamos sua visão, usuários e objetivos de negócio."
-      },
-      "architecture": {
-        "title": "Arquitetura",
-        "description": "Projetamos uma base escalável e escolhemos a stack certa."
-      },
-      "development": {
-        "title": "Desenvolvimento",
-        "description": "Entregamos em sprints semanais com code review desde o primeiro dia."
-      },
-      "testing": {
-        "title": "Testes",
-        "description": "Testes automatizados e QA mantêm a qualidade alta enquanto você cresce."
-      },
-      "launch": {
-        "title": "Lançamento",
-        "description": "Colocamos em produção com CI/CD e monitoramento."
-      },
-      "improvement": {
-        "title": "Melhoria Contínua",
-        "description": "Iteramos com dados e seguimos como seu parceiro técnico de longo prazo."
-      }
-    }
-  },
-  "services": {
-    "badge": "O Que Fazemos",
-    "title": "Feito para fundadores, não apenas para código",
-    "subtitle": "Engenharia de produto ponta a ponta para cada estágio da sua startup.",
-    "learnMore": "Saiba mais",
-    "items": {
-      "mvp": {
-        "title": "Desenvolvimento de MVP",
-        "description": "Lance um MVP validado com usuários reais em semanas, não meses."
-      },
-      "saas": {
-        "title": "Desenvolvimento de SaaS",
-        "description": "Produtos SaaS escaláveis e multi-tenant feitos para crescer."
-      },
-      "ai": {
-        "title": "Integrações com IA",
-        "description": "Aplique IA e automação a problemas reais de negócio."
-      },
-      "modernization": {
-        "title": "Modernização de Produto",
-        "description": "Resgate e modernize softwares legados sem parar a operação."
-      },
-      "team": {
-        "title": "Team Augmentation",
-        "description": "Engenheiros seniores para reforçar e acelerar seu time."
-      }
-    }
-  },
-  "differentiators": {
-    "badge": "Por Que a CodaCrew",
-    "title": "Por que fundadores escolhem a CodaCrew",
-    "subtitle": "Mais que uma software house, somos um parceiro técnico comprometido com seu crescimento.",
-    "items": {
-      "seniorEngineers": {
-        "title": "Engenheiros Seniores",
-        "description": "Engenheiros experientes que já entregaram produtos em escala."
-      },
-      "startupMindset": {
-        "title": "Mentalidade de Startup",
-        "description": "Pensamos em tração, velocidade e validação, como um co-fundador."
-      },
-      "fastDelivery": {
-        "title": "Entrega Rápida",
-        "description": "Sprints e demos semanais mantêm você avançando rápido."
-      },
-      "scalableArchitecture": {
-        "title": "Arquitetura Escalável",
-        "description": "Bases que aguentam o crescimento sem reescritas."
-      },
-      "productThinking": {
-        "title": "Visão de Produto",
-        "description": "Ajudamos você a construir a coisa certa, não qualquer coisa."
-      },
-      "partnership": {
-        "title": "Parceria de Longo Prazo",
-        "description": "Ficamos com você do MVP à escala."
-      }
-    }
-  },
-  "cases": {
-    "badge": "Cases",
-    "title": "O tipo de produto que construímos",
-    "subtitle": "Produtos representativos em diferentes setores, mostrando como transformamos ideias em software funcionando.",
-    "experienceNote": "Feito por engenheiros que construíram produtos para Hugo Boss, Calvin Klein, Tommy Hilfiger, Globo e Carlsberg.",
-    "items": {
-      "digitalMenu": {
-        "title": "Cardápio Digital & Pedidos",
-        "description": "Plataforma de cardápio via QR code e pedidos para restaurantes, com pedidos em tempo real e pagamentos integrados."
-      },
-      "managementSystem": {
-        "title": "Sistema de Gestão",
-        "description": "Sistemas internos e dashboards que otimizam a operação de times em crescimento."
-      },
-      "dashboard": {
-        "title": "Dashboard de Analytics",
-        "description": "Dashboards de dados que transformam métricas em decisões claras de negócio."
-      },
-      "marketplace": {
-        "title": "Marketplace",
-        "description": "Marketplaces de dois lados com pagamentos, busca e infraestrutura escalável."
-      }
-    }
-  },
   "team": {
     "badge": "O Time",
-    "title": "Conheça os fundadores",
-    "subtitle": "Você trabalha diretamente com engenheiros seniores que se importam com o seu produto.",
+    "title": "Os engenheiros por trás da CodaCrew",
+    "subtitle": "Escrevemos a partir de anos construindo e escalando produtos reais.",
     "specialtiesLabel": "Especialidades",
     "linkedinLabel": "LinkedIn",
     "members": {
@@ -216,58 +101,10 @@
       }
     }
   },
-  "ctaBanner": {
-    "build": {
-      "title": "Pronto para construir sua startup?",
-      "subtitle": "Vamos transformar sua ideia em um produto que fundadores e usuários amam.",
-      "button": "Vamos Construir sua Startup"
-    },
-    "estimate": {
-      "title": "Não sabe por onde começar?",
-      "subtitle": "Receba uma estimativa gratuita e sem compromisso para seu MVP.",
-      "button": "Estimativa Gratuita de MVP"
-    },
-    "talk": {
-      "title": "Tem dúvidas técnicas?",
-      "subtitle": "Fale direto com um engenheiro sênior, sem discurso de vendas.",
-      "button": "Fale com um Engenheiro"
-    }
-  },
-  "audience": {
-    "badge": "Para Quem É",
-    "title": "Para quem é (e para quem não é)",
-    "isFor": {
-      "title": "Faz sentido se:",
-      "list": [
-        "Você é fundador com uma ideia de produto digital",
-        "Precisa de um time para construir ou escalar seu MVP",
-        "Quer um parceiro técnico, não apenas execução",
-        "Valoriza arquitetura escalável e decisões claras",
-        "Está construindo para crescer, não um site pontual"
-      ]
-    },
-    "isNotFor": {
-      "title": "Não faz sentido se:",
-      "list": [
-        "Você busca apenas horas de desenvolvimento",
-        "Quer uma solução milagrosa da noite para o dia",
-        "Não quer se envolver nas decisões de produto",
-        "Precisa de um site institucional simples de uma página",
-        "Está atrás da opção mais barata possível"
-      ]
-    }
-  },
   "finalCta": {
-    "badge": "Vagas limitadas para novos projetos",
-    "title": "Vamos construir sua startup",
-    "description": "Conte sobre sua ideia. Respondemos em até 24h com próximos passos claros, sem pressão, sem jargão.",
-    "cta": "Conversar sobre o projeto",
-    "disclaimer": "Sem compromisso • Gratuito",
-    "stats": {
-      "experience": "Anos de experiência",
-      "projects": "Produtos em produção",
-      "satisfaction": "Taxa de sucesso"
-    }
+    "badge": "Fale com a gente",
+    "title": "Dúvidas, feedback ou só quer falar de tech?",
+    "description": "Escreva sobre nossos artigos, um tópico que você quer ver por aqui, ou qualquer coisa de software. A gente lê tudo."
   },
   "contactForm": {
     "email": {
@@ -276,25 +113,12 @@
       "error": "Por favor, insira um email válido"
     },
     "company": {
-      "label": "Empresa/Projeto",
-      "placeholder": "Nome da sua empresa ou projeto",
-      "error": "Por favor, informe o nome da empresa ou projeto"
-    },
-    "budget": {
-      "label": "Orçamento estimado (opcional)",
-      "placeholder": "Selecione uma faixa",
-      "options": {
-        "none": "Prefiro não informar",
-        "small": "Até € 8.000",
-        "medium": "€ 8.000 - € 25.000",
-        "large": "€ 25.000 - € 50.000",
-        "xlarge": "Acima de € 50.000",
-        "undefined": "Ainda não definido"
-      }
+      "label": "Nome (opcional)",
+      "placeholder": "Seu nome"
     },
     "message": {
-      "label": "Conte-nos sobre seu projeto",
-      "placeholder": "Descreva brevemente o que você precisa, desafios que está enfrentando ou como podemos ajudar...",
+      "label": "Sua mensagem",
+      "placeholder": "Faça uma pergunta, sugira um tópico, ou só diga oi...",
       "error": "Por favor, forneça mais detalhes sobre seu projeto (mínimo 10 caracteres)"
     },
     "submit": "Enviar mensagem",
@@ -303,14 +127,15 @@
     "error": "Erro ao enviar mensagem. Por favor, tente novamente."
   },
   "footer": {
-    "tagline": "Seu parceiro técnico para transformar ideias em startups escaláveis.",
-    "cta": "Agende uma Conversa Gratuita",
+    "tagline": "Notas de engenharia sobre construir software moderno.",
+    "cta": "Ler o Blog",
     "navigate": "Navegar",
     "servicesTitle": "Serviços",
     "connect": "Conecte-se",
     "rights": "Todos os direitos reservados.",
     "whatsapp": "WhatsApp",
-    "whatsappMessage": "Olá CodaCrew! Gostaria de conversar sobre construir meu produto."
+    "whatsappMessage": "Olá CodaCrew, tenho uma dúvida sobre o conteúdo de vocês.",
+    "topicsTitle": "Tópicos"
   },
   "blog": {
     "title": "Blog",
@@ -335,9 +160,9 @@
       "cloud": "Cloud"
     },
     "postCta": {
-      "title": "Tem um projeto em mente?",
-      "subtitle": "Vamos conversar sobre transformar sua ideia em um produto.",
-      "button": "Agende uma Conversa Gratuita"
+      "title": "Curtiu?",
+      "subtitle": "Explore mais artigos de engenharia da CodaCrew.",
+      "button": "Ver mais artigos"
     }
   },
   "languageSwitcher": {
@@ -1065,6 +890,20 @@
       "privacyPolicy": "Política de Privacidade",
       "termsOfUse": "Termos de Uso",
       "developedBy": "Desenvolvido por"
+    }
+  },
+  "topics": {
+    "badge": "Sobre o que Escrevemos",
+    "title": "Tópicos que cobrimos",
+    "subtitle": "Conteúdo prático em toda a stack, do primeiro commit à escala.",
+    "descriptions": {
+      "startup": "Validar ideias, MVPs e chegar aos primeiros usuários.",
+      "saas": "Construir produtos multi-tenant que escalam.",
+      "ai": "Aplicar IA e automação a software real.",
+      "architecture": "Projetar sistemas que crescem sem reescrita.",
+      "engineering": "Craft, testes, CI/CD e código limpo.",
+      "product": "Pensar em resultados, não apenas features.",
+      "cloud": "Deploy, escala e rodar em produção."
     }
   }
 }
